@@ -21,7 +21,7 @@ const getOpenId = function (callback) {
             if (data.phone) { 
               wx.setStorageSync(superConst.SUPER_TOKEN_KEY, data);
             } else {
-              wx.navigateTo({url: '../register/register'});
+              wx.redirectTo({url: '../register/register'});
             }
             callback && callback();
           }
