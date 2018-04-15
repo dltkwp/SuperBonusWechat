@@ -1,0 +1,140 @@
+<view class='pad-lg font-md font-grey-steel'>企业信息</view>
+<view class='list-block'>
+  <ul>
+    <li>
+      <view class='item-content'>
+        <view class='item-inner'>
+          <view class='item-title label font-lg font-grey'>公司名称
+            <text class='font-red'>*</text>
+          </view>
+          <view class='item-input font-lg'>
+            <input type='text' placeholder='请输入公司名称' placeholder-class='font-grey-cararra' auto-focus></input>
+          </view>
+        </view>
+      </view>
+    </li>
+    <li>
+      <view class='item-content'>
+        <view class='item-inner'>
+          <view class='item-title label font-lg font-grey'>联系人
+            <text class='font-red'>*</text>
+          </view>
+          <view class='item-input font-lg'>
+            <input type='text' placeholder='请输入联系人姓名' placeholder-class='font-grey-cararra'></input>
+          </view>
+        </view>
+      </view>
+    </li>
+    <li>
+      <view class='item-content'>
+        <view class='item-inner'>
+          <view class='item-title label font-lg font-grey'>联系电话
+            <text class='font-red'>*</text>
+          </view>
+          <view class='item-input font-lg'>
+            <input type='text' placeholder='请输入联系人手机号' placeholder-class='font-grey-cararra'></input>
+          </view>
+        </view>
+      </view>
+    </li>
+  </ul>
+</view>
+<view class='pad-lg font-md font-grey-steel'>项目信息</view>
+<view class='list-block'>
+  <ul>
+    <li>
+      <view class='item-content'>
+        <view class='item-inner'>
+          <view class='item-title label font-lg font-grey'>项目名称
+            <text class='font-red'>*</text>
+          </view>
+          <view class='item-input font-lg'>
+            <input type='text' placeholder='请输入项目名称' placeholder-class='font-grey-cararra'></input>
+          </view>
+        </view>
+      </view>
+    </li>
+    <li>
+      <view class='item-content'>
+        <view class='item-inner'>
+          <view class='item-title label font-lg font-grey'>地区</view>
+          <view class='item-input font-lg'>
+            <input type='text' placeholder='项目产品所在位置或产地' placeholder-class='font-grey-cararra'></input>
+          </view>
+        </view>
+      </view>
+    </li>
+    <li>
+      <view class='item-content item-link'>
+        <view class='item-inner'>
+          <view class='item-title label font-lg font-grey'>性质</view>
+          <view class='item-input font-lg'>
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+              <view class="picker font-black">
+                {{array[index]}}
+              </view>
+            </picker>
+          </view>
+        </view>
+      </view>
+    </li>
+    <li>
+      <view class='item-content'>
+        <view class='item-inner'>
+          <view class='item-title label font-lg font-grey'>产品价格
+            <text class='font-red'>*</text>
+          </view>
+          <view class='item-input font-lg'>
+            <input type='text' placeholder='产品对外市场价格' placeholder-class='font-grey-cararra'></input>
+          </view>
+        </view>
+      </view>
+    </li>
+    <li>
+      <view class='item-content'>
+        <view class='item-inner'>
+          <view class='item-title label font-lg font-grey'>平台价格
+            <text class='font-red'>*</text>
+          </view>
+          <view class='item-input font-lg'>
+            <input type='text' placeholder='与平台合作底价' placeholder-class='font-grey-cararra'></input>
+          </view>
+        </view>
+      </view>
+    </li>
+    <li>
+      <view class='item-content'>
+        <view class='item-inner font-lg'>
+          <view class='item-title-row'>
+            <textarea bindblur="bindTextAreaBlur" class='form-textarea' placeholder='对产品对简单描述' placeholder-class='font-grey-cararra' />
+          </view>
+        </view>
+      </view>
+      <view class='pad-lg'>
+        <view class='add-img'>
+          <icon class='icon-add-img'></icon>
+        </view>
+      </view>
+
+    </li>
+
+  </ul>
+</view>
+<view class='list-block mar-t-md'>
+  <ul>
+    <li>
+      <navigator class='item-content item-link' url='/pages/elaborate/elaborate'>
+        <view class='item-inner'>
+          <view class='item-title label font-lg font-grey'>产品概述</view>
+          <view class='item-input font-lg font-grey-cararra'>可对产品进行详细描述
+          </view>
+        </view>
+      </navigator>
+    </li>
+  </ul>
+</view>
+
+<view class='fixed-bottom-space'></view>
+<view class='fixed-bottom'>
+  <navigator url='/pages/releasesuc/releasesuc' class='btn btn-red btn-block'>发布项目</navigator>
+</view>

@@ -1,0 +1,4 @@
+<view class="discovery-img">
+  <navigator url='/pages/join/join' > 
+ <image src="http://www.fyfsjzs.com/images/ad.jpg" style='width:100%'></image></navigator>
+</view>

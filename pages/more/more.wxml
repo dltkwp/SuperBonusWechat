@@ -1,0 +1,81 @@
+<navigator class="user-bg" url='/pages/userinfo/userinfo'>
+  
+   <image src="https://cdns.mtscrm.com/FvIo6tSOUwUJxl0ilLV270HClddK?version=2017091901" class='user-img img-circle mar-l-lg'></image>
+   <view class='mar-l-lg' style='width:500rpx;'>
+   <view class='font-lg font-white'>王杰</view>
+   <view class='font-md font-white mar-t-md'>荣誉会员</view>
+   </view>
+   <view class='icon-arrow-right-white opt-5'></view>
+</navigator>
+
+<view class='list-block mar-t-md'>
+  <ul>
+   <li>
+      <navigator class='item-content item-link'url='/pages/intro/intro'>
+        <view class='item-media'>
+          <icon class='icon-intro'></icon>
+        </view>
+        <view class='item-inner'>
+          <view class='item-title font-lg'>平台介绍</view>
+        </view>
+      </navigator>
+    </li>
+    <li>
+      <navigator class='item-content item-link' url=''>
+        <view class='item-media'>
+          <icon class='icon-invite'></icon>
+        </view>
+        <view class='item-inner'>
+          <view class='item-title font-lg'>邀请好友</view>
+        </view>
+      </navigator>
+    </li>
+   
+  </ul>
+</view>
+<!-- <view class='list-block mar-t-md'>
+  <ul>
+    <li>
+      <navigator class='item-content item-link' url='/pages/mytask/mytask'>
+        <view class='item-media'>
+          <icon class='icon-task'></icon>
+        </view>
+        <view class='item-inner'>
+          <view class='item-title font-lg'>我的任务</view>
+        </view>
+      </navigator>
+    </li>
+    
+  </ul>
+</view> -->
+<view class='list-block mar-t-md'>
+  <ul>
+    <li>
+      <navigator class='item-content item-link' url='/pages/myorder/myorder'>
+        <view class='item-media'>
+          <icon class='icon-order'></icon>
+        </view>
+        <view class='item-inner'>
+          <view class='item-title font-lg'>我的订单</view>
+        </view>
+      </navigator>
+    </li>
+    
+  </ul>
+</view>
+<view class='list-block mar-t-md'>
+  <ul>
+   
+    <li>
+      <navigator class='item-content item-link' url='#'>
+        <view class='item-media'>
+          <icon class='icon-askonline'></icon>
+        </view>
+        <view class='item-inner'>
+          <view class='item-title font-lg'>在线咨询</view>
+        </view>
+      </navigator>
+    </li>
+  </ul>
+</view>
+

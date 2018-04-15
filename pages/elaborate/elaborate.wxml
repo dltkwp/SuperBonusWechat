@@ -1,0 +1,108 @@
+
+<view class='list-block mar-t-md'>
+  <ul>
+    <li>
+      <view class='item-content'>
+        <view class='item-inner'>
+          <view class='item-title label font-lg font-grey'>产品数量
+            
+          </view>
+          <view class='item-input font-lg'>
+            <input type='text' placeholder='请填写产品数量' placeholder-class='font-grey-cararra' auto-focus></input>
+          </view>
+        </view>
+      </view>
+    </li>
+   <li>
+      <navigator class='item-content item-link'>
+        <view class='item-inner'>
+          <view class='item-title label font-lg font-grey'>销售周期</view>
+          <view class='item-input font-lg'>
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+              <view class="picker font-black">
+                {{array[index]}}
+              </view>
+            </picker>
+          </view>
+        </view>
+     </navigator>
+    </li>
+  </ul>
+</view>
+<view class='pad-lg font-md font-grey-steel'>项目背景</view>
+<view class='list-block'>
+  <ul>
+    <li>
+      <view class='item-content'>
+        <view class='item-inner font-lg'>
+          <view class='item-title-row'>
+            <textarea bindblur="bindTextAreaBlur" class='form-textarea' placeholder='项目的详细描述' placeholder-class='font-grey-cararra' />
+          </view>
+        </view>
+      </view>
+    </li>
+  </ul>
+</view>
+<view class='pad-lg font-md font-grey-steel'>项目产品目标客户群体描述</view>
+<view class='list-block'>
+  <ul>
+    <li>
+      <view class='item-content'>
+        <view class='item-inner font-lg'>
+          <view class='item-title-row'>
+            <textarea bindblur="bindTextAreaBlur" class='form-textarea' placeholder='哪些人群是目标客户群' placeholder-class='font-grey-cararra' />
+          </view>
+        </view>
+      </view>
+    </li>
+  </ul>
+</view>
+<view class='pad-lg font-md font-grey-steel'>项目产品的优劣势</view>
+<view class='list-block'>
+  <ul>
+    <li>
+      <view class='item-content'>
+        <view class='item-inner font-lg'>
+          <view class='item-title-row'>
+            <textarea bindblur="bindTextAreaBlur" class='form-textarea' placeholder='描述下产品的优劣势是什么？建议4条以上' placeholder-class='font-grey-cararra' />
+          </view>
+        </view>
+      </view>
+    </li>
+  </ul>
+</view>
+
+<view class='pad-lg font-md font-grey-steel'>项目产品的卖点</view>
+<view class='list-block'>
+  <ul>
+    <li>
+      <view class='item-content'>
+        <view class='item-inner font-lg'>
+          <view class='item-title-row'>
+            <textarea bindblur="bindTextAreaBlur" class='form-textarea' placeholder='产品有什么卖点？您可以说说' placeholder-class='font-grey-cararra' />
+          </view>
+        </view>
+      </view>
+    </li>
+  </ul>
+</view>
+
+<view class='pad-lg font-md font-grey-steel'>同行竞品有哪些？</view>
+<view class='list-block'>
+  <ul>
+    <li>
+      <view class='item-content'>
+        <view class='item-inner font-lg'>
+          <view class='item-title-row'>
+            <textarea bindblur="bindTextAreaBlur" class='form-textarea' placeholder='请输入竞品名称' placeholder-class='font-grey-cararra' />
+          </view>
+        </view>
+      </view>
+    </li>
+  </ul>
+</view>
+
+<view class='fixed-bottom-space'></view>
+<view class='fixed-bottom'>
+  <navigator url='/pages/relaeaseinfo/relaeaseinfo' class='btn btn-red btn-block'>提交</navigator>
+</view>

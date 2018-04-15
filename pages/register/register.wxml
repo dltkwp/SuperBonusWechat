@@ -1,0 +1,34 @@
+<form bindsubmit="login">
+  <view class="font-xxxlg pad-lr-60 mar-t-xlg">注册</view>
+  <view class="pad-lr-60 mar-t-100">
+    <view class="list-block b-tb-line-none">
+      <ul>
+        <li>
+          <view class="item-content pad-0">
+            <view class="item-inner ">
+              <view class="item-input-lg font-lg">
+                <input type="text" placeholder="请输入您的手机号" placeholder-class="font-grey-cararra" bindinput="mobileInput" auto-focus maxlength="11" name="mobile"></input>
+              </view>
+            </view>
+          </view>
+        </li>
+        <li>
+          <view class="item-content pad-0">
+            <view class="item-inner" style="border-bottom:1rpx solid #ecedef;">
+              <view class="item-input-lg font-lg pad-0">
+                <input type="text" placeholder="请输入短信验证码" placeholder-class="font-grey-cararra" bindinput="smsCodeInput"  maxlength="5" name="smsCode"></input>
+              </view>
+              <view bindtap="send" class="item-title label font-lg font-grey text-center">{{smsTip}}</view>
+            </view>
+          </view>
+        </li>
+      </ul>
+    </view>
+    <view class="mar-t-md ver-mid">
+      <icon class="icon-checked-red-sm mar-r-xs"></icon>
+      <text class="font-sm font-grey-steel mar-r-xs">我已查看并同意</text>
+      <navigator url="/pages/agreement/agreement" class="font-sm font-blue inline">超级悬赏注册协议</navigator>
+    </view>
+    <button formType="submit" class="btn btn-block btn-red mar-t-lg">注册</button>
+  </view>
+</form>

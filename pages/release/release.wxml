@@ -1,0 +1,14 @@
+<view class='item bg-white pad-lg'>
+  <view class='font-xlg font-black'>超级悬赏是什么？</view>
+  <view class='font-md font-black mar-t-md'>［超级悬赏］全球商务对接悬赏平台是基于萧湃国际与各国驻华使馆及中国334个地级市政府及商界资源建立的全球商务共享服务系统，为个人及组织（统称"威客"）提供项目对接为主要业务的高额佣金平台。涉及各个领域的项目设立，精端人群承接项目等服务。</view>
+  <view class='font-xlg font-black mar-t-xxlg'>谁可以立项？</view>
+  <text class='font-md font-black mar-t-md'>单位，组织，个人； \n生产商或总代；\n法人，董事长等具有决策权利，直接负责人；
+  </text>
+
+</view>
+
+
+<view class='fixed-bottom-space'></view>
+<view class='fixed-bottom'>
+  <navigator url='/pages/releaseinfo/releaseinfo' class='btn btn-red btn-block'>我已知晓</navigator>
+</view>

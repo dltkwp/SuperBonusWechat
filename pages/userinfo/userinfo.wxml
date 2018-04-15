@@ -1,0 +1,100 @@
+<form bindsubmit="submit">
+  <view class="list-block ">
+    <ul>
+      <li>
+        <view class="item-content item-link">
+          <view class="item-inner ">
+            <view class="item-title label  font-lg font-grey">头像</view>
+            <view class="item-input text-right">
+              <image src="https://cdns.mtscrm.com/FvIo6tSOUwUJxl0ilLV270HClddK?version=2017091901" class="user-img-md img-circle"></image>
+            </view>
+          </view>
+        </view>
+      </li>
+      <li>
+        <view class="item-content">
+          <view class="item-inner">
+            <view class="item-title label font-lg font-grey ">姓名</view>
+            <view class="item-input font-lg">
+              <input type="text" placeholder="请输入姓名" value="王杰" placeholder-class="font-grey-cararra" class="text-right"></input>
+            </view>
+          </view>
+        </view>
+      </li>
+      <li>
+        <view class="item-content">
+          <view class="item-inner">
+            <view class="item-title label font-lg font-grey ">手机号</view>
+            <view class="item-input font-lg">
+              <input type="text" disabled readonly placeholder="请输入手机号" value="15242612898" placeholder-class="font-grey-cararra" class="text-right"></input>
+            </view>
+          </view>
+        </view>
+      </li>
+    </ul>
+  </view>
+  <view class="list-block mar-t-md">
+    <ul>
+      <li>
+        <view class="item-content">
+          <view class="item-inner">
+            <view class="item-title label font-lg font-grey">性别</view>
+            <view class="item-input font-lg  ">
+              <view class="sex-block">
+                <view class="mar-r-md ">
+                  <icon class="icon-checked-red inline "></icon>
+                  男
+                </view>
+                <view class="mar-r-md  ">
+                  <icon class="icon-unchecked inline"></icon>
+                  女
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </li>
+      <li>
+        <view class="item-content">
+          <view class="item-inner">
+            <view class="item-title label font-lg font-grey">企业</view>
+            <view class="item-input font-lg">
+              <input type="text" placeholder="您所在的企业名称" placeholder-class="font-grey-cararra" class="text-right"></input>
+            </view>
+          </view>
+        </view>
+      </li>
+      <li>
+        <view class="item-content">
+          <view class="item-inner">
+            <view class="item-title label font-lg font-grey">职位</view>
+            <view class="item-input font-lg">
+              <input type="text" placeholder="请输入您的职位" placeholder-class="font-grey-cararra" class="text-right"></input>
+            </view>
+          </view>
+        </view>
+      </li>
+      <li>
+        <view class="item-content">
+          <view class="item-inner">
+            <view class="item-title label font-lg font-grey">地址</view>
+            <view class="item-input font-lg">
+              <input type="text" placeholder="请输入联系地址" placeholder-class="font-grey-cararra" class="text-right"></input>
+            </view>
+          </view>
+        </view>
+      </li>
+      <li>
+        <view class="item-content">
+          <view class="item-inner">
+            <view class="item-title label font-lg font-grey">支付宝账号</view>
+            <view class="item-input font-lg">
+              <input type="text" placeholder="请输入收款支付宝账号" placeholder-class="font-grey-cararra" class="text-right"></input>
+            </view>
+          </view>
+        </view>
+      </li>
+    </ul>
+  </view>
+  <button formType="submit"  class="btn btn-large btn-red mar-t-lg mar-lr-auto" >完成</button>
+</form>

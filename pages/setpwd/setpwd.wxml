@@ -1,0 +1,33 @@
+<view class="font-xxxlg pad-lr-60 mar-t-xlg">设置密码</view>
+<view class='pad-lr-60 mar-t-100'>
+<view class='list-block b-tb-line-none' >
+  <ul>
+    <li>
+      <view class='item-content pad-0'>
+        <view class='item-inner '>
+         
+          <view class='item-input-lg font-lg'>
+            <input type='text' placeholder='请输入您的登录密码' placeholder-class='font-grey-cararra' auto-focus></input>
+          </view>
+        </view>
+      </view>
+    </li>
+    <li>
+      <view class='item-content pad-0'>
+        <view class='item-inner' style='border-bottom:1rpx solid #ecedef;'>
+        <view class='item-input-lg font-lg pad-0'>
+            <input type='text' placeholder='请再次输入您的登录密码' placeholder-class='font-grey-cararra'></input>
+          </view>
+          
+           
+          
+          
+        </view>
+      </view>
+    </li>
+   
+  </ul>
+</view>
+
+<navigator url='/pages/discovery/discovery' class='btn btn-block btn-red mar-t-lg'>完成</navigator>
+</view>

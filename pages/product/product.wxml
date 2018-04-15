@@ -1,0 +1,14 @@
+
+
+<view class='item bg-white pad-lg'>
+<view class='font-xxxlg font-black'>荣誉威客</view>
+<view class='font-md font-grey-steel'>超级悬赏会员募集中，加入我们成就未来</view>
+    
+    <image class='product-img-full mar-t-md mar-b-md' src="https://cdns.mtscrm.com/FvIo6tSOUwUJxl0ilLV270HClddK?version=2017091901"></image>
+   <view class='font-lg font-black'>超级悬赏“共享杯”是全球商务信息共享标的一种事物载体，是超级悬赏线下圆桌会参与唯一标识，是超级悬赏共享平台的身份象征，寓意为：“一杯子，一辈子”。一次参与，一辈子财富共享。
+自2008年席卷全球的金融危机至今已过去9年，在这段时间内全球经济体依然没有彻底走出危机所带来的负面影响，全球有效需求不足、经济增长速度缓慢，世界经济仍然处在调整期与重构期，整体的经济形势处于低增长、低贸易流动、低通货膨胀率、低投资和低利率，以及高股价、高债务水平的“五低两高”阶段。在此阶段内，各国的经济增长出现了分化，而分化的经济增长又导致了政策的不统一，从而进一步加剧了世界经济复苏的不确定性。在此大背景下，超级悬赏以“大使馆圆桌会”的形式进行业务拓展及推进，帮助企业及个人销售、对接优质项目的同时，拓展各自的人脉资源池，高度实现企业与政府的无缝对接，真正实现全球共享资源、共享经济。</view> 
+</view>
+<view class='fixed-bottom-space'></view>
+<view class='fixed-bottom'>
+   <navigator url='/pages/joinsuc/joinsuc'  class='btn btn-red btn-block'>立即加盟</navigator>
+</view>

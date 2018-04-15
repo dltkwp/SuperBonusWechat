@@ -1,0 +1,1627 @@
+/**app.wxss**/
+
+page {
+  background-color: #f8f8f8;
+}
+input{
+  color:#383838;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+
+/*字体大小设置 */
+
+.font-xs {
+  font-size: 22rpx;
+}
+
+.font-sm {
+  font-size: 26rpx;
+}
+
+.font-md {
+  font-size: 28rpx;
+}
+
+.font-lg {
+  font-size: 34rpx;
+}
+
+.font-xlg {
+  font-size: 36rpx;
+}
+
+.font-xxlg {
+  font-size: 40rpx;
+}
+
+.font-xxxlg {
+  font-size: 48rpx;
+}
+
+/*字体颜色设置 */
+
+.font-grey-steel {
+  color: #999;
+}
+
+.font-grey-cararra {
+  color: #bfbfbf;
+}
+
+.font-grey {
+  color: #666;
+}
+
+.font-black {
+  color: #383838;
+}
+
+.font-white {
+  color: #fff;
+}
+
+.font-red {
+  color: #d43b33;
+}
+
+.font-green {
+  color: #35b7a5;
+}
+.font-blue{
+  color:#5572AC;
+}
+/*背景颜色设置*/
+
+.bg-grey {
+  background: #f0f3f6;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+/*间距设置 */
+
+.pad-t-xs {
+  padding-top: 10rpx;
+}
+
+.pad-t-sm {
+  padding-top: 16rpx;
+}
+
+.pad-t-md {
+  padding-top: 20rpx;
+}
+
+.pad-t-lg {
+  padding-top: 24rpx;
+}
+
+.pad-t-xlg {
+  padding-top: 30rpx;
+}
+
+.pad-t-xxlg {
+  padding-top: 40rpx;
+}
+
+.pad-lr-60 {
+  padding-left: 60rpx;
+  padding-right: 60rpx;
+}
+.pad-lr-xlg {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.pad-l-xs {
+  padding-left: 10rpx;
+}
+
+.pad-l-sm {
+  padding-left: 16rpx;
+}
+
+.pad-l-md {
+  padding-left: 20rpx;
+}
+
+.pad-l-lg {
+  padding-left: 24rpx;
+}
+
+.pad-l-xlg {
+  padding-left: 30rpx;
+}
+
+.pad-l-xxlg {
+  padding-left: 40rpx;
+}
+
+.pad-r-xs {
+  padding-right: 10rpx;
+}
+
+.pad-r-sm {
+  padding-right: 16rpx;
+}
+
+.pad-r-md {
+  padding-right: 20rpx;
+}
+
+.pad-r-lg {
+  padding-right: 24rpx;
+}
+
+.pad-r-xlg {
+  padding-right: 30rpx;
+}
+
+.pad-r-xxlg {
+  padding-right: 40rpx;
+}
+
+.pad-b-xs {
+  padding-bottom: 10rpx;
+}
+
+.pad-b-sm {
+  padding-bottom: 16rpx;
+}
+
+.pad-b-md {
+  padding-bottom: 20rpx;
+}
+
+.pad-b-lg {
+  padding-bottom: 24rpx;
+}
+
+.pad-b-xlg {
+  padding-bottom: 30rpx;
+}
+
+.pad-b-xxlg {
+  padding-bottom: 40rpx;
+}
+
+.pad-xs {
+  padding: 10rpx;
+}
+
+.pad-sm {
+  padding: 16rpx;
+}
+
+.pad-md {
+  padding: 20rpx;
+}
+
+.pad-lg {
+  padding: 24rpx;
+}
+
+.pad-xlg {
+  padding: 30rpx;
+}
+
+.pad-xxlg {
+  padding: 40rpx;
+}
+.pad-0{
+  padding:0!important;
+}
+.mar-t-xs {
+  margin-top: 10rpx;
+}
+
+.mar-t-sm {
+  margin-top: 16rpx;
+}
+
+.mar-t-md {
+  margin-top: 20rpx;
+}
+
+.mar-t-lg {
+  margin-top: 24rpx;
+}
+
+.mar-t-xlg {
+  margin-top: 30rpx;
+}
+
+.mar-t-xxlg {
+  margin-top: 40rpx;
+}
+.mar-t-100 {
+  margin-top: 100rpx;
+}
+.mar-l-xs {
+  margin-left: 10rpx;
+}
+
+.mar-l-sm {
+  margin-left: 16rpx;
+}
+
+.mar-l-md {
+  margin-left: 20rpx;
+}
+
+.mar-l-lg {
+  margin-left: 24rpx;
+}
+
+.mar-l-xlg {
+  margin-left: 30rpx;
+}
+
+.mar-l-xxlg {
+  margin-left: 40rpx;
+}
+.mar-r-xxs{
+  margin-right:5rpx;
+}
+.mar-r-xs {
+  margin-right: 10rpx;
+}
+
+.mar-r-sm {
+  margin-right: 16rpx;
+}
+
+.mar-r-md {
+  margin-right: 20rpx;
+}
+
+.mar-r-lg {
+  margin-right: 24rpx;
+}
+
+.mar-r-xlg {
+  margin-right: 30rpx;
+}
+
+.mar-r-xxlg {
+  margin-right: 40rpx;
+}
+
+.mar-b-xs {
+  margin-bottom: 10rpx;
+}
+
+.mar-b-sm {
+  margin-bottom: 16rpx;
+}
+
+.mar-b-md {
+  margin-bottom: 20rpx;
+}
+
+.mar-b-lg {
+  margin-bottom: 24rpx;
+}
+
+.mar-b-xlg {
+  margin-bottom: 30rpx;
+}
+
+.mar-b-xxlg {
+  margin-bottom: 40rpx;
+}
+.mar-lr-auto{
+  margin-left:auto;
+  margin-right:auto;
+}
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+/*下划线*/
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+}
+
+/*表单相关css*/
+
+.form-control {
+  display: block;
+  padding: 0 12px;
+  width: 100%;
+  color: #333;
+  height: 88rpx;
+  line-height: 88rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  -webkit-transition: border-color 0.1s linear, background-color 0.1s linear;
+  -moz-transition: border-color 0.1s linear, background-color 0.1s linear;
+  -o-transition: border-color 0.1s linear, background-color 0.1s linear;
+  transition: border-color 0.1s linear, background-color 0.1s linear;
+}
+
+textarea.form-control {
+  width: 100%;
+  line-height: 1.4;
+  min-height: 160rpx;
+  padding: 0;
+}
+
+.form-control:focus {
+  outline: 0;
+  border-color: #93a1bb;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(147, 161, 187, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(147, 161, 187, 0.6);
+}
+
+.form-control::-moz-placeholder {
+  color: #bfbfbf;
+  opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+.form-control-outline {
+  border: none;
+}
+
+.input-icon {
+  padding-left: 80rpx;
+}
+
+.form-group {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+
+/**图标**/
+
+.icon-search {
+  width: 28rpx;
+  height: 28rpx;
+  background: url(http://www.fyfsjzs.com/reward/ic_search.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.form-group .icon-search {
+  position: absolute;
+  top: 16rpx;
+  left: 60rpx;
+}
+
+.icon-down-grey {
+  width: 64rpx;
+  height: 64rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_down_grey.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.icon-up-grey {
+  width: 64rpx;
+  height: 64rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_up_grey.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.icon-product-minus {
+  width: 50rpx;
+  height: 50rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_product_minus.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.icon-product-plus {
+  width: 50rpx;
+  height: 50rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_product_plus.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.icon-cart {
+  width: 44rpx;
+  height: 47rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_cart.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.icon-checked {
+  width: 44rpx;
+  height: 44rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_checked.png);
+  background-size: 100% 100%;
+  vertical-align: middle;
+}
+
+.icon-checked-red {
+  width: 44rpx;
+  height: 44rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_checked_red.png);
+  background-size: 100% 100%;
+   vertical-align: middle;
+}
+.icon-checked-red-sm {
+  width: 30rpx;
+  height: 30rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_checked_red.png);
+  background-size: 100% 100%;
+   vertical-align: middle;
+}
+/*icon-unchecked*/
+
+.icon-unchecked {
+  width: 44rpx;
+  height: 44rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_uncheck.png);
+  background-size: 100% 100%;
+   vertical-align: middle;
+}
+
+/*地址图标*/
+
+.icon-address {
+  width: 44rpx;
+  height: 44rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_address.png);
+  background-size: 100% 100%;
+}
+
+/*编辑图标*/
+
+.icon-edit {
+  width: 40rpx;
+  height: 40rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_edit.png);
+  background-size: 100% 100%;
+}
+
+/*垃圾箱图标*/
+
+.icon-rubbish {
+  width: 40rpx;
+  height: 40rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_rubbish.png);
+  background-size: 100% 100%;
+}
+
+/*支付相关图标*/
+
+.icon-pay-wechat {
+  width: 60rpx;
+  height: 60rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_pay_wechat.png);
+  background-size: 100% 100%;
+}
+
+.icon-pay-alipay {
+  width: 60rpx;
+  height: 60rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_pay_alipay.png);
+  background-size: 100% 100%;
+}
+
+.icon-pay-cash {
+  width: 60rpx;
+  height: 60rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_pay_cash.png);
+  background-size: 100% 100%;
+}
+
+.icon-pay-user {
+  width: 60rpx;
+  height: 60rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_pay_user.png);
+  background-size: 100% 100%;
+}
+
+/*更多相关图标*/
+
+.icon-intro {
+  width: 40rpx;
+  height: 40rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_more_about_shop.png);
+  background-size: 100% 100%;
+  margin-right: 20rpx;
+}
+
+.icon-invite {
+  width: 40rpx;
+  height: 40rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_more_invite.png);
+  background-size: 100% 100%;
+  margin-right: 20rpx;
+}
+.icon-task{
+   width: 40rpx;
+  height: 40rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_more_duty.png);
+  background-size: 100% 100%;
+  margin-right: 20rpx;
+}
+.icon-order {
+  width: 40rpx;
+  height: 40rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_order.png);
+  background-size: 100% 100%;
+  margin-right: 20rpx;
+}
+.icon-askonline {
+  width: 40rpx;
+  height: 40rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_more_ask_online.png);
+  background-size: 100% 100%;
+  margin-right: 20rpx;
+}
+.icon-custom {
+  width: 40rpx;
+  height: 40rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_custom.png);
+  background-size: 100% 100%;
+  margin-right: 20rpx;
+}
+
+.icon-user {
+  width: 40rpx;
+  height: 40rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_me.png);
+  background-size: 100% 100%;
+  margin-right: 20rpx;
+}
+
+.icon-price {
+  width: 40rpx;
+  height: 40rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_price.png);
+  background-size: 100% 100%;
+  margin-right: 20rpx;
+}
+
+.icon-shop {
+  width: 38rpx;
+  height: 38rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_shop.png);
+  background-size: 100% 100%;
+  margin-right: 5rpx;
+  vertical-align: bottom;
+}
+
+/*公用型列表*/
+
+.list-block {
+  width: 100%;
+  position: relative;
+  border-top: 1rpx solid #ecedef;
+  border-bottom: 1rpx solid #ecedef;
+}
+
+.list-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  box-sizing: border-box; 
+}
+
+.list-block ul li {
+  background-color: #fff;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.list-block .item-media {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-shrink: 0;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding-top: 16rpx;
+  padding-bottom: 16rpx;
+}
+
+.list-block.media-list .item-media {
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.list-block.media-list .item-media img {
+  display: block;
+}
+
+.list-block .item-inner {
+  padding-right: 30rpx;
+  position: relative;
+  width: 100%;
+  padding-top: 16rpx;
+  padding-bottom: 16rpx;
+  min-height: 88rpx;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  border-bottom: 1rpx solid #ecedef;
+}
+
+.list-block li:last-child .item-inner {
+  border-bottom: none;
+}
+
+.list-block.media-list .item-inner {
+  display: block;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  -webkit-align-self: stretch;
+  align-self: stretch;
+}
+
+.list-block.media-list .item-media {
+  margin-right: 20rpx;
+}
+
+.list-block .item-title-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.list-block .item-subtitle {
+ 
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
+
+.list-block .item-text {
+
+ 
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+
+.list-block .item-title {
+  flex-shrink: 1;
+  position: relative;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.list-block .item-title.label {
+  width: 35%;
+  flex-shrink: 0;
+  margin: 8rpx 0;
+}
+
+.list-block .item-input {
+  width: 100%;
+  -webkit-box-flex: 1;
+  flex-shrink: 1;
+}
+
+.list-block .item-input-lg input {
+ height: 80rpx;
+ line-height: 80rpx;
+ 
+}
+
+.list-block .item-after {
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: 5rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.list-block .smart-select .item-after {
+  max-width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.list-block .item-link {
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  display: block;
+  color: inherit;
+} 
+
+.list-block .item-link .item-inner {
+  padding-right: 44rpx;
+  background-image: url(http://www.fyfsjzs.com/reward/icon_right_grey.png);
+  background-size: 20rpx;
+  background-repeat: no-repeat;
+  background-position: -webkit-calc(100% - 20rpx) center;
+}
+
+.list-block .item-content {
+  box-sizing: border-box;
+  padding-left: 30rpx;
+  min-height: 88rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-input textarea {
+  width: 450rpx;
+}
+
+.product-list .item-title-row {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height: 150rpx;
+  overflow: hidden;
+}
+
+.product-list .item-subtitle {
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-subtract {
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.num {
+  width: 100rpx;
+  text-align: center;
+}
+
+/**图片尺寸**/
+
+.product-img-xs {
+  width: 150rpx;
+  height: 150rpx;
+  background-color: #f0f3f6;
+}
+
+.product-img-sm {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #f0f3f6;
+}
+
+.product-img-full {
+  width: 100%;
+  background-color: #f0f3f6;
+  box-sizing: border-box;
+  display: block;
+}
+
+/**index**/
+
+.search-box {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  background: #fff;
+}
+
+.search-box .form-group {
+  margin-bottom: 0;
+}
+
+.search-box input {
+  width: 690rpx;
+  height: 62rpx;
+  margin: 0rpx auto;
+  font-size: 28rpx;
+  padding-left: 80rpx;
+}
+
+.input-circle {
+  border-radius: 31rpx;
+}
+
+.input-grey {
+  background-color: #f1f1f6;
+}
+
+/* 分类选择  */
+
+.type-select {
+  height: 88rpx;
+  padding: 24rpx 26rpx;
+ 
+  box-sizing: border-box;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+}
+
+.type-select > view {
+  flex: 1;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.type-select > view:last-child {
+  border-right: none;
+}
+
+.cart-box {
+  position: fixed;
+  left: 30rpx;
+  bottom: 40rpx;
+  background: #4a4a4a;
+  border-radius: 50%;
+  width: 98rpx;
+  height: 98rpx;
+  text-align: center;
+  line-height: 120rpx;
+}
+
+.cart-box:hover {
+  background: #333;
+}
+
+.cart-num {
+  min-width: 40rpx;
+  height: 40rpx;
+  border-radius: 24rpx;
+  line-height: 30rpx;
+  padding: 5rpx;
+  box-sizing: border-box;
+  background: #ff715f;
+  position: absolute;
+  top: 0;
+  color: #fff;
+  display: block;
+  right: -10rpx;
+  font-size: 26rpx;
+}
+
+.cart-sum .icon-checked, .cart-sum .icon-unchecked {
+  vertical-align: middle;
+}
+
+/*banner*/
+
+swiper-item {
+  text-align: center;
+  width: 100%;
+}
+
+.swiper-container {
+  width: 100%;
+  position: relative;
+}
+
+.swiper-box {
+  width: 100%;
+  position: relative;
+  height: 750rpx;
+}
+
+.slide-image {
+  width: 750rpx;
+  height: 750rpx;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.swiper-box .wx-swiper-dots.wx-swiper-dots-horizontal {
+  margin-bottom: 2rpx;
+}
+
+.swiper-box .wx-swiper-dot {
+  width: 10rpx;
+  display: inline-flex;
+  height: 10rpx;
+  margin-left: 5 rpx;
+  justify-content: space-between;
+}
+
+.swiper-box .wx-swiper-dot {
+  content: '';
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 8rpx;
+}
+
+.swiper-box .wx-swiper-dot-active {
+  background: rgba(255, 255, 255, 0.6);
+  width: 30rpx;
+}
+
+.item {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/*标题*/
+
+.title-item {
+  width: 100%;
+  height: 88rpx;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid #ecedef;
+}
+
+.title-text {
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: left;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #383838;
+}
+
+/*分割线*/
+
+.b-b-line {
+  border-bottom: 1rpx solid #ecedef;
+}
+
+.b-t-line {
+  border-top: 1rpx solid #ecedef;
+}
+
+.b-l-line {
+  border-left: 1rpx solid #ecedef;
+}
+
+.b-r-line {
+  border-right: 1rpx solid #ecedef;
+}
+.b-tb-line-none{
+  border-top:none;
+  border-bottom:none;
+}
+
+/*fixed-bottom*/
+
+.fixed-bottom-space {
+  width: 100%;
+  height: 100rpx;
+  margin-top: 20rpx;
+}
+
+.fixed-bottom {
+  border-top: 1rpx solid #ecedef;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  height: 100rpx;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.fixed-bottom .btn{
+  border-radius: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.fixed-bottom-button{
+  padding:10rpx;
+}
+.fixed-bottom-button .btn{
+  border-radius:10rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.fixed-bottom-button .btn:first-child{
+  margin-right:10rpx;
+}
+.fixed-bottom-button .btn:last-child{
+  margin-right:10rpx;
+}
+.bottom-icon {
+  width: 120rpx;
+  height: 80rpx;
+  position: relative;
+  text-align: center;
+}
+
+.icon-cart-grey {
+  width: 40rpx;
+  height: 40rpx;
+  background: url(http://www.fyfsjzs.com/reward/shop_cart.png);
+  background-size: 100% 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
+.fixed-bottom .cart-num {
+  right: 0rpx;
+}
+
+/*btn*/
+
+.btn {
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  padding: 0 10rpx;
+  font-size: 32rpx;
+  box-sizing: border-box;
+}
+
+.btn-block {
+  width: 100%;
+  display: block;
+}
+
+.btn-large {
+  width: 600rpx;
+}
+.btn-half{
+  width:360rpx;
+}
+
+.btn-sm {
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+  padding: 0 10rpx;
+  font-size: 24rpx;
+  width: 140rpx;
+  text-align: center;
+}
+
+.btn-xs {
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 10rpx;
+  padding: 0 10rpx;
+  font-size: 24rpx;
+  width: 140rpx;
+  text-align: center;
+}
+.btn-radius-30{
+  border-radius: 30rpx;
+}
+/*绿色btn*/
+
+.btn-green {
+  background: #35b7a5;
+  color: #fff;
+}
+
+.btn-green:hover, .btn-green:focus {
+  background: #2ea292;
+  color: #fff;
+}
+
+/*绿色btn*/
+
+.btn-green-outline {
+  background: transparent;
+  color: #35b7a5;
+  border: 1rpx solid #35b7a5;
+}
+
+.btn-green-outline:hover, .btn-green-outline:focus {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/*默认btn*/
+
+.btn-white {
+  background: #fff;
+  color: #666;
+  border: 1rpx solid #ecedef;
+}
+
+.btn-white:hover, .btn-white:focus {
+  background: #ecedef;
+  color: #666;
+}
+
+.btn-default {
+  background: #f8f8f8;
+  color: #383838;
+  border: 1rpx solid #ecedef;
+}
+
+.btn-default:hover, .btn-default:focus {
+  background: #c6c6c6;
+  color: #383838;
+}
+.button {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.button icon, .button text {
+  vertical-align: middle;
+}
+
+/*红色btn*/
+
+.btn-red {
+  background: #D43B33;
+  color: #fff;
+}
+
+.btn-red:hover, .btn-red:focus {
+  background: #aa2f29;
+  color: #fff;
+}
+
+.btn-full {
+  margin: 20rpx;
+  display: block;
+  width: 710rpx;
+}
+
+.add-img {
+  width: 160rpx;
+  height: 160rpx;
+  margin-right:20rpx;
+  margin-bottom:20rpx;
+  background-color: #f0f1f3;
+}
+
+.icon-add-img {
+  width: 160rpx;
+  height: 160rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_add_img.png);
+  background-size: 100% 100%;
+}
+
+.icon-pay-user {
+  width: 60rpx;
+  height: 60rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_pay_user.png);
+  background-size: 100% 100%;
+}
+
+.user-bg {
+  width: 700rpx;
+  height: 208rpx;
+  margin:20rpx auto 0 auto;
+  display: position;  
+ background-image: linear-gradient(45deg, #A4AAC2 0%, #C4CFDD 100%);
+  box-sizing: border-box;
+  border-radius: 10rpx;
+ box-sizing:border-box;
+display:-webkit-box;
+display:-webkit-flex;
+display:flex;
+-webkit-box-pack:justify;
+justify-content:flex-start;
+align-items:center;
+
+}
+
+.user-img {
+  width: 144rpx;
+  height: 144rpx;
+  background: url(http://www.fyfsjzs.com/reward/img_normal.png);
+  background-size: 100% 100%;
+  border-radius: 5rpx;
+  background-repeat: no-repeat;
+}
+
+.user-img-md {
+  width: 80rpx;
+  height: 80rpx;
+  background: url(http://www.fyfsjzs.com/reward/img_normal.png);
+  background-size: 100% 100%;
+  border-radius: 5rpx;
+}
+.user-img-sm {
+  width: 50rpx;
+  height: 50rpx;
+  background: url(http://www.fyfsjzs.com/reward/img_normal.png);
+  background-size: 100% 100%;
+  border-radius: 5rpx;
+}
+.user-bg .user-img{
+  border:10rpx solid rgba(255,255,255,.2);
+}
+.swiper-tab {
+  width: 100%;
+  border-bottom: 1rpx solid #ecedef;
+  text-align: center;
+  line-height: 84rpx;
+  background: #fff;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.swiper-tab-list {
+  flex: 1;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 5rpx solid #fff;
+}
+
+.on {
+  color: #D43B33;
+  border-bottom: 5rpx solid #D43B33;
+}
+
+.tab-box {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  padding-top: 88rpx;
+}
+
+.tab-box .tab-item {
+  display: none;
+}
+
+.tab-box .tab-item.active {
+  display: block;
+}
+
+.tab-box swipe-item {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+.text-lt {
+  text-decoration: line-through;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.order-detail-bg {
+  width: 100%;
+  height: 128rpx;
+  background: url('http://www.fyfsjzs.com/reward/order_bg.png') no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-wancheng {
+  width: 30rpx;
+  height: 30rpx;
+  background: url('http://www.fyfsjzs.com/reward/ic_wancheng.png');
+  background-size: 100% 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+
+.discovery-img {
+  width: 100%;
+  height: 100%;
+}
+
+.discovery-img image {
+  width: 720rpx;
+  height: 1100rpx;
+}
+
+.discovery-btn {
+  position: fixed;
+  bottom: 30rpx;
+  width: 520rpx;
+  margin: 20rpx 100rpx;
+}
+
+.b-l-green {
+  border-left: 8rpx solid #35b7a5;
+}
+
+.img-success {
+  width: 396rpx;
+  height: 264rpx;
+  margin: 20rpx 162rpx;
+  background: url('http://www.fyfsjzs.com/reward/icon_success.png');
+  background-size: 100% 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*----------超级悬赏---------*/
+
+.banner {
+  width: 750rpx;
+  height: 240rpx;
+  background-color: #eee;
+}
+
+.banner-img {
+  width: 750rpx;
+  height: 240rpx;
+}
+
+.btn-list {
+  width: 100%;
+  position: relative;
+  height: 160rpx;
+  background-color: #fff;
+}
+
+.btn-list ul {
+  width: 100%;
+  position: relative;
+  list-style: none;
+}
+
+.btn-list ul li {
+  width: 50%;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-list ul li navigator {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+  height: 160rpx;
+}
+
+.icon-release {
+  width: 100rpx;
+  height: 100rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_fabu.png);
+  background-size: 100% 100%;
+  opacity: 0.5;
+}
+
+.icon-undertake {
+  width: 100rpx;
+  height: 100rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_chengjie.png);
+  background-size: 100% 100%;
+  opacity: 0.5;
+}
+
+.icon-sound {
+  width: 50rpx;
+  height: 50rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_sound.png);
+  background-size: 100% 100%;
+  vertical-align: bottom;
+  margin-right: 10rpx;
+}
+
+.news-roller {
+  width: 100%;
+  position: relative;
+  background: #fff;
+  border-top: 1rpx solid #ecedef;
+  border-bottom: 1rpx solid #ecedef;
+  height: 88rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-roller-title {
+  font-size: 28rpx;
+  color: #999;
+  min-width: 120rpx;
+  margin-right: 10rpx;
+}
+
+.news-roller-price {
+  font-size: 28rpx;
+  color: #666;
+  text-align: right;
+  min-width: 140rpx;
+  margin-right: 10rpx;
+}
+
+.news-roller-info {
+  font-size: 28rpx;
+  color: #666;
+  overflow: hidden;
+  height: 120rpx;
+  white-space: nowrap;
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
+.product-item{
+  line-height: 1.5;
+}
+.form-textarea{
+  width:690rpx;
+  height: 150rpx;
+}
+.progress-box{
+  width:100%;
+  padding:90rpx 0 90rpx 0;
+  box-sizing: border-box;
+  text-align: center;
+  float:left;
+}
+.progress1{
+  width: 502rpx;
+  height: 30rpx;
+  background: url(http://www.fyfsjzs.com/reward/progress1.png);
+  background-size: 100% 100%;
+  margin: 0 auto;
+}
+.progress2{
+  width: 502rpx;
+  height: 30rpx;
+  background: url(http://www.fyfsjzs.com/reward/progress2.png);
+  background-size: 100% 100%;
+  margin: 0 auto;
+}
+.progress3{
+  width: 502rpx;
+  height: 30rpx;
+  background: url(http://www.fyfsjzs.com/reward/progress3.png);
+  background-size: 100% 100%;
+
+}
+.step1{
+  width:170rpx;
+  margin-left:55rpx;
+  float:left;
+}
+.step2{
+  width:150rpx;
+  margin-left:70rpx;
+  float:left;
+}
+.step3{
+  width:200rpx;
+  margin-left:70rpx;
+  float:left;
+}
+.item-task-price{
+  display:flex;
+display:-webkit-flex;
+flex-flow:row nowrap;
+justify-content:space-between;
+align-items:center;
+position: absolute;
+bottom:20rpx;
+width:480rpx;
+}
+.img-circle{
+  border-radius: 50%;
+}
+
+.ver-mid{
+  display:-webkit-box;
+display:-webkit-flex;
+display:flex;
+-webkit-box-pack:justify;
+align-items:center;
+}
+.icon-arrow-right-white{
+ width:120rpx;
+  height: 120rpx;
+  background: url(http://www.fyfsjzs.com/reward/icon_arrow_white.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.pull-right{
+  float:right;
+}
+.opt-5{
+  opacity: .5;
+}
+.inline{
+  display: inline-block;
+}
+.sex-block{
+  display:flex;
+display:-webkit-flex;
+flex-flow:row nowrap;
+justify-content:space-around;
+align-items:center;
+
+}

@@ -1,0 +1,51 @@
+<view class='text-center mar-t-xlg'>
+  <icon class='img-success'></icon>
+</view>
+<view class='text-center mar-t-xlg'>
+  <view class='font-lg font-black'>支付成功！</view>
+  <view class='font-md font-grey mar-t-md'>您已经成功支付该订单</view>
+</view>
+
+<view class='list-block media-list mar-t-xlg'>
+  <ul>
+    <li>
+      <view class='item-content'>
+        <view class='item-inner'>
+          <view class='item-title-row'>
+            <view class='item-title font-lg font-black'>
+              订单详情
+             
+            </view>
+
+          </view>
+        </view>
+      </view>
+    </li>
+
+    <li class='item-content'>
+      <text class='font-md font-grey'>订单编号</text>
+      <text class='font-md font-grey mar-r-md'>37245061515488654742</text>
+    </li>
+    <li class='item-content'>
+      <text class='font-md font-grey'>订单内容</text>
+      <text class='font-md font-grey mar-r-md'>超级大威加盟</text>
+    </li>
+    <li class='item-content'>
+      <text class='font-md font-grey'>付款时间</text>
+      <text class='font-md font-grey mar-r-md'>2018/01/09 17:04</text>
+    </li>
+
+    <li class='item-content'>
+      <text class='font-md font-grey'>支付时间</text>
+      <text class='font-md font-grey mar-r-md'>微信时间</text>
+    </li>
+    <li class='item-content'>
+      <text class='font-md font-grey'>订单总价</text>
+      <text class='font-md font-grey mar-r-md'>¥99.00</text>
+    </li>
+        <li class='item-content'>
+      <text class='font-md font-grey'>实际付款</text>
+      <text class='font-md font-grey mar-r-md'>¥99.00</text>
+    </li>
+  </ul>
+</view>

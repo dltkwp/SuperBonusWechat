@@ -1,0 +1,22 @@
+<view class='progress-box font-sm font-grey-steel'>
+<view>
+  <icon class='progress1'></icon>
+  </view>
+  <view class='step1'>
+    <view>发布项目</view>
+      <view>等待平台审核</view>
+  </view>
+  <view class='step2'>
+    <view>平台审核</view>
+      <view>历时7天左右</view>
+  </view>
+  <view class='step3'>
+    <view>审核通过</view>
+      <view>项目发布至平台</view>
+  </view>
+</view>
+<view class='font-md font-black text-center'>
+  您可与客服进行沟通，推进项目审核过程
+</view>
+   <navigator  url='' class='btn btn-large btn-red mar-t-xxlg mar-lr-auto'>联系客服</navigator> 
+    <navigator  url='/pages/index/index' class='btn btn-large btn-default mar-t-md mar-lr-auto'>返回首页</navigator> 

@@ -1,0 +1,61 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/agreement/agreement",
+    "pages/discovery/discovery",
+    "pages/elaborate/elaborate",
+    "pages/info/info",
+    "pages/intro/intro",
+    "pages/joinsuc/joinsuc",
+    "pages/more/more",
+    "pages/myorder/myorder",
+    "pages/mytask/mytask",
+    "pages/order-detail/order-detail",
+    "pages/product/product",
+    "pages/recommend/recommend",
+    "pages/recommendother/recommendother",
+    "pages/register/register",
+    "pages/release/release",
+    "pages/releaseinfo/releaseinfo",
+    "pages/releasesuc/releasesuc",
+    "pages/setpwd/setpwd",
+    "pages/task/task",
+    "pages/undertake/undertake",
+    "pages/userinfo/userinfo"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "超级悬赏",
+    "navigationBarTextStyle":"black",
+    "backgroundColor": "#fff9fa",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#ed768f",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/nav_home.png",
+        "selectedIconPath": "images/nav_home_act.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/recommend/recommend",
+        "iconPath": "images/nav_tuijian.png",
+        "selectedIconPath": "images/nav_tuijian_act.png",
+        "text": "推荐"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "iconPath": "images/nav_more.png",
+        "selectedIconPath": "images/nav_more_act.png",
+        "text": "更多"
+      }
+    ]
+  },
+  "debug": true
+}

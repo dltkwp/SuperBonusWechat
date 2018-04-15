@@ -1,0 +1,31 @@
+<view class='pad-lg font-md font-grey-steel'>推荐他人承接项目，他人完成项目推荐人可获得相应赏金</view>
+<view class='list-block'>
+  <ul>
+    <li>
+      <view class='item-content'>
+        <view class='item-inner'>
+          <view class='item-title label font-lg font-grey'>联系人
+            <text class='font-red'>*</text>
+          </view>
+          <view class='item-input font-lg'>
+            <input type='text' placeholder='请输入联系人名称' placeholder-class='font-grey-cararra' auto-focus></input>
+          </view>
+        </view>
+      </view>
+    </li>
+    <li>
+      <view class='item-content'>
+        <view class='item-inner'>
+          <view class='item-title label font-lg font-grey'>联系电话
+            <text class='font-red'>*</text>
+          </view>
+          <view class='item-input font-lg'>
+            <input type='text' placeholder='请输入联系人手机号' placeholder-class='font-grey-cararra'></input>
+          </view>
+        </view>
+      </view>
+    </li>
+    
+  </ul>
+</view>
+<view class='btn-full btn-red btn'>提交</view>

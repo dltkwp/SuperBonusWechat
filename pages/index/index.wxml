@@ -1,0 +1,127 @@
+<view class="banner">
+  <swiper class="swiper-box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{current}}">
+    <block wx:for="{{bannerList}}" wx:key="{{index}}">
+      <swiper-item bindtap="swiperClick" data-index="{{index}}">
+        <image src="{{item.advertisingImage}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="btn-list b-b-line">
+  <ul>
+    <li>
+      <!-- <navigator url="/pages/release/release" class="btn-list-item pad-xlg b-r-line">
+        <view>
+          <view class="font-lg font-black">我要发布</view>
+          <view class="font-sm font-grey-steel">Release</view>
+        </view>
+        <view>
+          <icon class="icon-release"></icon>
+        </view>
+      </navigator> -->
+      <navigator url="#" bindtap="noWork" class="btn-list-item pad-xlg b-r-line">
+        <view>
+          <view class="font-lg font-black">我要发布</view>
+          <view class="font-sm font-grey-steel">Release</view>
+        </view>
+        <view>
+          <icon class="icon-release"></icon>
+        </view>
+      </navigator>
+    </li>
+    <li>
+      <!-- <navigator url="/pages/discovery/discovery" open-type="switchTab" class="btn-list-item  pad-xlg">
+        <view>
+          <view class="font-lg font-black">我要承接</view>
+          <view class="font-sm font-grey-steel">Undertake</view>
+        </view>
+        <view>
+          <icon class="icon-undertake"></icon>
+        </view>
+      </navigator> -->
+      <navigator url="#" bindtap="noWork" class="btn-list-item  pad-xlg">
+        <view>
+          <view class="font-lg font-black">我要承接</view>
+          <view class="font-sm font-grey-steel">Undertake</view>
+        </view>
+        <view>
+          <icon class="icon-undertake"></icon>
+        </view>
+      </navigator>
+
+    </li>
+  </ul>
+</view>
+<!-- <view class="news-roller mar-t-md">
+  <icon class="icon-sound"></icon>
+  <text class="news-roller-title">最新悬赏</text>
+  <text class="news-roller-info">100吨五常大米对外出售，有意…</text>
+  <text class="news-roller-price">1万元</text>
+</view> -->
+<view class="list-block media-list mar-t-md">
+  <ul>
+    <li>
+      <view class="item-content">
+        <view class="item-inner">
+          <view class="item-title-row">
+            <view class="item-title font-lg font-black">
+              加入超级悬赏
+              <text class="font-sm font-grey-steel">Join us</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </li>
+    <li>
+      <navigator class="item-content" hover-class="none" url="/pages/product/product">
+        <view class="item-media">
+          <image src="https://cdns.mtscrm.com/FvIo6tSOUwUJxl0ilLV270HClddK?version=2017091901" class="product-img-xs"></image>
+        </view>
+        <view class="item-inner">
+          <view class="item-title-row">
+            <view class="item-title font-xlg font-black">荣誉威客</view>
+          </view>
+          <view class="item-subtitle font-sm font-grey-steel mar-t-xs">超级悬赏会员募集中，加入我们成就未来</view>
+          <view class="item-text font-red mar-t-xs">
+            <text class="font-sm mar-r-xxs">¥</text>
+            <text class="font-xlg">99</text>
+          </view>
+        </view>
+      </navigator>
+    </li>
+    <li>
+      <navigator class="item-content" hover-class="none" url="/pages/product/product">
+        <view class="item-media">
+          <image src="https://cdns.mtscrm.com/FvIo6tSOUwUJxl0ilLV270HClddK?version=2017091901" class="product-img-xs"></image>
+        </view>
+        <view class="item-inner">
+          <view class="item-title-row">
+            <view class="item-title font-xlg font-black">大威客</view>
+          </view>
+          <view class="item-subtitle font-sm font-grey-steel mar-t-xs">超级悬赏会员募集中，加入我们成就未来</view>
+          <view class="item-text font-red mar-t-xs">
+            <text class="font-sm mar-r-xxs">¥</text>
+            <text class="font-xlg">10000</text>
+          </view>
+        </view>
+      </navigator>
+    </li>
+    <li>
+      <navigator class="item-content" hover-class="none" url="/pages/product/product">
+        <view class="item-media">
+          <image src="https://cdns.mtscrm.com/FvIo6tSOUwUJxl0ilLV270HClddK?version=2017091901" class="product-img-xs"></image>
+        </view>
+        <view class="item-inner">
+          <view class="item-title-row">
+            <view class="item-title font-xlg font-black">超级威客</view>
+          </view>
+          <view class="item-subtitle font-sm font-grey-steel mar-t-xs">超级悬赏会员募集中，加入我们成就未来</view>
+          <view class="item-text font-red mar-t-xs">
+            <text class="font-sm mar-r-xxs">¥</text>
+            <text class="font-xlg">50000</text>
+          </view>
+        </view>
+      </navigator>
+    </li>
+  </ul>
+</view>
