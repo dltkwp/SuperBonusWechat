@@ -17,10 +17,8 @@ const getOpenId = function (callback) {
           url: 'oauth/session?code=' + code,
           success: function (data) {
             getApp().globalData.openId = data.openId;
-
-            if (data.phone) { 
-              wx.setStorageSync(superConst.SUPER_TOKEN_KEY, data);
-            } else {
+            wx.setStorageSync(superConst.SUPER_TOKEN_KEY, data);
+            if (!data.phone) { 
               wx.redirectTo({url: '../register/register'});
             }
             callback && callback();

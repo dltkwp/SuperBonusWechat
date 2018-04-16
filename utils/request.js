@@ -21,9 +21,11 @@ const request = function (requestHandler) {
   requestHandler.isLoading = requestHandler.isLoading || false;
   requestHandler.isLoading && wx.showLoading({ title: '加载中...' });
 
-  const header = {
-    Authorization: wx.getStorageSync(superConst.SUPER_TOKEN_KEY).token, //  登录token 
-  };
+  let storage = wx.getStorageSync(superConst.SUPER_TOKEN_KEY)
+  const header = {}
+  if(storage){
+    header.Authorization = storage.token//  登录token 
+  }
   // 设置默认的 method => POST
   requestHandler.method = requestHandler.method || superConst.REQUEST_DEFAULT_METHOD;
   superConst.IS_DEBUG && console.log(superConst.API_BASE_URL + requestHandler.url + '  [start]');
@@ -39,7 +41,7 @@ const request = function (requestHandler) {
       if (statusCode < 500) {
         switch (statusCode) {
           case 401: { // 未登录授权自动跳转
-
+            console.error('未登录授权');
           } break;
           default: {
             requestHandler.success && requestHandler.success(res.data);

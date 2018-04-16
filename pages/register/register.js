@@ -63,21 +63,22 @@ Page({
       return false;
     }
     _this.sendSms();
-    _this.createTimer();
   },
   sendSms: function () {
     let _this = this;
     let requestHandle = {
-      url: 'send',
+      url: 'sms/send',
       params: {
-        mobile: _this.data.mobile
+        phone: _this.data.mobile
       },
       method: 'POST',
       success: function (data) {
         message.success('发送短信成功');
+        _this.createTimer();
       },
       fail: function () {}
     };
+    request(requestHandle);
   },
   mobileInput: function (e) {
     this.setData({
