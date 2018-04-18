@@ -1,5 +1,6 @@
 let moment = require('./moment.min');
 let superConst = require('./super-const');
+let message = require('./message');
 
 /**
  * http request 封装
@@ -24,7 +25,7 @@ const request = function (requestHandler) {
   let storage = wx.getStorageSync(superConst.SUPER_TOKEN_KEY)
   const header = {}
   if(storage){
-    header.Authorization = storage.token//  登录token 
+    header.token = storage.token//  登录token 
   }
   // 设置默认的 method => POST
   requestHandler.method = requestHandler.method || superConst.REQUEST_DEFAULT_METHOD;
@@ -44,7 +45,14 @@ const request = function (requestHandler) {
             console.error('未登录授权');
           } break;
           default: {
-            requestHandler.success && requestHandler.success(res.data);
+            //-- 拦截后端返回的结果
+            let data = res.data;
+            if (data.code && data.code>0){
+                message.error(data.msg);
+            }else{
+              requestHandler.success && requestHandler.success(data);
+            }
+            
           }
         }
       } else {

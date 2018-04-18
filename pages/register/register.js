@@ -11,35 +11,64 @@ Page({
     totalInterval: 60,
     smsTip: '获取验证码',
     interval: 1000,
+    headImgUrl: '',
+    nickname: '',
+    sex: 1
   },
   onLoad: function (options) {
     let _this = this;
   },
   onShow: function () {
     let _this = this;
+    wx.getUserInfo({
+      success: function (res) {
+        let userInfo = res.userInfo;
+        var nickName = userInfo.nickName
+        var avatarUrl = userInfo.avatarUrl
+        var gender = userInfo.gender //性别 0：未知、1：男、2：女
+        var province = userInfo.province
+        var city = userInfo.city
+        var country = userInfo.country
 
+        _this.setData({
+          headImgUrl: avatarUrl,
+          nickname: nickName,
+          sex: gender
+        })
+      },
+      fail: function () {
+        wx.showModal({
+          title: '警告',
+          confirmText:'重新授权',
+          cancelText: '不授权',
+          content: '您点击了拒绝授权，将无法正常使用全部功能体验。点击重新授权,则可重新使用,点击不授权后还想使用小程序,需在微信[发现]-[小程序]-[删掉][超级悬赏],重新搜索授权登陆方可使用.',
+          success: function(){
+            wx.openSetting({
+              success: function (res) {
+                if (!res.authSetting["scope.userInfo"] || !res.authSetting["scope.userLocation"]) {
+                  wx.getUserInfo({
+                    success: function (res) {
+                      let userInfo = res.userInfo;
+                      var nickName = userInfo.nickName
+                      var avatarUrl = userInfo.avatarUrl
+                      var gender = userInfo.gender //性别 0：未知、1：男、2：女
+                      var province = userInfo.province
+                      var city = userInfo.city
+                      var country = userInfo.country
 
-    // // 获取用户信息
-    // wx.getSetting({
-    //   success: res => {
-    //     if (res.authSetting['scope.userInfo']) {
-    //       // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-    //       wx.getUserInfo({
-    //         success: res => {
-    //           // 可以将 res 发送给后台解码出 unionId
-    //           this.globalData.userInfo = res.userInfo
-
-    //           // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-    //           // 所以此处加入 callback 以防止这种情况
-    //           if (this.userInfoReadyCallback) {
-    //             this.userInfoReadyCallback(res)
-    //           }
-    //         }
-    //       })
-    //     }
-    //   }
-    // })
-
+                      _this.setData({
+                        headImgUrl: avatarUrl,
+                        nickname: nickName,
+                        sex: gender
+                      })
+                  }})
+                }
+              }
+            })
+          }
+        })
+      }
+    })
 
   },
   login: function (e) {
@@ -55,6 +84,20 @@ Page({
       message.warn('短信验证码不可为空');
       return false;
     }
+    let param = [];
+    param.push('phone=' + _this.data.mobile);
+    param.push('checkCode=' + _this.data.smsCode);
+    let requestHandle = {
+      url: 'sms/check?' + param.join('&'),
+      method: 'POST',
+      success: function (data) {
+        message.success('注册成功');
+        wx.redirectTo({url: '../index/index'});
+      },
+      fail: function () {}
+    };
+    request(requestHandle);
+
   },
   send: function (e) {
     let _this = this;
@@ -67,10 +110,7 @@ Page({
   sendSms: function () {
     let _this = this;
     let requestHandle = {
-      url: 'sms/send',
-      params: {
-        phone: _this.data.mobile
-      },
+      url: 'sms/send?phone=' + _this.data.mobile,
       method: 'POST',
       success: function (data) {
         message.success('发送短信成功');
