@@ -92,6 +92,9 @@ Page({
       method: 'POST',
       success: function (data) {
         message.success('注册成功');
+
+        // 注册成功后，将信息缓存
+
         wx.redirectTo({url: '../index/index'});
       },
       fail: function () {}

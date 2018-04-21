@@ -42,6 +42,12 @@
 					"name": "个人信息页面",
 					"pathName": "pages/userinfo/userinfo",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "joinsuc",
+					"pathName": "pages/joinsuc/joinsuc",
+					"query": ""
 				}
 			]
 		}

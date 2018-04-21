@@ -16,7 +16,7 @@
           <view class="item-content pad-0">
             <view class="item-inner" style="border-bottom:1rpx solid #ecedef;">
               <view class="item-input-lg font-lg pad-0">
-                <input type="text" placeholder="请输入短信验证码" placeholder-class="font-grey-cararra" bindinput="smsCodeInput"  maxlength="5" name="smsCode"></input>
+                <input type="text" placeholder="请输入短信验证码" placeholder-class="font-grey-cararra" bindinput="smsCodeInput"  maxlength="8" name="smsCode"></input>
               </view>
               <view bindtap="send" class="item-title label font-lg font-grey text-center">{{smsTip}}</view>
             </view>
