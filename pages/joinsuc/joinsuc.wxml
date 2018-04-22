@@ -3,6 +3,6 @@
   <view class=' font-xlg font-black item'>支付成功</view>
   <view class=' font-md font-grey-steel mar-t-md'>可于我的订单中进行查看</view>
 
-   <navigator  url='/pages/index/index' class='btn btn-large btn-red mar-t-xxlg mar-lr-auto'>返回首页</navigator> 
-    <navigator  url='/pages/info/info' class='btn btn-large btn-default mar-t-md mar-lr-auto'>完善个人信息</navigator> 
+<navigator open-type="switchTab" url='/pages/index/index' class='btn btn-large btn-red mar-t-xxlg mar-lr-auto'>返回首页</navigator> 
+<navigator  url='/pages/info/info' class='btn btn-large btn-default mar-t-md mar-lr-auto'>完善个人信息</navigator> 
 </view>

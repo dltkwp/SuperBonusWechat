@@ -25,6 +25,10 @@ Page({
   },
   onShow: function () {
     let _this = this;
+    _this.setData({
+      bannerList:[],
+      productList:[]
+    });
     _this.getAdvImages();
     _this.getProductList();
   },

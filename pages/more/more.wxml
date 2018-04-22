@@ -20,7 +20,7 @@
         </view>
       </navigator>
     </li>
-    <li>
+    <!-- <li>
       <navigator class='item-content item-link' url=''>
         <view class='item-media'>
           <icon class='icon-invite'></icon>
@@ -29,7 +29,7 @@
           <view class='item-title font-lg'>邀请好友</view>
         </view>
       </navigator>
-    </li>
+    </li> -->
    
   </ul>
 </view>
@@ -63,7 +63,7 @@
     
   </ul>
 </view>
-<view class='list-block mar-t-md'>
+<!-- <view class='list-block mar-t-md'>
   <ul>
    
     <li>
@@ -77,5 +77,5 @@
       </navigator>
     </li>
   </ul>
-</view>
+</view> -->
 
