@@ -151,7 +151,7 @@ Page({
             totalInterval: 60
           })
           if (timer) {
-            window.clearInterval(timer);
+            clearInterval(timer);
             timer = null;
           }
         }

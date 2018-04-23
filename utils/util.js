@@ -16,10 +16,11 @@ const getOpenId = function (callback) {
           method: 'GET',
           url: 'oauth/session?code=' + code,
           success: function (data) {
-            getApp().globalData.openId = data.openId;
             wx.setStorageSync(superConst.SUPER_TOKEN_KEY, data);
             if (!data.phone) { 
-              wx.redirectTo({url: '../register/register'});
+              setTimeout(function(){
+                wx.redirectTo({url: '../register/register'});
+              },800)
             }
             callback && callback();
           }

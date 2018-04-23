@@ -14,9 +14,7 @@
           <view class='item-title-row'>
             <view class='item-title font-lg font-black'>
               订单详情
-             
             </view>
-
           </view>
         </view>
       </view>
@@ -24,28 +22,28 @@
 
     <li class='item-content'>
       <text class='font-md font-grey'>订单编号</text>
-      <text class='font-md font-grey mar-r-md'>37245061515488654742</text>
+      <text class='font-md font-grey mar-r-md'>{{detail.orderNo}}</text>
     </li>
     <li class='item-content'>
       <text class='font-md font-grey'>订单内容</text>
-      <text class='font-md font-grey mar-r-md'>超级大威加盟</text>
+      <text class='font-md font-grey mar-r-md'>{{detail.productName}}</text>
     </li>
     <li class='item-content'>
       <text class='font-md font-grey'>付款时间</text>
-      <text class='font-md font-grey mar-r-md'>2018/01/09 17:04</text>
+      <text class='font-md font-grey mar-r-md'>{{detail.createDate}}</text>
     </li>
 
     <li class='item-content'>
       <text class='font-md font-grey'>支付时间</text>
-      <text class='font-md font-grey mar-r-md'>微信时间</text>
+      <text class='font-md font-grey mar-r-md'>{{detail.payDate}}</text>
     </li>
     <li class='item-content'>
       <text class='font-md font-grey'>订单总价</text>
-      <text class='font-md font-grey mar-r-md'>¥99.00</text>
+      <text class='font-md font-grey mar-r-md'>¥{{detail.payment}}</text>
     </li>
         <li class='item-content'>
       <text class='font-md font-grey'>实际付款</text>
-      <text class='font-md font-grey mar-r-md'>¥99.00</text>
+      <text class='font-md font-grey mar-r-md'>¥{{detail.payment}}</text>
     </li>
   </ul>
 </view>

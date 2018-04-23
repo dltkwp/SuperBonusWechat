@@ -15,7 +15,8 @@ Page({
   
   },
   onShow: function () {
-  
+    let _this = this;
+    _this.getUserInfo();
   },
   onHide: function () {
   
@@ -23,49 +24,48 @@ Page({
   onUnload: function () {
   
   },
+  changeSex: function (e) {
+    let userInfo = this.data.userInfo
+    userInfo.sex = Number(e.currentTarget.dataset.sex)
+    this.setData({
+      userInfo: userInfo
+    })
+  },
+  submit: function (e) {
+    let page = e.detail.value;
+     
+    if (!e.detail.value.memberName){
+      util.message({
+        content: '请输入姓名'
+      })
+      return
+    }
+  },
   getUserInfo: function (){
+    let _this = this;
     let storage = wx.getStorageSync(superConst.SUPER_TOKEN_KEY);
     if (storage && storage.openId){
       let openId = storage.openId;
-      let productId = _this.data.id;
-
-      let _this = this;
       let requestHandler = {
         url: 'users?openId=' + openId,
         method: 'GET',
         params: {},
         success: function (data) {
-          let list = data.list;
-
-          // 处理下图片
-          _.forEach(list, function (item) {
-            if (item.images) {
-              let arr = item.images.split(',');
-              item.imageUrl = superConst.IMAGE_STATIC_URL + arr[0];
-            }
-          });
-
-          let temp = [];
-          if (_this.data.pageNum == 1) {
-            temp = list;
-          } else if (_this.data.pageNum > 1) {
-            temp = _this.data.productList.concat(list);
-          }
-          if (list.length < _this.data.pageSize) {
-            _this.setData({ loadOver: true })
-
+          if (data.headImage) {
+            let httpIndex = data.headImage.indexOf('http');
+            if (httpIndex == -1) {
+              data.headImage = superConst.IMAGE_STATIC_URL + data.headImage;
+            } 
           }
           _this.setData({
-            pageNum: _this.data.pageNum + 1,
-            productList: temp
-          });
+            userInfo:data
+          })
         },
         fail: function () {
 
         }
       }
       request(requestHandler);
-
     }
   }
 })

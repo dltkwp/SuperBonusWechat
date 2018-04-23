@@ -8,7 +8,8 @@ const app = getApp()
 
 Page({
   data: {
-    orderId:''
+    orderId:'',
+    detail:{}
   },
   onLoad: function (options) {
     let _this = this;
@@ -30,32 +31,11 @@ Page({
       method: 'GET',
       params: {},
       success: function (data) {
-        console.log(data,1231231231231);
-          let list = data.list;
-
-          // 处理下图片
-          _.forEach(list,function(item){
-             if(item.images){
-               let arr = item.images.split(',');
-               item.imageUrl = superConst.IMAGE_STATIC_URL + arr[0];
-              }
-              item.createDate = moment(item.createDate).format('YYYY/MM/DD HH:mm')
-          });
-
-          let temp = [];
-          if (_this.data.pageNum == 1) {
-            temp = list;
-          } else if (_this.data.pageNum > 1) {
-            temp = _this.data.orderList.concat(list);
-          }
-          if (list.length < _this.data.pageSize) {
-            _this.setData({ loadOver: true })
-
-          }
-          _this.setData({
-            pageNum: _this.data.pageNum + 1,
-            ordeList: temp
-          });
+        data.createDate = moment(data.createDate).format('YYYY/MM/DD HH:mm');
+        data.payDate = moment(data.payDate).format('YYYY/MM/DD HH:mm');
+        _this.setData({
+          detail:data
+        })
       },
       fail: function () {}
     }
