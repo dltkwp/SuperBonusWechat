@@ -1,4 +1,8 @@
-let superConst = require("../../utils/super-const");
+const _ = require('../../utils/lodash.core');
+const request = require('../../utils/request');
+const modal = require('../../utils/modal');
+const superConst = require("../../utils/super-const");
+const app = getApp()
 
 Page({
   data: {

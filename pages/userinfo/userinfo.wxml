@@ -42,10 +42,10 @@
             <view class="item-input font-lg  ">
               <view class="sex-block">
                 <view class="mar-r-md" data-sex='1' bindtap="changeSex">
-                  <icon  class="{{info.sex == 1 ? 'icon-checked-red': 'icon-unchecked'}} inline"></icon>男
+                  <icon  class="{{sex == 1 ? 'icon-checked-red': 'icon-unchecked'}} inline"></icon>男
                 </view>
                 <view class="mar-r-md" data-sex='2' bindtap="changeSex">
-                  <icon  class="{{info.sex == 2 ? 'icon-checked-red': 'icon-unchecked'}} inline"></icon>女
+                  <icon  class="{{sex == 2 ? 'icon-checked-red': 'icon-unchecked'}} inline"></icon>女
                 </view>
               </view>
             </view>
@@ -87,7 +87,7 @@
           <view class="item-inner">
             <view class="item-title label font-lg font-grey">支付宝账号</view>
             <view class="item-input font-lg">
-              <input type="text" placeholder="请输入收款支付宝账号"  value="{{userInfo.address}}" name="address"  placeholder-class="font-grey-cararra" class="text-right" maxlength="20"></input>
+              <input type="text" placeholder="请输入收款支付宝账号"  value="{{userInfo.alipay}}" name="alipay"  placeholder-class="font-grey-cararra" class="text-right" maxlength="20"></input>
             </view>
           </view>
         </view>

@@ -1,12 +1,14 @@
 const _ = require('../../utils/lodash.core');
 const request = require('../../utils/request');
 const modal = require('../../utils/modal');
+const message = require('../../utils/message');
 const superConst = require("../../utils/super-const");
 const app = getApp()
 
 Page({
   data: {
-    userInfo:{}
+    userInfo:{},
+    sex:1
   },
   onLoad: function (options) {
   
@@ -25,21 +27,43 @@ Page({
   
   },
   changeSex: function (e) {
-    let userInfo = this.data.userInfo
-    userInfo.sex = Number(e.currentTarget.dataset.sex)
-    this.setData({
-      userInfo: userInfo
+    let _this = this;
+    _this.setData({
+        sex: Number(e.currentTarget.dataset.sex)
     })
   },
   submit: function (e) {
+    let _this = this;
     let page = e.detail.value;
-     
-    if (!e.detail.value.memberName){
-      util.message({
-        content: '请输入姓名'
-      })
-      return
+
+    if (!e.detail.value.realname){
+      message.warn('请输入姓名')
+      return false;
     }
+
+    let userInfo = _this.data.userInfo
+    userInfo.sex = Number(_this.data.sex)
+
+    userInfo.realname= page.realname;
+    userInfo.enterprise= page.enterprise;
+    userInfo.position= page.position;
+    userInfo.address= page.address;
+    userInfo.alipay= page.alipay;
+
+    let requestHandler = {
+      url: 'users',
+      method: 'PUT',
+      params: {
+        userInfo
+      },
+      success: function (data) {
+         message.success('操作成功');
+      },
+      fail: function () {
+
+      }
+    }
+    request(requestHandler);
   },
   getUserInfo: function (){
     let _this = this;
@@ -58,6 +82,7 @@ Page({
             } 
           }
           _this.setData({
+            sex:data.sex || 1,
             userInfo:data
           })
         },
