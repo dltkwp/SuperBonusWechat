@@ -1,66 +1,56 @@
-// pages/intro/intro.js
+const _ = require('../../utils/lodash.core');
+const request = require('../../utils/request');
+const modal = require('../../utils/modal');
+const superConst = require("../../utils/super-const");
+const util = require("../../utils/util")
+const app = getApp()
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    images: [],
+    scrollData: {
+      offetHeight: 15, // px
+      height: 80, // px
+      colunm: 3
+    },
+    showIndex: 0
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-  
+    let _this = this;
+    _this.initImages();
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady: function () {
-  
-  },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
+  },
   onShow: function () {
-  
-  },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
   onReachBottom: function () {
-  
-  },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  },
+  initImages: function () {
+      let _this = this;
+      let len = 23;
+      let imgArr = [];
+      for(let i=0;i<len;i++){
+        imgArr.push(superConst.IMAGE_STATIC_URL   + "2018042201/" + i + '.jpeg');
+      }
+      _this.setData({
+        images: imgArr
+      })
+  },
+  scrollHide(e) {
+    let data = [
+      this.data.scrollData.offetHeight,
+      e.detail.scrollTop,
+      this.data.scrollData.height,
+      this.data.scrollData.colunm
+    ]
+
+    let index = util.countIndex(...data)
+
+    this.setData({
+      showIndex: index
+    })
   }
 })

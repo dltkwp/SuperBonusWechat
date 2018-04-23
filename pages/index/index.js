@@ -22,6 +22,7 @@ Page({
     pageSize: 10
   },
   onLoad: function () {
+   
   },
   onShow: function () {
     let _this = this;
@@ -38,19 +39,32 @@ Page({
     })
   },
   getAdvImages: function () {
-    return false;
     let _this = this;
     let requestHandler = {
-      url: '',
-      method: '',
+      url: 'advs',
+      method: 'GET',
       params: {},
       success: function (data) {
+        let temp = data;
+        if (temp.length ==0){
+          temp.push({
+            image: superConst.HOME_BANNER_DEFAULT_IMAGE
+          });
+        }else{
+          _.forEach(data,function(item){
+            if(item.image.indexOf('product')>=0){
+              item.image = superConst.IMAGE_STATIC_URL + item.image;
+            }else{
+              item.image = superConst.HOME_BANNER_DEFAULT_IMAGE;
+            }
+          })
+        }
         _this.setData({
-          bannerList: data
+          bannerList: temp
         })
       },
       fail: function () {
-
+        
       }
     }
     request(requestHandler);

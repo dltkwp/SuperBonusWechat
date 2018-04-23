@@ -1,12 +1,15 @@
-<view class="banner">
-  <swiper class="swiper-box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{current}}">
-    <block wx:for="{{bannerList}}" wx:key="{{index}}">
-      <swiper-item bindtap="swiperClick" data-index="{{index}}">
-        <image src="{{item.advertisingImage}}" class="slide-image" />
+<!--banner区域-->
+<view class='swiper-container'>
+  <swiper class="swiper-box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height: 562.5rpx;">
+    <block wx:for="{{bannerList}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item.image}}" class="slide-image" style="height: 562.5rpx;" />
       </swiper-item>
     </block>
   </swiper>
 </view>
+
+
 <view class="btn-list b-b-line">
   <ul>
     <li>

@@ -1,8 +1,34 @@
 <view class='item bg-white pad-lg'>
-  <view class='font-xlg font-black'>超级悬赏是什么？</view>
-  <view class='font-md font-black mar-t-md'>［超级悬赏］全球商务对接悬赏平台是基于萧湃国际与各国驻华使馆及中国334个地级市政府及商界资源建立的全球商务共享服务系统，为个人及组织（统称"威客"）提供项目对接为主要业务的高额佣金平台。涉及各个领域的项目设立，精端人群承接项目等服务。</view>
-  <view class='font-xlg font-black mar-t-xxlg'>谁可以立项？</view>
-  <text class='font-md font-black mar-t-md'>单位，组织，个人； \n生产商或总代；\n法人，董事长等具有决策权利，直接负责人；
+  <text class='font-md'>
+第一步：
+荣誉威客<text class="font-red">完成付费</text>，填写<text class="font-red">荣誉威客注册麦克表</text>，完善个人资料。
+
+第二步：
+荣誉威客有意向发布产品时，应先联系超级悬赏平台威客咨询服务人员（<text class="font-red">100国大使馆商务中心秘书长</text>），进行简单的发布产品前的沟通工作并填写<text class="font-red">发布悬赏申请表</text>，确认威客为<text class="font-red">直接发布人或间接发布人</text>，说明悬赏佣金奖励机制，确认无误后，交由立项组进行下一步项目审核程序。
+
+第三步：
+立项组根据项目的具体情况，应向发布产品方收取以下基本资料：
+<text class="icon-circle"></text><text class="font-red">企业营业执照副本扫描件</text>（根据2014年10月1日生效的《企业经营异常名录管理暂行办法》需确保未在企业经营异常名录中且所售商品属于经营范围内）
+<text class="icon-circle"></text><text class="font-red">实体商品提供质检报告复印件或产品质量合格证明扫描件。</text>（需提供近一年内送检的质量报告，或相对应批次产品的质检报告，需有国家质量监督检验中心检验专用章，第三方质检机构（具有CNAS/CMA/CMAF认证）也可以）
+<text class="icon-circle"></text>超级悬赏平台销售委托书
+<text class="icon-circle"></text>销售许可证
+<text class="icon-circle"></text>基本信息表和悬赏产品概述（超级悬赏平台项目组提供表格，发布悬赏方完成填写）
+
+<text class="font-red">（国外产品需另外提供）：</text>
+<text class="icon-circle"></text>海关检验检疫证明扫描件
+<text class="icon-circle"></text>进口报关单扫描件
+<text class="icon-circle"></text>产品购销合同扫描件
+<text class="icon-circle"></text>授权销售证明扫描件
+
+第四步：
+超级悬赏平台项目组根据发布方提供的产品信息确认<text class="font-red">项目性质</text>以及超级悬赏平台<text class="font-red">是否已有同类型的产品</text>。
+
+第五步：
+超级悬赏项目组调研待发布的产品的<text class="font-red">市场价格、产品及有潜在需求客户</text>的分析。
+
+第六步：
+同发布悬赏方沟通<text class="font-red">产品底价</text>和<text class="font-red">悬赏佣金数额</text>，最终确定发布悬赏产品流程。
+
   </text>
 
 </view>
