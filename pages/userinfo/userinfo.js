@@ -51,6 +51,7 @@ Page({
     userInfo.alipay= page.alipay;
 
     let requestHandler = {
+      isLoading:true,
       url: 'users',
       method: 'PUT',
       params: userInfo,

@@ -3,6 +3,8 @@ const _ = require('../../utils/lodash.core');
 const request = require('../../utils/request');
 const modal = require('../../utils/modal');
 const superConst = require("../../utils/super-const");
+const message = require('../../utils/message');
+
 const app = getApp()
 
 Page({
@@ -42,6 +44,7 @@ Page({
     let productId = _this.data.id;
 
     let requestHandler = {
+      isLoading:true,
       url: 'pay',
       method: 'POST',
       params: {

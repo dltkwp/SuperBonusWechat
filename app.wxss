@@ -1625,3 +1625,28 @@ justify-content:space-around;
 align-items:center;
 
 }
+
+.empty-container {
+  width: 100%;
+  padding-top: 40rpx;
+}
+
+.empty-container image {
+  display: block;
+  width: 78%;
+  margin-left: 11%;
+}
+
+.empty-container .tit {
+  margin-top: 20rpx;
+  color: #333;
+  font-size: 36rpx;
+  text-align: center;
+}
+
+.empty-container .cnt {
+  margin-top: 20rpx;
+  color: #666;
+  font-size: 28rpx;
+  text-align: center;
+}

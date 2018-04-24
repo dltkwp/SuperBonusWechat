@@ -1,6 +1,7 @@
 const _ = require('../../utils/lodash.core');
 const request = require('../../utils/request');
 const modal = require('../../utils/modal');
+const message = require('../../utils/message');
 const superConst = require("../../utils/super-const");
 const app = getApp()
 

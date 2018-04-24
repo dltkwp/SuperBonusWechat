@@ -17,8 +17,6 @@ let message = require('./message');
  */
 const request = function (requestHandler) {
 
-  refreshToken();
-
   requestHandler.isLoading = requestHandler.isLoading || false;
   requestHandler.isLoading && wx.showLoading({ title: '加载中...' });
 
@@ -69,21 +67,5 @@ const request = function (requestHandler) {
   })
 }
 
-/**
- * 刷新登录token过期时间
- * 主要是判定是否有memberId，只有在是会员的情况下才进行刷新token
- */
-const refreshToken = function () {
-  let auth = wx.getStorageSync(superConst.SUPER_TOKEN_KEY);
-  if(auth && auth.memberId){
-    request({
-      url:'',
-      method:'',
-      success:function(){
-        
-      }
-    })
-  }
-}
 
 module.exports = request;
