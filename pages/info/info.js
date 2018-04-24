@@ -1,66 +1,75 @@
-// pages/info/info.js
+const _ = require('../../utils/lodash.core');
+const request = require('../../utils/request');
+const modal = require('../../utils/modal');
+const message = require('../../utils/message');
+const superConst = require("../../utils/super-const");
+const app = getApp()
+
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    userInfo:{}
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
   
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
-  
+    let _this = this;
+    _this.getUserInfo();
   },
+  submit: function (e) {
+    let _this = this;
+    let page = e.detail.value;
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
+    if (!e.detail.value.realname) {
+      message.warn('请输入姓名')
+      return false;
+    }
+
+    let userInfo = _this.data.userInfo;
+    
+    userInfo.realname = page.realname;
+    userInfo.alipay = page.alipay;
+
+    let requestHandler = {
+      url: 'users',
+      method: 'PUT',
+      params: userInfo,
+      success: function (data) {
+        message.success('操作成功');
+      },
+      fail: function () {
+
+      }
+    }
+    request(requestHandler);
   },
+  getUserInfo: function () {
+    let _this = this;
+    let storage = wx.getStorageSync(superConst.SUPER_TOKEN_KEY);
+    if (storage && storage.openId) {
+      let openId = storage.openId;
+      let requestHandler = {
+        url: 'users?openId=' + openId,
+        method: 'GET',
+        params: {},
+        success: function (data) {
+          data.realname = data.realname || data.nickname;
+          if (data.headImage) {
+            let httpIndex = data.headImage.indexOf('http');
+            if (httpIndex == -1) {
+              data.headImage = superConst.IMAGE_STATIC_URL + data.headImage;
+            }
+          }
+          _this.setData({
+            userInfo: data
+          })
+        },
+        fail: function () {
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+        }
+      }
+      request(requestHandler);
+    }
   }
 })

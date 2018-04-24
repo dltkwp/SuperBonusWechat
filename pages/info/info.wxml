@@ -1,54 +1,56 @@
-<view class='pad-md font-md'>基本信息（必填）</view>
-<view class='list-block'>
-  <ul>
-    <li>
-      <view class='item-content'>
-        <view class='item-inner'>
-          <view class='item-title label font-lg'>姓名</view>
-          <view class='item-input font-lg'>
-            <input type='text' placeholder='姓名' auto-focus></input>
+<form bindsubmit="submit">
+  <view class='pad-md font-md'>基本信息（必填）</view>
+  <view class='list-block'>
+    <ul>
+      <li>
+        <view class='item-content'>
+          <view class='item-inner'>
+            <view class='item-title label font-lg'>姓名</view>
+            <view class='item-input font-lg'>
+              <input type='text' placeholder='姓名' name="realname" 
+                     value="{{userInfo.realname}}" auto-focus maxlength='20'></input>
+            </view>
           </view>
         </view>
-      </view>
-    </li>
-     <li>
-      <view class='item-content'>
-        <view class='item-inner'>
-          <view class='item-title label font-lg'>手机号</view>
-          <view class='item-input font-lg'>
-            <input type='text' placeholder='手机号'></input>
+      </li>
+      <li>
+        <view class='item-content'>
+          <view class='item-inner'>
+            <view class='item-title label font-lg'>手机号</view>
+            <view class='item-input font-lg'>
+              <input type='text' placeholder='手机号' value="{{userInfo.username}}" disabled readonly></input>
+            </view>
           </view>
         </view>
-      </view>
-    </li>
-  
-  </ul>
-</view>
-<view class='pad-md font-md'>支付信息（选填）</view>
-<view class='list-block'>
-  <ul>
-   
-    <li>
-      <view class='item-content'>
-        <view class='item-inner'>
-          <view class='item-title label font-lg'>支付宝</view>
-          <view class='item-input font-lg'>
-             <input type='text' placeholder='请输入支付宝账号'></input>
-          </view>
-        </view>
-      </view>
-    </li>
-    <li>
-      <view class='item-content'>
-        <view class='item-inner'>
-          <view class='item-title label font-lg'>微信</view>
-          <view class='item-input font-lg'>
-             <input type='text' placeholder='请输入微信号码'></input>
-          </view>
-        </view>
-      </view>
-    </li>
-  </ul>
-</view>
+      </li>
 
-<view class='btn-full btn-red btn'>提交</view>
+    </ul>
+  </view>
+  <view class='pad-md font-md'>支付信息（选填）</view>
+  <view class='list-block'>
+    <ul>
+
+      <li>
+        <view class='item-content'>
+          <view class='item-inner'>
+            <view class='item-title label font-lg'>支付宝</view>
+            <view class='item-input font-lg'>
+              <input type='text' placeholder='请输入支付宝账号' name="alipay" value="{{userInfo.alipay}}" maxlength='20'></input>
+            </view>
+          </view>
+        </view>
+      </li>
+      <!-- <li>
+        <view class='item-content'>
+          <view class='item-inner'>
+            <view class='item-title label font-lg'>微信</view>
+            <view class='item-input font-lg'>
+              <input type='text' placeholder='请输入微信号码'  name="wechat" value="{{userInfo.wechat}}" maxlength='20'></input>
+            </view>
+          </view>
+        </view>
+      </li> -->
+    </ul>
+  </view>
+  <button formType="submit" class='btn-full btn-red btn'>提交</button>
+</form>
