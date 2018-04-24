@@ -3,7 +3,7 @@
    <image src="{{userInfo.headImage}}" class='user-img img-circle mar-l-lg'></image>
    <view class='mar-l-lg' style='width:500rpx;'>
    <view class='font-lg font-white'>{{userInfo.realname || ''}}</view>
-   <view class='font-md font-white mar-t-md'>{{userInfo.levelname || ''}}</view>
+   <view class='font-md font-white mar-t-md'>{{userInfo.levelName || ''}}</view>
    </view>
    <view class='icon-arrow-right-white opt-5'></view>
 </navigator>
@@ -67,8 +67,7 @@
     <ul>
         <li class='item-content item-link'>
           <contact-button 
-            type="default-dark" size="27" session-from="weapp">
-            在线咨询
+            type="default-dark" size="27" session-from="weapp">在线咨询
           </contact-button>
         </li>
     </ul>

@@ -11,7 +11,7 @@
         <view >
             <block wx:for="{{images}}" wx:key="index">
                 <view>
-                    <image mode="aspectFit" wx:if="{{showIndex + 24 > index && showIndex - 6 < index}}" src="{{item}}" ></image>
+                    <image style='margin:0 2px' mode="aspectFit" wx:if="{{showIndex + 24 > index && showIndex - 6 < index}}" src="{{item}}" ></image>
                 </view>
             </block>
         </view>

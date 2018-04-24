@@ -53,9 +53,7 @@ Page({
     let requestHandler = {
       url: 'users',
       method: 'PUT',
-      params: {
-        userInfo
-      },
+      params: userInfo,
       success: function (data) {
          message.success('操作成功');
       },
