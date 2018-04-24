@@ -2,7 +2,7 @@
   
    <image src="{{userInfo.headImage}}" class='user-img img-circle mar-l-lg'></image>
    <view class='mar-l-lg' style='width:500rpx;'>
-   <view class='font-lg font-white'>{{userInfo.realname || ''}}</view>
+   <view class='font-lg font-white'>{{userInfo.realname || userInfo.nickname}}</view>
    <view class='font-md font-white mar-t-md'>{{userInfo.levelName || ''}}</view>
    </view>
    <view class='icon-arrow-right-white opt-5'></view>

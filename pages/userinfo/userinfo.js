@@ -73,6 +73,7 @@ Page({
         method: 'GET',
         params: {},
         success: function (data) {
+          data.realname = data.realname || data.nickname;
           if (data.headImage) {
             let httpIndex = data.headImage.indexOf('http');
             if (httpIndex == -1) {
