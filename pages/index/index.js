@@ -40,6 +40,17 @@ Page({
       content: '程序猿小伙伴正在加班赶工中。。。'
     })
   },
+  advItemClick: function (e){
+    console.log(e);
+    let index = e.currentTarget.dataset.index;
+    let _this = this;
+    let cur = _this.data.bannerList[index];
+    if (cur.href) {   // pages/product/product?productId=17
+      wx.navigateTo({
+        url: '../product/product?productId=' + cur.href
+      });  
+    }
+  },
   getAdvImages: function () {
     let _this = this;
     let requestHandler = {
