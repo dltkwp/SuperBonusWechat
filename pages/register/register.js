@@ -87,15 +87,25 @@ Page({
     let param = [];
     param.push('phone=' + _this.data.mobile);
     param.push('checkCode=' + _this.data.smsCode);
+
+    if (_this.data.headImgUrl){
+      param.push('headImage=' + _this.data.headImgUrl);
+    }
+
+    if (_this.data.nickname) {
+      param.push('nickname=' + _this.data.nickname);
+    }
+
+    if (_this.data.sex) {
+      param.push('sex=' + _this.data.sex);
+    }
+
     let requestHandle = {
       url: 'sms/check?' + param.join('&'),
       method: 'POST',
       success: function (data) {
         message.success('注册成功');
-
-        // 注册成功后，将信息缓存
-
-        wx.redirectTo({url: '../index/index'});
+        wx.switchTab({url: '../index/index'});
       },
       fail: function () {}
     };

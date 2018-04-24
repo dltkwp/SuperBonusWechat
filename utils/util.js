@@ -8,26 +8,29 @@ let app = getApp();
  * @param {回调函数} callback 
  */
 const getOpenId = function (callback) {
-  wx.login({
-    success: function (res) {
-      let code = res.code;
-      if (code) {
-        request({
-          method: 'GET',
-          url: 'oauth/session?code=' + code,
-          success: function (data) {
-            wx.setStorageSync(superConst.SUPER_TOKEN_KEY, data);
-            if (!data.phone) { 
-              setTimeout(function(){
-                wx.redirectTo({url: '../register/register'});
-              },800)
+  let temp = wx.getStorageSync(superConst.SUPER_TOKEN_KEY);
+  if(!temp.openId){
+    wx.login({
+      success: function (res) {
+        let code = res.code;
+        if (code) {
+          request({
+            method: 'GET',
+            url: 'oauth/session?code=' + code,
+            success: function (data) {
+              wx.setStorageSync(superConst.SUPER_TOKEN_KEY, data);
+              if (!data.phone) { 
+                setTimeout(function(){
+                  wx.redirectTo({url: '../register/register'});
+                },800)
+              }
+              callback && callback();
             }
-            callback && callback();
-          }
-        });
+          });
+        }
       }
-    }
-  })
+    })
+  }
 }
 
 /**

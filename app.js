@@ -1,7 +1,9 @@
 let util = require("./utils/util");
 App({
-  globalData: {},
+  globalData: {
+    openId:''
+  },
   onShow: function () {
-    // util.getOpenId();
+    util.getOpenId(); 
   }
 })

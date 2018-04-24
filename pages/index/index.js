@@ -30,8 +30,10 @@ Page({
       bannerList:[],
       productList:[]
     });
-    _this.getAdvImages();
-    _this.getProductList();
+    setTimeout(function(){
+      _this.getAdvImages();
+      _this.getProductList();
+    },0)
   },
   noWork: function () {
     modal({
