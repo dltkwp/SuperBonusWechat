@@ -5,18 +5,8 @@
         scrollLoad滚动加载
         scrollHide图片当屏渲染
     -->
-    
-    <scroll-view scroll-y="true"
-        bindscrolltolower="scrollLoad" bindscroll="scrollHide">
-        <view >
-            <block wx:for="{{images}}" wx:key="index">
-                <view>
-                    <image style='width:100%;float:left;' mode="aspectFit" wx:if="{{showIndex + 24 > index && showIndex - 6 < index}}" src="{{item}}" ></image>
-                </view>
-            </block>
-        </view>
-    
-    </scroll-view>
-
-    
+     <block wx:for="{{images}}" wx:key="index">
+       <image mode="widthFix" wx:if="{{showIndex + 24 > index && showIndex - 6 < index}}" src="{{item}}" ></image>
+     </block>
+   
 </view>

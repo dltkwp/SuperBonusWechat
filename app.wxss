@@ -996,7 +996,10 @@ swiper-item {
   position: relative;
   box-sizing: border-box;
 }
-
+.item image{
+  width:100%;
+  float:left;
+}
 /*标题*/
 
 .title-item {
