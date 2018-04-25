@@ -1,6 +1,6 @@
 <navigator class="user-bg" url='/pages/userinfo/userinfo'>
   
-   <image src="{{userInfo.headImage}}" class='user-img img-circle mar-l-lg'></image>
+   <image src="{{userInfo.headImage}}" mode='aspectFill	' class='user-img img-circle mar-l-lg'></image>
    <view class='mar-l-lg' style='width:500rpx;'>
    <view class='font-lg font-white'>{{userInfo.realname || userInfo.nickname}}</view>
    <view class='font-md font-white mar-t-md'>{{userInfo.levelName || ''}}</view>

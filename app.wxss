@@ -449,6 +449,7 @@ textarea.form-control {
   height: 47rpx;
   background: url(http://www.fyfsjzs.com/reward/icon_cart.png) no-repeat;
   background-size: 100% 100%;
+
 }
 
 .icon-checked {
@@ -456,7 +457,8 @@ textarea.form-control {
   height: 44rpx;
   background: url(http://www.fyfsjzs.com/reward/icon_checked.png);
   background-size: 100% 100%;
-  vertical-align: middle;
+  vertical-align: bottom;
+     margin-right:10rpx;
 }
 
 .icon-checked-red {
@@ -464,14 +466,16 @@ textarea.form-control {
   height: 44rpx;
   background: url(http://www.fyfsjzs.com/reward/icon_checked_red.png);
   background-size: 100% 100%;
-   vertical-align: middle;
+   vertical-align: bottom;
+   margin-right:10rpx;
 }
 .icon-checked-red-sm {
   width: 30rpx;
   height: 30rpx;
   background: url(http://www.fyfsjzs.com/reward/icon_checked_red.png);
   background-size: 100% 100%;
-   vertical-align: middle;
+   vertical-align: bottom;
+   margin-right:10rpx;
 }
 /*icon-unchecked*/
 
@@ -480,7 +484,8 @@ textarea.form-control {
   height: 44rpx;
   background: url(http://www.fyfsjzs.com/reward/icon_uncheck.png);
   background-size: 100% 100%;
-   vertical-align: middle;
+   vertical-align: bottom;
+      margin-right:10rpx;
 }
 
 /*地址图标*/
@@ -1277,6 +1282,7 @@ align-items:center;
   background-size: 100% 100%;
   border-radius: 5rpx;
   background-repeat: no-repeat;
+  box-sizing: border-box;
 }
 
 .user-img-md {
