@@ -1261,6 +1261,7 @@ swiper-item {
   width: 700rpx;
   height: 208rpx;
   margin:20rpx auto 0 auto;
+ 
   display: position;  
  background-image: linear-gradient(45deg, #A4AAC2 0%, #C4CFDD 100%);
   box-sizing: border-box;
