@@ -63,13 +63,40 @@
     
   </ul>
 </view>
+
 <view class='list-block mar-t-md'>
-    <ul>
-        <li class='item-content item-link'>
+  <ul>
+    <li><contact-button 
+            type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:0;'></contact-button>
           <contact-button 
-            type="default-dark" size="27" session-from="weapp">在线咨询
-          </contact-button>
-        </li>
-    </ul>
-</view> 
+            type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:80rpx;'></contact-button>
+             <contact-button 
+            type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:160rpx;'></contact-button>
+              <contact-button 
+            type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:240rpx;'></contact-button>
+              <contact-button 
+            type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:320rpx;'></contact-button>
+              <contact-button 
+            type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:400rpx;'></contact-button>
+              <contact-button 
+            type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:480rpx;'></contact-button>
+              <contact-button 
+            type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:560rpx;'></contact-button>
+              <contact-button 
+            type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:640rpx;'></contact-button>
+              <contact-button 
+            type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:720rpx;'></contact-button>
+            
+      <view class='item-content item-link'>
+        <view class='item-media'>
+          <icon class='icon-askonline'></icon>
+        </view>
+        <view class='item-inner'>
+          <view class='item-title font-lg'>在线咨询</view>
+        </view>
+      </view>  
+    </li>
+  </ul>
+</view>
+
 
