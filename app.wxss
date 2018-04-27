@@ -406,7 +406,7 @@ textarea.form-control {
 .icon-search {
   width: 28rpx;
   height: 28rpx;
-  background: url(http://www.fyfsjzs.com/reward/ic_search.png) no-repeat;
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/ic_search.png) no-repeat;
   background-size: 100% 100%;
 }
 
@@ -419,35 +419,35 @@ textarea.form-control {
 .icon-down-grey {
   width: 64rpx;
   height: 64rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_down_grey.png) no-repeat;
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_down_grey.png) no-repeat;
   background-size: 100% 100%;
 }
 
 .icon-up-grey {
   width: 64rpx;
   height: 64rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_up_grey.png) no-repeat;
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_up_grey.png) no-repeat;
   background-size: 100% 100%;
 }
 
 .icon-product-minus {
   width: 50rpx;
   height: 50rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_product_minus.png) no-repeat;
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_product_minus.png) no-repeat;
   background-size: 100% 100%;
 }
 
 .icon-product-plus {
   width: 50rpx;
   height: 50rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_product_plus.png) no-repeat;
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_product_plus.png) no-repeat;
   background-size: 100% 100%;
 }
 
 .icon-cart {
   width: 44rpx;
   height: 47rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_cart.png) no-repeat;
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_cart.png) no-repeat;
   background-size: 100% 100%;
 
 }
@@ -455,7 +455,7 @@ textarea.form-control {
 .icon-checked {
   width: 44rpx;
   height: 44rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_checked.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_checked.png);
   background-size: 100% 100%;
   vertical-align: bottom;
      margin-right:10rpx;
@@ -464,7 +464,7 @@ textarea.form-control {
 .icon-checked-red {
   width: 44rpx;
   height: 44rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_checked_red.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_checked_red.png);
   background-size: 100% 100%;
    vertical-align: bottom;
    margin-right:10rpx;
@@ -472,7 +472,7 @@ textarea.form-control {
 .icon-checked-red-sm {
   width: 30rpx;
   height: 30rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_checked_red.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_checked_red.png);
   background-size: 100% 100%;
    vertical-align: bottom;
    margin-right:10rpx;
@@ -482,7 +482,7 @@ textarea.form-control {
 .icon-unchecked {
   width: 44rpx;
   height: 44rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_uncheck.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_uncheck.png);
   background-size: 100% 100%;
    vertical-align: bottom;
       margin-right:10rpx;
@@ -493,7 +493,7 @@ textarea.form-control {
 .icon-address {
   width: 44rpx;
   height: 44rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_address.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_address.png);
   background-size: 100% 100%;
 }
 
@@ -502,7 +502,7 @@ textarea.form-control {
 .icon-edit {
   width: 40rpx;
   height: 40rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_edit.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_edit.png);
   background-size: 100% 100%;
 }
 
@@ -511,7 +511,7 @@ textarea.form-control {
 .icon-rubbish {
   width: 40rpx;
   height: 40rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_rubbish.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_rubbish.png);
   background-size: 100% 100%;
 }
 
@@ -520,28 +520,28 @@ textarea.form-control {
 .icon-pay-wechat {
   width: 60rpx;
   height: 60rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_pay_wechat.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_pay_wechat.png);
   background-size: 100% 100%;
 }
 
 .icon-pay-alipay {
   width: 60rpx;
   height: 60rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_pay_alipay.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_pay_alipay.png);
   background-size: 100% 100%;
 }
 
 .icon-pay-cash {
   width: 60rpx;
   height: 60rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_pay_cash.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_pay_cash.png);
   background-size: 100% 100%;
 }
 
 .icon-pay-user {
   width: 60rpx;
   height: 60rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_pay_user.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_pay_user.png);
   background-size: 100% 100%;
 }
 
@@ -550,7 +550,7 @@ textarea.form-control {
 .icon-intro {
   width: 40rpx;
   height: 40rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_more_about_shop.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_more_about_shop.png);
   background-size: 100% 100%;
   margin-right: 20rpx;
 }
@@ -558,35 +558,35 @@ textarea.form-control {
 .icon-invite {
   width: 40rpx;
   height: 40rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_more_invite.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_more_invite.png);
   background-size: 100% 100%;
   margin-right: 20rpx;
 }
 .icon-task{
    width: 40rpx;
   height: 40rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_more_duty.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_more_duty.png);
   background-size: 100% 100%;
   margin-right: 20rpx;
 }
 .icon-order {
   width: 40rpx;
   height: 40rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_order.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_order.png);
   background-size: 100% 100%;
   margin-right: 20rpx;
 }
 .icon-askonline {
   width: 40rpx;
   height: 40rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_more_ask_online.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_more_ask_online.png);
   background-size: 100% 100%;
   margin-right: 20rpx;
 }
 .icon-custom {
   width: 40rpx;
   height: 40rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_custom.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_custom.png);
   background-size: 100% 100%;
   margin-right: 20rpx;
 }
@@ -594,7 +594,7 @@ textarea.form-control {
 .icon-user {
   width: 40rpx;
   height: 40rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_me.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_me.png);
   background-size: 100% 100%;
   margin-right: 20rpx;
 }
@@ -602,7 +602,7 @@ textarea.form-control {
 .icon-price {
   width: 40rpx;
   height: 40rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_price.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_price.png);
   background-size: 100% 100%;
   margin-right: 20rpx;
 }
@@ -610,7 +610,7 @@ textarea.form-control {
 .icon-shop {
   width: 38rpx;
   height: 38rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_shop.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_shop.png);
   background-size: 100% 100%;
   margin-right: 5rpx;
   vertical-align: bottom;
@@ -782,7 +782,7 @@ textarea.form-control {
 
 .list-block .item-link .item-inner {
   padding-right: 44rpx;
-  background-image: url(http://www.fyfsjzs.com/reward/icon_right_grey.png);
+  background-image: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_right_grey.png);
   background-size: 20rpx;
   background-repeat: no-repeat;
   background-position: -webkit-calc(100% - 20rpx) center;
@@ -1102,7 +1102,7 @@ swiper-item {
 .icon-cart-grey {
   width: 40rpx;
   height: 40rpx;
-  background: url(http://www.fyfsjzs.com/reward/shop_cart.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/shop_cart.png);
   background-size: 100% 100%;
   display: block;
   margin: 0 auto;
@@ -1246,14 +1246,14 @@ swiper-item {
 .icon-add-img {
   width: 160rpx;
   height: 160rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_add_img.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_add_img.png);
   background-size: 100% 100%;
 }
 
 .icon-pay-user {
   width: 60rpx;
   height: 60rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_pay_user.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_pay_user.png);
   background-size: 100% 100%;
 }
 
@@ -1279,7 +1279,7 @@ align-items:center;
 .user-img {
   width: 144rpx;
   height: 144rpx;
-  background: url(http://www.fyfsjzs.com/reward/img_normal.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/img_normal.png);
   background-size: 100% 100%;
   border-radius: 5rpx;
   background-repeat: no-repeat;
@@ -1289,14 +1289,14 @@ align-items:center;
 .user-img-md {
   width: 80rpx;
   height: 80rpx;
-  background: url(http://www.fyfsjzs.com/reward/img_normal.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/img_normal.png);
   background-size: 100% 100%;
   border-radius: 5rpx;
 }
 .user-img-sm {
   width: 50rpx;
   height: 50rpx;
-  background: url(http://www.fyfsjzs.com/reward/img_normal.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/img_normal.png);
   background-size: 100% 100%;
   border-radius: 5rpx;
 }
@@ -1377,7 +1377,7 @@ align-items:center;
 .order-detail-bg {
   width: 100%;
   height: 128rpx;
-  background: url('http://www.fyfsjzs.com/reward/order_bg.png') no-repeat;
+  background: url('https://bonus.oss-cn-beijing.aliyuncs.com/wechat/order_bg.png') no-repeat;
   background-size: 100% 100%;
   display: flex;
   display: -webkit-flex;
@@ -1389,7 +1389,7 @@ align-items:center;
 .icon-wancheng {
   width: 30rpx;
   height: 30rpx;
-  background: url('http://www.fyfsjzs.com/reward/ic_wancheng.png');
+  background: url('https://bonus.oss-cn-beijing.aliyuncs.com/wechat/ic_wancheng.png');
   background-size: 100% 100%;
   display: inline-block;
   vertical-align: middle;
@@ -1421,7 +1421,7 @@ align-items:center;
   width: 396rpx;
   height: 264rpx;
   margin: 20rpx 162rpx;
-  background: url('http://www.fyfsjzs.com/reward/icon_success.png');
+  background: url('https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_success.png');
   background-size: 100% 100%;
 }
 
@@ -1476,7 +1476,7 @@ align-items:center;
 .icon-release {
   width: 100rpx;
   height: 100rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_fabu.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_fabu.png);
   background-size: 100% 100%;
   opacity: 0.5;
 }
@@ -1484,7 +1484,7 @@ align-items:center;
 .icon-undertake {
   width: 100rpx;
   height: 100rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_chengjie.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_chengjie.png);
   background-size: 100% 100%;
   opacity: 0.5;
 }
@@ -1492,7 +1492,7 @@ align-items:center;
 .icon-sound {
   width: 50rpx;
   height: 50rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_sound.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_sound.png);
   background-size: 100% 100%;
   vertical-align: bottom;
   margin-right: 10rpx;
@@ -1557,21 +1557,21 @@ align-items:center;
 .progress1{
   width: 502rpx;
   height: 30rpx;
-  background: url(http://www.fyfsjzs.com/reward/progress1.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/progress1.png);
   background-size: 100% 100%;
   margin: 0 auto;
 }
 .progress2{
   width: 502rpx;
   height: 30rpx;
-  background: url(http://www.fyfsjzs.com/reward/progress2.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/progress2.png);
   background-size: 100% 100%;
   margin: 0 auto;
 }
 .progress3{
   width: 502rpx;
   height: 30rpx;
-  background: url(http://www.fyfsjzs.com/reward/progress3.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/progress3.png);
   background-size: 100% 100%;
 
 }
@@ -1614,7 +1614,7 @@ align-items:center;
 .icon-arrow-right-white{
  width:120rpx;
   height: 120rpx;
-  background: url(http://www.fyfsjzs.com/reward/icon_arrow_white.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_arrow_white.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -1691,4 +1691,10 @@ align-items:center;
   height: 80rpx;
   line-height: 3;
 
+}
+.logo-lg{
+  width: 300rpx;
+  height: 74rpx;
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/logo.png);
+  background-size: 100% 100%;
 }

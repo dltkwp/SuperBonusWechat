@@ -1,6 +1,6 @@
 <form bindsubmit="login">
-  <view class="font-xxxlg pad-lr-60 mar-t-xlg">注册</view>
-  <view class="pad-lr-60 mar-t-100">
+  <view class="font-xxxlg pad-lr-60  mar-t-xxlg"><icon class='logo-lg'></icon></view>
+  <view class="pad-lr-60 mar-t-lg">
     <view class="list-block b-tb-line-none">
       <ul>
         <li>
