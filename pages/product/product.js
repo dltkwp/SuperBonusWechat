@@ -28,8 +28,14 @@ Page({
       method: 'GET',
       params: {},
       success: function (data) {
+        if (!data.description){
+          data.description = '';
+        }
         _this.setData({
           detail: data
+        })
+        wx.setNavigationBarTitle({
+          title: data.productName
         })
         WxParse.wxParse('article', 'html', data.description, _this, 5)
       },

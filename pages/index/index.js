@@ -23,25 +23,25 @@ Page({
     pageSize: 10
   },
   onLoad: function () {
-   
-  },
-  onShow: function () {
     let _this = this;
     _this.setData({
-      bannerList:[],
-      productList:[]
+      bannerList: [],
+      productList: []
     });
-    setTimeout(function(){
+    setTimeout(function () {
       _this.getAdvImages();
       _this.getProductList();
-    },0)
+    }, 0)
+  },
+  onShow: function () {
+
   },
   noWork: function () {
     modal({
       content: '程序猿小伙伴正在加班赶工中。。。'
     })
   },
-  advItemClick: function (e){
+  advItemClick: function (e) {
     console.log(e);
     let index = e.currentTarget.dataset.index;
     let _this = this;
@@ -49,26 +49,27 @@ Page({
     if (cur.href) {   // pages/product/product?productId=17
       wx.navigateTo({
         url: '../product/product?productId=' + cur.href
-      });  
+      });
     }
   },
   getAdvImages: function () {
     let _this = this;
     let requestHandler = {
+      isLoading: true,
       url: 'advs',
       method: 'GET',
       params: {},
       success: function (data) {
         let temp = data;
-        if (temp.length ==0){
+        if (temp.length == 0) {
           temp.push({
             image: superConst.HOME_BANNER_DEFAULT_IMAGE
           });
-        }else{
-          _.forEach(data,function(item){
-            if(item.image.indexOf('product')>=0){
+        } else {
+          _.forEach(data, function (item) {
+            if (item.image.indexOf('product') >= 0) {
               item.image = superConst.IMAGE_STATIC_URL + item.image;
-            }else{
+            } else {
               item.image = superConst.HOME_BANNER_DEFAULT_IMAGE;
             }
           })
@@ -78,42 +79,43 @@ Page({
         })
       },
       fail: function () {
-        
+
       }
     }
     request(requestHandler);
   },
-  getProductList : function () {
+  getProductList: function () {
     let _this = this;
     let requestHandler = {
+      isLoading: true,
       url: 'products?pageNum=' + _this.data.pageNum + '&pageSize=' + _this.data.pageSize + '&status=1',
       method: 'GET',
       params: {},
       success: function (data) {
-          let list = data.list;
-
+        try {
           // 处理下图片
-          _.forEach(list,function(item){
-             if(item.images){
-               let arr = item.images.split(',');
-               item.imageUrl = superConst.IMAGE_STATIC_URL + arr[0];
-             }
+          let _productList = [];
+          _.forEach(data.list, function (item) {
+            if (item.images) {
+              let arr = item.images.split(',');
+              item.imageUrl = superConst.IMAGE_STATIC_URL + arr[0];
+            }
+            _productList.push(item);
           });
-
-          let temp = [];
-          if (_this.data.pageNum == 1) {
-            temp = list;
-          } else if (_this.data.pageNum > 1) {
-            temp = _this.data.productList.concat(list);
+          if (_this.data.pageNum > 1) {
+            _productList = _this.data.productList.concat(data.list);
           }
-          if (list.length < _this.data.pageSize) {
+          if (data.list.length < _this.data.pageSize) {
             _this.setData({ loadOver: true })
 
           }
           _this.setData({
             pageNum: _this.data.pageNum + 1,
-            productList: temp
+            productList: _productList
           });
+        } catch (e) {
+          console.error(e);
+        }
       },
       fail: function () {
 

@@ -8,7 +8,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.93",
+	"libVersion": "2.0.0",
 	"appid": "wx3902cc912c78c08e",
 	"projectname": "SuperBonusWechat",
 	"condition": {

@@ -1,34 +1,29 @@
-
- <view wx:if="{{ordeList.length==0}}">
-      <view class="empty-container">
-        <image src="https://bonus.oss-cn-beijing.aliyuncs.com/product/842935B5D1A44CEB8C2D104AB8BF5900.png"></image>
-        <view class="tit">暂无内容</view>
-      </view>
-    </view>
-    <view class='list-block media-list' wx:else="{{ordeList.length > 0}}">
+<view wx:if="{{ordeList.length==0}}">
+  <view class="empty-container">
+    <image src="https://bonus.oss-cn-beijing.aliyuncs.com/product/842935B5D1A44CEB8C2D104AB8BF5900.png"></image>
+    <view class="tit">暂无内容</view>
+  </view>
+</view>
+<view class="list-block media-list" wx:else="{{ordeList.length > 0}}">
   <ul>
-    <li wx:for="{{ordeList}}"  wx:key="{{index}}" wx:for-index="index">
-      <navigator class='item-content' hover-class='none' url='/pages/order-detail/order-detail?orderId={{item.id}}'>
-        <view class='item-media'>
-          <image src="{{item.imageUrl}}" class='product-img-xs'></image>
+    <li wx:for="{{ordeList}}" wx:key="{{index}}" wx:for-index="index">
+      <navigator class="item-content" hover-class="none" url="/pages/order-detail/order-detail?orderId={{item.id}}">
+        <view class="item-media">
+          <image src="{{item.imageUrl}}" class="product-img-xs"></image>
         </view>
-        <view class='item-inner'>
-          <view class='item-title-row'>
-            <view class='item-title font-xlg font-black'>
-              {{item.productName}}
-            </view>
-            <view class='item-after'>
-              <text class='font-green font-md'>已完成</text>
+        <view class="item-inner">
+          <view class="item-title-row">
+            <view class="item-title font-xlg font-black">{{item.productName}}</view>
+            <view class="item-after">
+              <text class="font-green font-md">已完成</text>
             </view>
           </view>
-          <view class='item-subtitle font-sm font-grey-steel mar-t-xs'>
+          <view class="item-subtitle font-sm font-grey-steel mar-t-xs">
             下单时间：{{item.createDate}}
           </view>
-          <view class='item-text font-sm font-grey-steel mar-t-xs'>总价：¥{{item.payment}}
-          </view>
+          <view class="item-text font-sm font-grey-steel mar-t-xs">总价：¥{{item.payment}}</view>
         </view>
       </navigator>
     </li>
-   
   </ul>
 </view>

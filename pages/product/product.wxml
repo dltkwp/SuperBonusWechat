@@ -1,7 +1,7 @@
 <view class="item bg-white pad-lg">
     <view class="font-xxxlg font-black">{{detail.productName}}</view>
     <view class="font-md font-grey-steel">{{detail.intoduction}}</view>
-    <view>
+    <view wx:if="detail.description">
         <import src="../../wxParse/wxParse.wxml" />
         <view class="wxParse intro-detail">
             <template is="wxParse" data="{{wxParseData:article.nodes}}" />

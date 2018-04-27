@@ -57,10 +57,9 @@ Page({
       params: userInfo,
       success: function (data) {
          message.success('操作成功');
+         wx.navigateBack();
       },
-      fail: function () {
-
-      }
+      fail: function () {}
     }
     request(requestHandler);
   },
