@@ -79,14 +79,14 @@
     <li wx:for="{{productList}}" wx:key="{{index}}" wx:for-index="index">
       <navigator class="item-content" hover-class="none" url="/pages/product/product?productId={{item.id}}">
         <view class="item-media">
-          <image src="{{item.imageUrl}}" class="product-img-xs"></image>
+          <image src="{{item.imageUrl}}" class="product-img-sm"></image>
         </view>
         <view class="item-inner">
           <view class="item-title-row">
             <view class="item-title font-xlg font-black">{{item.productName}}</view>
           </view>
-          <view class="item-subtitle font-sm font-grey-steel mar-t-xs">{{item.intoduction}}</view>
-          <view class="item-text font-red mar-t-xs">
+          <view class="item-subtitle font-sm font-grey-steel">{{item.intoduction}}</view>
+          <view class="item-text font-red">
             <text class="font-sm mar-r-xxs">¥</text>
             <text class="font-xlg">{{item.price}}</text>
           </view>

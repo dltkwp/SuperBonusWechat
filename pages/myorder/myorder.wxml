@@ -18,7 +18,7 @@
               <text class="font-green font-md">已完成</text>
             </view>
           </view>
-          <view class="item-subtitle font-sm font-grey-steel mar-t-xs">
+          <view class="item-text font-sm font-grey-steel mar-t-xs">
             下单时间：{{item.createDate}}
           </view>
           <view class="item-text font-sm font-grey-steel mar-t-xs">总价：¥{{item.payment}}</view>
