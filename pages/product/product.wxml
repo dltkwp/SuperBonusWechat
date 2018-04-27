@@ -1,6 +1,6 @@
-<view class="item bg-white pad-lg">
-    <view class="font-xxxlg font-black">{{detail.productName}}</view>
-    <view class="font-md font-grey-steel">{{detail.intoduction}}</view>
+<view class="item bg-white">
+    <view class="font-xxxlg font-black hide">{{detail.productName}}</view>
+    <view class="font-md font-grey-steel pad-lg">{{detail.intoduction}}</view>
     <view wx:if="detail.description">
         <import src="../../wxParse/wxParse.wxml" />
         <view class="wxParse intro-detail">

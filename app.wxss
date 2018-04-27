@@ -1660,3 +1660,27 @@ align-items:center;
   font-size: 28rpx;
   text-align: center;
 }
+
+/*介绍文字*/
+
+.intro-detail {
+  width: 100%;
+  position: relative;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.intro-detail .WxEmojiView {
+  font-size: 28rpx;
+  color: #333;
+  width: 100%;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  display: block;
+  text-align: justify;
+}
+
+.intro-detail image {
+  width: 100%!important;
+  float: left;
+}
