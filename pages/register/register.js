@@ -118,7 +118,9 @@ Page({
       message.warn('手机号格式不正确.');
       return false;
     }
-    _this.sendSms();
+    if (!_this.data.isActive) {
+      _this.sendSms();
+    }
   },
   sendSms: function () {
     let _this = this;
