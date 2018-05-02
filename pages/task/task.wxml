@@ -1,6 +1,8 @@
 <view class='swiper-container'>
-  <swiper class="swiper-box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}" wx:key="index">
+  <swiper class="swiper-box" indicator-dots="{{indicatorDots}}" 
+          vertical="{{vertical}}" autoplay="{{autoplay}}" 
+          interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{images}}" wx:key="index">
       <swiper-item>
         <image src="{{item}}" class="slide-image" />
       </swiper-item>
@@ -8,14 +10,14 @@
   </swiper>
 </view>
 <view class='item bg-white pad-md'>
-  <view class='font-xlg font-black mar-t-xlg'>天津户口对外推送
+  <view class='font-xlg font-black mar-t-xlg'>{{detail.projectName}}
   </view>
-<view class='font-sm font-grey-steel mar-t-xs'>5个天津户口对外推送，有能力的前来对接
+<view class='font-sm font-grey-steel mar-t-xs'>{{detail.intoduction}}
   </view>
   <view class='font-xlg font-red mar-t-lg'>
    <text class='font-md pad-r-xs'>赏金</text>
-    <text class='font-md pad-r-xs'>¥</text>2000.00
-    <text class='font-md text-line-through font-grey-steel'>¥7000</text>
+    <text class='font-md pad-r-xs'>¥</text>{{detail.price}}
+    <!-- <text class='font-md text-line-through font-grey-steel'>¥7000</text> -->
   </view>
 </view>
 <view class='list-block mar-t-md'>
@@ -26,7 +28,7 @@
           <view class='item-title label font-lg font-grey'>有效期
           </view>
           <view class='item-input font-lg font-black'>
-            2017/11/26～2017/12/25
+            {{detail.startDateStr}}～{{detail.endDateStr}}
           </view>
         </view>
       </view>
@@ -36,32 +38,28 @@
 <view class='pad-lg font-md font-grey-steel'>目标客户</view>
 
 <view class='item bg-white b-t-line b-b-line pad-md'>
-    <text class='font-md font-black'>1.在北京工作且子女在北京上学的外地户籍人员；\n2.预计报考天津市公务员人员；\n3.在北京工作预计在天津购买住房人员（天津户口可以买限价房）；\n4.子女在高考大省（河北、山东、河南）学习需要到天津参加高考人员；
-</text>
-    
+    <text class='font-md font-black'>{{detail.target}}</text>
 </view>
 
 <view class='pad-lg font-md font-grey-steel'>项目背景</view>
 
 <view class='item bg-white b-t-line b-b-line pad-md'>
-    <text class='font-md font-black'>2017年天津住房限购政策升级，外地户籍在津买房须近三年中有两年连续社保缴纳纪录。造成了天津落户紧缺，仅2107年7月1日到10月26日积分落户申请总数就为26740人，传统企业及个人申请人才引进落户需走完官方全部申请流程，中间出现问题需要更改后重新审核，排队周期长，失败率高，且人才引进只有一次机会，如官方系统有记录将无法进行第二次申请。通过平台协助知道办理，减少不必要的时间损失，一个月出证，省钱省时高效！
-</text>
-    
+    <text class='font-md font-black'>{{detail.context}}</text>
 </view>
 
 <view class='pad-lg font-md font-grey-steel'>详细介绍</view>
 
 <view class='item bg-white b-t-line b-b-line pad-md'>
-    <text class='font-md font-black'>图文类型介绍！
-</text>
-    <image class='product-img-full mar-t-md' src="https://cdns.mtscrm.com/FvIo6tSOUwUJxl0ilLV270HClddK?version=2017091901"></image>
-     <image class='product-img-full' src="https://cdns.mtscrm.com/FvIo6tSOUwUJxl0ilLV270HClddK?version=2017091901"></image>
-      <image class='product-img-full mar-b-md' src="https://cdns.mtscrm.com/FvIo6tSOUwUJxl0ilLV270HClddK?version=2017091901"></image>
+    <import src="../../wxParse/wxParse.wxml" />
+    <view class="wxParse intro-detail">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
 </view>
 <view class='fixed-bottom-space'></view>
 <view class='fixed-bottom fixed-bottom-button'>
   
-   <navigator url='/pages/recommendother/recommendother' class='btn btn-default btn-half'>推荐他人</navigator>
-   <navigator url=''  class='btn btn-red btn-half'>立即承接</navigator>
+  <!-- <navigator url='/pages/recommendother/recommendother' 
+    class='btn btn-default btn-half'>推荐他人</navigator> -->
+  <view class='btn btn-red btn-half' bindtap='submit'>立即承接</view>
    <!--跳转至小程序聊天界面 -->
 </view>

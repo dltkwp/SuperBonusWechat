@@ -1,66 +1,78 @@
-// pages/task/task.js
+const WxParse = require('../../wxParse/wxParse.js')
+const _ = require('../../utils/lodash.core');
+const request = require('../../utils/request');
+const modal = require('../../utils/modal');
+const message = require('../../utils/message');
+const superConst = require("../../utils/super-const");
+const moment  = require("../../utils/moment.min.js");
+const app = getApp()
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    id:'',
+    images:[],
+    detail:{}
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-  
+    let _this = this;
+    _this.setData({
+      id: options.id
+    });
+    _this.getDetail();
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady: function () {
   
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
   
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
+  submit: function () {
+    let _this = this;
+    let storage = wx.getStorageSync(superConst.SUPER_TOKEN_KEY);
+    if (storage && storage.userId) {
+      let requestHandler = {
+        isLoading: true,
+        url: 'projects/' + _this.data.id + '/users/' + storage.userId,
+        method: 'POST',
+        params: {},
+        success: function (data) {
+          message.success('操作成功');
+        },
+        fail: function () { }
+      }
+      request(requestHandler);
+    }
   },
+  getDetail: function () {
+    let _this = this;
+    let requestHandler = {
+      isLoading: true,
+      url: 'projects/' + _this.data.id,
+      method: 'GET',
+      params: {},
+      success: function (data) {
+        try {
+          let arr = [];
+          if (data.images && data.images.lenght > 0) {
+              _.forEach(data.images,function(item){
+                arr.push(superConst.IMAGE_STATIC_URL + item);                
+              })
+          }   
+          data.startDateStr = moment(data.startDate).format('YYYY/MM/DD');
+          data.endDateStr = moment(data.endDateStr).format('YYYY/MM/DD');
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
+          WxParse.wxParse('article', 'html', data.description, _this, 5)
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+          _this.setData({
+            images: arr,
+            detail:  data
+          });
+        } catch (e) {
+          console.error(e);
+        }
+      },
+      fail: function () {}
+    }
+    request(requestHandler);
   }
 })

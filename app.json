@@ -50,6 +50,12 @@
         "text": "推荐"
       },
       {
+        "pagePath": "pages/discovery/discovery",
+        "iconPath": "images/nav_discover.png",
+        "selectedIconPath": "images/nav_discover_act.png",
+        "text": "发现"
+      },
+      {
         "pagePath": "pages/more/more",
         "iconPath": "images/nav_more.png",
         "selectedIconPath": "images/nav_more_act.png",

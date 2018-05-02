@@ -1,48 +1,70 @@
 <view class="search-box">
   <view class='form-group'>
-    <input class="form-control input-icon input-grey input-circle" placeholder="搜索任务标题或关键字" placeholder-class='font-grey-cararra' />
+    <input class="form-control input-icon input-grey input-circle"  
+      value="{{queryKey}}"
+      placeholder="搜索任务标题或关键字" placeholder-class='font-grey-cararra' 
+      confirm-type="search" bindconfirm="onSearch"/>
     <icon class="icon-search"></icon>
   </view>
 </view>
-<view class="type-select font-md font-grey">
-  <view bindtap="choiceItem" data-item="1">
-    <text>区域</text>
-    <view class="icon-down-grey"></view>
+
+<view class="choice-bar">
+
+   <view class="sorting-list{{!showArea?' chioce-list-hide':' chioce-list-show'}}">
+      <view wx:for="{{areaList}}" wx:key="index" 
+        catchtap="clickArea" data-index="{{index}}" 
+        class="sorting-item">{{item.name}}</view>
+    </view> 
+
+  <view class="sorting-list{{!showOrderBy?' chioce-list-hide':' chioce-list-show'}}">
+    <view wx:for="{{orderByList}}"  wx:key="index" 
+      catchtap="clickOrderBy" data-index="{{index}}" 
+      class="sorting-item" hover-class="click-once">{{item.value}}</view>
+    </view>
+
+
+  <view class="type-select font-md font-grey">
+    <view bindtap="choiceItem" data-item="1">
+      <text>{{areaShow}}</text>
+      <view class="icon-down-grey"></view>
+    </view>
+    <view bindtap="choiceItem" data-item="2">
+      <text>{{orderShowText}}</text>
+      <view class="icon-down-grey"></view>
+    </view>
   </view>
-  <view bindtap="choiceItem" data-item="2">
-    <text>分类</text>
-    <view class="icon-down-grey"></view>
-  </view>
-  <view bindtap="choiceItem" data-item="3">
-    <text>智能排序</text>
-    <view class="icon-up-grey"></view>
-  </view>
-</view>
-<view class="list-block media-list">
-  <ul>
-    <li>
-      <navigator hover-class='none' class='item-content' url='/pages/task/task'>
-        <view class='item-media'>
-          <image src="https://cdns.mtscrm.com/FvIo6tSOUwUJxl0ilLV270HClddK?version=2017091901" class='product-img-sm'></image>
-        </view>
-        <view class='item-inner'>
-          <view class='item-title-row'>
-            <view class='item-title font-xlg font-black'>天津户口对外推送</view>
+  <view class="list-block media-list">
+    <ul>
+      <li wx:for="{{taskList}}" wx:key="index" wx:for-index="index">
+        <navigator hover-class='none' class='item-content' url='/pages/task/task?id={{item.id}}'>
+          <view class='item-media'>
+            <image src="{{item.imageUrl}}" class='product-img-sm'></image>
           </view>
-          <view class='item-text font-sm mar-t-xs font-grey-steel'>5个天津户口对外推送，有能力的前来对接
-           
-          </view>
-          <view class='item-task-price'>
-           <view>
-              <text class='font-red font-xs'>赏金</text>
-              <text class='font-red font-lg  pad-l-sm '>¥2000.00</text>
+          <view class='item-inner'>
+            <view class='item-title-row'>
+              <view class='item-title font-xlg font-black'>{{item.projectName}}</view>
             </view>
-          
-              <view class='btn btn-red btn-xs btn-radius-30'>承接赚</view>
+            <view class='item-text font-sm mar-t-xs font-grey-steel'>{{item.intoduction}}
             
+            </view>
+            <view class='item-task-price'>
+            <view>
+                <text class='font-red font-xs'>赏金</text>
+                <text class='font-red font-lg  pad-l-sm '>¥{{item.price}}</text>
+              </view>
+                <view class='btn btn-red btn-xs btn-radius-30'>承接赚</view>
+            </view>
           </view>
+        </navigator>
+      </li>
+       <li wx:if="{{taskList.length==0&&pageNum==1}}">
+        <view class="empty-container">
+          <image src="https://bonus.oss-cn-beijing.aliyuncs.com/product/842935B5D1A44CEB8C2D104AB8BF5900.png"></image>
+          <view class="tit">暂无内容</view>
         </view>
-      </navigator>
     </li>
-  </ul>
+    </ul>
+  </view>
+
+   <view bindtap="hideAllChioce" class="mask" hidden="{{!showArea&&!showOrderBy}}"></view>
 </view>
