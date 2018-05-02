@@ -28,7 +28,7 @@
           <view class='item-title label font-lg font-grey'>数量
           </view>
           <view class='item-input font-lg font-black'>
-           
+            {{detail.projectNumber}}
           </view>
         </view>
       </view>
@@ -39,7 +39,7 @@
           <view class='item-title label font-lg font-grey'>悬赏标价
           </view>
           <view class='item-input font-lg font-black'>
-          
+          {{detail.pricing}}
           </view>
         </view>
       </view>

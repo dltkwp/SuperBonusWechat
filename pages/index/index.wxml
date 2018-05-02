@@ -34,7 +34,7 @@
       </navigator>
     </li>
     <li>
-      <!-- <navigator url="/pages/discovery/discovery" open-type="switchTab" class="btn-list-item  pad-xlg">
+      <navigator url="/pages/discovery/discovery" open-type="switchTab" class="btn-list-item  pad-xlg">
         <view>
           <view class="font-lg font-black">我要承接</view>
           <view class="font-sm font-grey-steel">Undertake</view>
@@ -42,17 +42,7 @@
         <view>
           <icon class="icon-undertake"></icon>
         </view>
-      </navigator> -->
-      <navigator url="#" bindtap="noWork" class="btn-list-item  pad-xlg">
-        <view>
-          <view class="font-lg font-black">我要承接</view>
-          <view class="font-sm font-grey-steel">Undertake</view>
-        </view>
-        <view>
-          <icon class="icon-undertake"></icon>
-        </view>
-      </navigator>
-
+      </navigator> 
     </li>
   </ul>
 </view>

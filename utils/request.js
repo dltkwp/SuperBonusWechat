@@ -40,6 +40,7 @@ const request = function (requestHandler) {
       if (statusCode < 500) {
         switch (statusCode) {
           case 401: { // 未登录授权自动跳转
+            wx.redirectTo({ url: '../register/register' });
             console.error('未登录授权');
           } break;
           default: {
