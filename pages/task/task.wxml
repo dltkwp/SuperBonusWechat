@@ -22,6 +22,28 @@
 </view>
 <view class='list-block mar-t-md'>
   <ul>
+  <li>
+      <view class='item-content'>
+        <view class='item-inner'>
+          <view class='item-title label font-lg font-grey'>数量
+          </view>
+          <view class='item-input font-lg font-black'>
+           
+          </view>
+        </view>
+      </view>
+    </li>
+    <li>
+      <view class='item-content'>
+        <view class='item-inner'>
+          <view class='item-title label font-lg font-grey'>悬赏标价
+          </view>
+          <view class='item-input font-lg font-black'>
+          
+          </view>
+        </view>
+      </view>
+    </li>
     <li>
       <view class='item-content'>
         <view class='item-inner'>
