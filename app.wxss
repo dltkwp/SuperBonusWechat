@@ -876,12 +876,24 @@ textarea.form-control {
   display: block;
 }
 
-/**index**/
+/**发现**/
+.discovery-box{
+  min-height:100vh;
+background-color:#fff;
+padding-top:174rpx;
+box-sizing:border-box;
 
+}
 .search-box {
   width: 100%;
   box-sizing: border-box;
-  position: relative;
+ position:fixed;
+top:0;
+left:0;
+height:88rpx;
+z-index:11;
+padding:13rpx 0;
+box-sizing: border-box;
   background: #fff;
 }
 
@@ -917,6 +929,12 @@ textarea.form-control {
   justify-content: space-around;
   align-items: center;
   background-color: #fff;
+  position:fixed;
+top:88rpx;
+left:0;
+width:100%;
+z-index:9;
+
 }
 
 .type-select > view {

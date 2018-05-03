@@ -1,80 +1,5 @@
 /* 头部搜索 */
 
-.productbox-list {
-  min-height: 100vh;
-  background-color: #fff;
-  padding-top: 176rpx;
-  box-sizing: border-box;
-}
-
-.shop-top-input {
-  width: 100%;
-  height: 88rpx;
-  padding: 16rpx 60rpx;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  background-image: #35B7A5;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 11;
-}
-
-.shop-top-input .shop-search {
-  height: 56rpx;
-  background: rgba(255, 255, 255, 0.19);
-  border: 0 solid #fff;
-  border-radius: 100rpx;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-
-  padding: 11rpx 14rpx;
-  display: flex;
-  display: -webkit-flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-
-.shop-top-input .shop-search input{
-  display: inline-block;
-  flex: 1;
-  margin-left: 18rpx;
-}
-
-/* 分类选择  */
-.shop-type-select{
-  height: 88rpx;
-  padding: 24rpx 26rpx;
-  border-bottom: 1rpx solid #e5e5e5;
-  box-sizing: border-box;
-  background-color: #fff;
-
-  display: flex;
-  display: -webkit-flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-
-  position: fixed;
-  top: 88rpx;
-  left: 0;
-  width: 100%;
-  z-index: 9;
-}
-.shop-type-select > view{
-  flex: 1;
-  border-right: 1rpx dotted #f0f1f3;
-  display: flex;
-  display: -webkit-flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-}
-.shop-type-select > view:last-child{
-  border-right: none;
-}
 
 .sorting-list {
   margin-top: -1rpx;
@@ -85,7 +10,7 @@
   background-color: #fff;
   z-index: 10;
   font-size: 14px;
-  border-bottom: 1rpx solid #ddd;
+  
   max-height: 75vh;
   overflow-y: auto;
 }
@@ -115,7 +40,7 @@
   height: 88rpx;
   line-height: 88rpx;
   padding: 0 40rpx;
-  border-bottom: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #ecedef;
 }
 
 .mask {
