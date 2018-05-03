@@ -1,5 +1,5 @@
 <view class="discovery-img">
-  <navigator url="/pages/product/product?productId=8" > 
+  <navigator url="/pages/product/product?productId=21" > 
  <image src="http://bonus.oss-cn-beijing.aliyuncs.com/2018042201/25.jpg" style='width:100%'></image></navigator>
 </view>
 

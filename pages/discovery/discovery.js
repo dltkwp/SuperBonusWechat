@@ -182,12 +182,18 @@ Page({
             _this.setData({ loadOver: true })
 
           }
-          console.log(_taskList, 123123123)
+          if (_taskList.length ==0 && _this.data.pageNum ==1){
+            _this.setData({
+              pageNum: 1,
+              taskList: _taskList
+            });
+          } else if (_taskList.length > 0){
+            _this.setData({
+              pageNum: _this.data.pageNum + 1,
+              taskList: _taskList
+            });
+          }
           
-          _this.setData({
-            pageNum: _this.data.pageNum + 1,
-            taskList: _taskList
-          });
         } catch (e) {
           console.error(e);
         }

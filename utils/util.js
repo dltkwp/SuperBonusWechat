@@ -30,6 +30,22 @@ const getOpenId = function (callback) {
         }
       }
     })
+  } else if (!temp.phone){
+      wx.login({
+        success: function (res) {
+          let code = res.code;
+          if (code) {
+            request({
+              method: 'GET',
+              url: 'oauth/session?code=' + code,
+              success: function (data) {
+                wx.setStorageSync(superConst.SUPER_TOKEN_KEY, data);
+                callback && callback();
+              }
+            });
+          }
+        }
+      })
   }
 }
 

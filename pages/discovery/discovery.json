@@ -1,1 +1,8 @@
-{}
+{
+  "backgroundTextStyle": "black",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "超级悬赏",
+  "navigationBarBackgroundColor": "#fff",
+  "backgroundColor": "#F2f2f2",
+  "enablePullDownRefresh": false
+}

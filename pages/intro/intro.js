@@ -30,10 +30,11 @@ Page({
   },
   initImages: function () {
       let _this = this;
+      let imageUrl = superConst.IMAGE_STATIC_URL.replace('/product','');
       let len = 23;
       let imgArr = [];
       for(let i=0;i<len;i++){
-        imgArr.push(superConst.IMAGE_STATIC_URL   + "2018042201/" + i + '.jpeg');
+        imgArr.push(imageUrl + "2018042201/" + i + '.jpeg');
       }
       _this.setData({
         images: imgArr

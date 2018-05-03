@@ -53,8 +53,9 @@ Page({
       success: function (data) {
         try {
           let arr = [];
-          if (data.images && data.images.lenght > 0) {
-              _.forEach(data.images,function(item){
+          if (data.images) {
+               let imagesArr = data.images.split(',');
+               _.forEach(imagesArr,function(item){
                 arr.push(superConst.IMAGE_STATIC_URL + item);                
               })
           }   
