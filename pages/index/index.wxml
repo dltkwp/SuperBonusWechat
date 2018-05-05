@@ -53,8 +53,9 @@
   <text class='news-roller-info'>
     {{marquee.projectName}}
   </text>
-  <text class='news-roller-price'></text>
+  <text class='news-roller-price hide'></text>
 </view>
+  <navigator url="/pages/page/page">单页</navigator>
 <view class="list-block media-list mar-t-md">
   <ul>
     <li>

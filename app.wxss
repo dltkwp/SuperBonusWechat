@@ -1562,14 +1562,14 @@ swiper-item {
   display: -webkit-flex;
   display: flex;
   -webkit-box-pack: justify;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .news-roller-title {
   font-size: 28rpx;
   color: #999;
-  min-width: 120rpx;
+  min-width: 140rpx;
   margin-right: 10rpx;
 }
 

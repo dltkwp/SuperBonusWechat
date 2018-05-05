@@ -21,7 +21,8 @@
     "pages/setpwd/setpwd",
     "pages/task/task",
     "pages/undertake/undertake",
-    "pages/userinfo/userinfo"
+    "pages/userinfo/userinfo",
+    "pages/page/page"
   ],
   "window":{
     "backgroundTextStyle":"light",
