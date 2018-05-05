@@ -85,7 +85,7 @@ Page({
     this.setData({
       pageNo: 1,
       showArea: false,
-      area: this.data.areaList[index],
+      area: this.data.areaList[index].key,
       areaShow: this.data.areaList[index].key == '' ? '区域' : this.data.areaList[index].key
     })
     this.getList()
@@ -115,11 +115,11 @@ Page({
   },
   getAreaList: function () {
     let _this = this;
-    _this.setData({
-      areaList: [
-        { key: '', name: '全部' }]
-    });
-    return false;
+    // _this.setData({
+    //   areaList: [
+    //     { key: '', name: '全部' }]
+    // });
+    // return false;
 
     let requestHandler = {
       isLoading: true,

@@ -80,8 +80,7 @@
 <view class='fixed-bottom-space'></view>
 <view class='fixed-bottom fixed-bottom-button'>
   
-  <!-- <navigator url='/pages/recommendother/recommendother' 
-    class='btn btn-default btn-half'>推荐他人</navigator> -->
+  <navigator url='/pages/recommendother/recommendother' 
+    class='btn btn-default btn-half'>推荐他人</navigator> 
   <view class='btn btn-red btn-half' bindtap='submit'>立即承接</view>
-   <!--跳转至小程序聊天界面 -->
 </view>

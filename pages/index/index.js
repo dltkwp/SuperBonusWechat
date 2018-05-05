@@ -47,9 +47,23 @@ Page({
     let _this = this;
     let cur = _this.data.bannerList[index];
     if (cur.href) {   // pages/product/product?productId=17
-      wx.navigateTo({
-        url: '../product/product?productId=' + cur.href
-      });
+      switch (cur.type) {
+        case 'product': { 
+          wx.navigateTo({
+            url: '../product/product?productId=' + cur.href
+          });
+        } break;
+        case 'project': { 
+          wx.navigateTo({
+            url: '../task/task?id=' + cur.href
+          });
+        } break;
+        case 'custom': {
+          wx.navigateTo({
+            url: '../product/product?productId=' + cur.href
+          });
+        } break;
+      }
     }
   },
   getAdvImages: function () {

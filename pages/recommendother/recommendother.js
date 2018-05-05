@@ -1,66 +1,42 @@
-// pages/recommendother/recommendother.js
+const _ = require('../../utils/lodash.core');
+const request = require('../../utils/request');
+const modal = require('../../utils/modal');
+const message = require('../../utils/message');
+const superConst = require("../../utils/super-const");
+const regex = require('../../utils/regex.js');
+const moment = require("../../utils/moment.min.js");
+const app = getApp()
+
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    name:'',
+    phone:'',
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
   
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady: function () {
   
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
   
   },
+  formSubmit: function (e) {
+    let form = e.detail.value;
+    let name = form.name;
+    let phone = form.phone;
+    
+    if(!name){
+      modal({content: '联系人不可为空'});
+      return false;
+    }
+    if (!regex.mobile(phone)) {
+      modal({ content: '手机号格式不正确' });
+      return false;
+    }
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
+    
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
   }
 })
