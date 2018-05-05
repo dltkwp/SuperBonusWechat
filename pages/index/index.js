@@ -4,6 +4,7 @@ const modal = require('../../utils/modal');
 const message = require('../../utils/message');
 const superConst = require("../../utils/super-const");
 const app = getApp()
+let timer = null;
 
 Page({
   data: {
@@ -24,6 +25,8 @@ Page({
 
     marqueeList:[], // 首页的循环体 默认显示最新的5条 没有的话不显示
     marquee:{}, //  当前循环体是什么
+    marqueeIndex:0, // 循环体索引
+    maxMarqueeIndex: 0, // 最大的索引值，达到了就自动变更为 marqueeIndex=0
   },
   onLoad: function () {
     let _this = this;
@@ -64,7 +67,7 @@ Page({
         } break;
         case 'custom': {
           wx.navigateTo({
-            url: '../product/product?productId=' + cur.href
+            url: '../page/page?id=' + cur.href
           });
         } break;
       }
@@ -165,10 +168,37 @@ Page({
         _this.setData({
           marqueeList: data.list
         });
+        if (timer){
+          clearInterval(timer);
+          timer = null;
+        }
         if(data.list.length>0){
           _this.setData({
-            marquee:data.list[0]
-          })
+            marqueeIndex:0,
+            marquee:data.list[0],
+            maxMarqueeIndex:data.list.length
+          });
+
+          if(!timer && data.list.length >=2) {
+            timer = setInterval(function(){
+              console.log('input into .....');
+              
+              _this.setData({
+                marqueeIndex: _this.data.marqueeIndex + 1
+              })
+
+              if (_this.data.marqueeIndex == _this.data.maxMarqueeIndex) {
+                _this.setData({
+                  marqueeIndex: 0,
+                  marquee: _this.data.marqueeList[0]
+                })
+              } else {
+                _this.setData({
+                  marquee: _this.data.marqueeList[_this.data.marqueeIndex ]
+                })
+              }
+            },5000);
+          }
         }
       },
       fail: function () { }

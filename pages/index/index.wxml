@@ -50,12 +50,13 @@
 <view class='news-roller mar-t-md' wx:if="marqueeList.length>0">
   <icon class='icon-sound'></icon>
   <text class="news-roller-title">最新悬赏</text>
-  <text class='news-roller-info'>
-    {{marquee.projectName}}
-  </text>
+    <navigator url='/pages/task/task?id={{marquee.id}}'>
+      <text class='news-roller-info'>
+          {{marquee.projectName}}
+      </text>
+    </navigator>
   <text class='news-roller-price hide'></text>
 </view>
-  <navigator url="/pages/page/page">单页</navigator>
 <view class="list-block media-list mar-t-md">
   <ul>
     <li>
