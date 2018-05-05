@@ -151,7 +151,7 @@ Page({
     param.push('pageSize=' + _this.data.pageSize);
 
     if (_this.data.area){
-      param.push('areas=' + _this.data.area);
+      param.push('area=' + _this.data.area);
     }
 
     if (_this.data.orderBy!='created'){
@@ -159,6 +159,9 @@ Page({
       param.push('orderType=' + _this.data.orderType);
     }
 
+    if (_this.data.queryKey){
+      param.push('queryKey=' + _this.data.queryKey);
+    }
 
     let requestHandler = {
       isLoading: true,

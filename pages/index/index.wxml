@@ -47,11 +47,13 @@
     </li>
   </ul>
 </view>
-<view class="news-roller mar-t-md">
-  <icon class="icon-sound"></icon>
+<view class='news-roller mar-t-md' wx:if="marqueeList.length>0">
+  <icon class='icon-sound'></icon>
   <text class="news-roller-title">最新悬赏</text>
-  <text class="news-roller-info">100吨五常大米对外出售，有意…</text>
-  <text class="news-roller-price">1万元</text>
+  <text class='news-roller-info'>
+    {{marquee.projectName}}
+  </text>
+  <text class='news-roller-price'></text>
 </view>
 <view class="list-block media-list mar-t-md">
   <ul>

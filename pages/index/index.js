@@ -20,7 +20,10 @@ Page({
     loading: true,
     loadOver: false,
     pageNum: 1,
-    pageSize: 10
+    pageSize: 10,
+
+    marqueeList:[], // 首页的循环体 默认显示最新的5条 没有的话不显示
+    marquee:{}, //  当前循环体是什么
   },
   onLoad: function () {
     let _this = this;
@@ -34,7 +37,8 @@ Page({
     }, 0)
   },
   onShow: function () {
-
+    let _this = this;
+    _this.getProjects();
   },
   noWork: function () {
     modal({
@@ -102,7 +106,9 @@ Page({
     let _this = this;
     let requestHandler = {
       isLoading: true,
-      url: 'products?pageNum=' + _this.data.pageNum + '&pageSize=' + _this.data.pageSize + '&status=1',
+      url: 'products?pageNum=' + _this.data.pageNum + 
+           '&pageSize=' + _this.data.pageSize + 
+           '&status=1',
       method: 'GET',
       params: {},
       success: function (data) {
@@ -143,4 +149,30 @@ Page({
       _this.getProductList();
     }
   },
+  getProjects: function () {
+    let _this = this;
+
+    let param = [];
+    param.push('pageNum=1');
+    param.push('pageSize=5');
+
+    let requestHandler = {
+      isLoading: true,
+      url: 'projects?' + param.join('&'),
+      method: 'GET',
+      params: {},
+      success: function (data) {
+        _this.setData({
+          marqueeList: data.list
+        });
+        if(data.list.length>0){
+          _this.setData({
+            marquee:data.list[0]
+          })
+        }
+      },
+      fail: function () { }
+    }
+    request(requestHandler);
+  }
 })
