@@ -88,20 +88,14 @@ Page({
           });
         } else {
           _.forEach(data, function (item) {
-            if (item.image.indexOf('product') >= 0) {
               item.image = superConst.IMAGE_STATIC_URL + item.image;
-            } else {
-              item.image = superConst.HOME_BANNER_DEFAULT_IMAGE;
-            }
           })
         }
         _this.setData({
           bannerList: temp
         })
       },
-      fail: function () {
-
-      }
+      fail: function () {}
     }
     request(requestHandler);
   },
@@ -182,7 +176,7 @@ Page({
           if(!timer && data.list.length >=2) {
             timer = setInterval(function(){
               console.log('input into .....');
-              
+
               _this.setData({
                 marqueeIndex: _this.data.marqueeIndex + 1
               })
