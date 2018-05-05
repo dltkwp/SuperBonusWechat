@@ -35,8 +35,23 @@ Page({
       modal({ content: '手机号格式不正确' });
       return false;
     }
-
+    return false;
     
+    let requestHandler = {
+      isLoading: true,
+      url: 'users',
+      method: 'PUT',
+      params: {
+        name:name,
+        phone:phone
+      },
+      success: function (data) {
+        message.success('操作成功');
+        wx.navigateBack();
+      },
+      fail: function () { }
+    }
+    request(requestHandler);
 
   }
 })

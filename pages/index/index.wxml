@@ -34,7 +34,8 @@
       </navigator>
     </li>
     <li>
-      <navigator url="/pages/discovery/discovery" open-type="switchTab" class="btn-list-item  pad-xlg">
+      <navigator url="/pages/discovery/discovery" 
+                 open-type="switchTab" class="btn-list-item  pad-xlg">
         <view>
           <view class="font-lg font-black">我要承接</view>
           <view class="font-sm font-grey-steel">Undertake</view>
@@ -46,12 +47,12 @@
     </li>
   </ul>
 </view>
-<!-- <view class="news-roller mar-t-md">
+<view class="news-roller mar-t-md">
   <icon class="icon-sound"></icon>
   <text class="news-roller-title">最新悬赏</text>
   <text class="news-roller-info">100吨五常大米对外出售，有意…</text>
   <text class="news-roller-price">1万元</text>
-</view> -->
+</view>
 <view class="list-block media-list mar-t-md">
   <ul>
     <li>

@@ -65,14 +65,14 @@ Page({
   onSearch: function (e) {
     this.setData({
       queryKey: e.detail.value,
-      pageNo: 1
+      pageNum: 1
     })
     this.getList(true)
   },
   clickOrderBy: function (e) {
     let index = e.currentTarget.dataset.index
     this.setData({
-      pageNo: 1,
+      pageNum: 1,
       showOrderBy: false,
       orderBy: this.data.orderByList[index].type,
       orderType: this.data.orderByList[index].key,
@@ -83,7 +83,8 @@ Page({
   clickArea: function (e) {
     let index = e.currentTarget.dataset.index;
     this.setData({
-      pageNo: 1,
+      pageNum: 1,
+      taskList:[],
       showArea: false,
       area: this.data.areaList[index].key,
       areaShow: this.data.areaList[index].key == '' ? '区域' : this.data.areaList[index].key
@@ -123,14 +124,14 @@ Page({
 
     let requestHandler = {
       isLoading: true,
-      url: 'projects/areas',
+      url: 'area',
       method: 'GET',
       params: {},
       success: function (data) {
         try {
           let arr = [{key:'',name:'全部'}];
           _.forEach(data,function(item){
-            arr.push({ key: item, name: item });
+            arr.push({ key: item.area, name: item.area });
           });
           _this.setData({
             areaList: arr
