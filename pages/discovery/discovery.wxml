@@ -39,7 +39,7 @@
       <li wx:for="{{taskList}}" wx:key="index" wx:for-index="index">
         <navigator hover-class='none' class='item-content' url='/pages/task/task?id={{item.id}}'>
           <view class='item-media'>
-            <image src="{{item.imageUrl}}" class='product-img-sm'></image>
+            <image src="{{item.imageUrl}}" class='product-img-sm img-rounded'></image>
           </view>
           <view class='item-inner'>
             <view class='item-title-row'>

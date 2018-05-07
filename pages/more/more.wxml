@@ -1,14 +1,15 @@
 <navigator class="user-bg" url='/pages/userinfo/userinfo'>
   
-   <image src="{{userInfo.headImage}}" mode='aspectFill	' class='user-img img-circle mar-l-lg'></image>
-   <view class='mar-l-lg' style='width:400rpx;'>
-   <view class='font-lg font-white'>{{userInfo.realname || userInfo.nickname}}</view>
-   <view class='font-md font-white mar-t-md'>{{userInfo.levelName || ''}}</view>
+   <image src="{{userInfo.headImage}}" mode='aspectFill	' class='user-img img-circle'></image>
+   <view class='mar-l-lg' style='width:500rpx;'>
+   <view class='font-lg font-white mar-t-sm'>{{userInfo.realname || userInfo.nickname}}</view>
+   <view class='font-md font-white mar-t-xs my-level'>{{userInfo.levelName || ''}}</view>
    </view>
-   <view class='icon-arrow-right-white opt-5'></view>
+    <view class='icon-arrow-right-white  mar-t-xxlg'></view>
+   <view class='my-wave'></view>
 </navigator>
 
-<view class='list-block mar-t-md'>
+<view class='list-block'  style='border-top:none;'>
   <ul>
    <li>
       <navigator class='item-content item-link'url='/pages/intro/intro'>

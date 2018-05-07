@@ -11,7 +11,7 @@
 </view>
 
 
-<view class="btn-list b-b-line">
+<view class="btn-list">
   <ul>
     <li>
       <!-- <navigator url="/pages/release/release" class="btn-list-item pad-xlg b-r-line">
@@ -23,37 +23,42 @@
           <icon class="icon-release"></icon>
         </view>
       </navigator> -->
-      <navigator url="#" bindtap="noWork" class="btn-list-item pad-xlg b-r-line">
+      <navigator url="#" bindtap="noWork" >
+      <view class='btn-list-item'>
         <view>
-          <view class="font-lg font-black">我要发布</view>
-          <view class="font-sm font-grey-steel">Release</view>
+          <view class="font-xlg ">我要发布</view>
+          <view class="font-sm opt-7">Release</view>
         </view>
-        <view>
+       
           <icon class="icon-release"></icon>
+        
         </view>
       </navigator>
     </li>
     <li>
       <navigator url="/pages/discovery/discovery" 
-                 open-type="switchTab" class="btn-list-item  pad-xlg">
+                 open-type="switchTab" >
+                  <view class='btn-list-item'>
         <view>
-          <view class="font-lg font-black">我要承接</view>
-          <view class="font-sm font-grey-steel">Undertake</view>
+          <view class="font-xlg">我要承接</view>
+          <view class="font-sm opt-7">Undertake</view>
         </view>
-        <view>
+       
           <icon class="icon-undertake"></icon>
+       
         </view>
       </navigator> 
     </li>
   </ul>
 </view>
-<view class='news-roller mar-t-md' wx:if="marqueeList.length>0">
-  <icon class='icon-sound'></icon>
-  <text class="news-roller-title">最新悬赏</text>
-    <navigator url='/pages/task/task?id={{marquee.id}}'>
-      <text class='news-roller-info'>
+<view class='news-roller' wx:if="marqueeList.length>0" style="border-top:none;">
+ 
+  <text class="news-roller-title"></text>
+  <text class='news-roller-divide'></text>
+    <navigator url='/pages/task/task?id={{marquee.id}}' class='news-roller-info'>
+      
           {{marquee.projectName}}
-      </text>
+     
     </navigator>
   <text class='news-roller-price hide'></text>
 </view>
@@ -61,12 +66,11 @@
   <ul>
     <li>
       <view class="item-content">
+     
         <view class="item-inner">
-          <view class="item-title-row">
+         
             <view class="item-title font-lg font-black">
-              加入超级悬赏
-              <text class="font-sm font-grey-steel">Join us</text>
-            </view>
+                 <icon class='icon-red-line'></icon>加入超级悬赏
           </view>
         </view>
       </view>
@@ -74,7 +78,7 @@
     <li wx:for="{{productList}}" wx:key="{{index}}" wx:for-index="index">
       <navigator class="item-content" hover-class="none" url="/pages/product/product?productId={{item.id}}">
         <view class="item-media">
-          <image src="{{item.imageUrl}}" class="product-img-sm"></image>
+          <image src="{{item.imageUrl}}" class="product-img-sm img-rounded"></image>
         </view>
         <view class="item-inner">
           <view class="item-title-row">

@@ -55,7 +55,7 @@ input {
 /*字体颜色设置 */
 
 .font-grey-steel {
-  color: #999;
+  color: #b3b3b3;
 }
 
 .font-grey-cararra {
@@ -63,11 +63,11 @@ input {
 }
 
 .font-grey {
-  color: #666;
+  color: #737373;
 }
 
 .font-black {
-  color: #383838;
+  color: #262626;
 }
 
 .font-white {
@@ -75,11 +75,11 @@ input {
 }
 
 .font-red {
-  color: #d43b33;
+  color: #f23030;
 }
 
 .font-green {
-  color: #35b7a5;
+  color: #48d2a0;
 }
 
 .font-blue {
@@ -562,47 +562,47 @@ textarea.form-control {
 /*更多相关图标*/
 
 .icon-intro {
-  width: 40rpx;
-  height: 40rpx;
-  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_more_about_shop.png);
+  width: 48rpx;
+  height: 48rpx;
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_my_introduce.png);
   background-size: 100% 100%;
   margin-right: 20rpx;
 }
 
 .icon-invite {
-  width: 40rpx;
-  height: 40rpx;
-  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_more_invite.png);
+  width: 48rpx;
+  height: 48rpx;
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_my_invite.png);
   background-size: 100% 100%;
   margin-right: 20rpx;
 }
 
 .icon-task {
-  width: 40rpx;
-  height: 40rpx;
-  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_more_duty.png);
+  width: 48rpx;
+  height: 48rpx;
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_my_task.png);
   background-size: 100% 100%;
   margin-right: 20rpx;
 }
 
 .icon-order {
-  width: 40rpx;
-  height: 40rpx;
-  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_order.png);
+  width: 48rpx;
+  height: 48rpx;
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_my_order.png);
   background-size: 100% 100%;
   margin-right: 20rpx;
 }
 
 .icon-askonline {
-  width: 40rpx;
+  width: 48rpx;
   height: 40rpx;
-  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_more_ask_online.png);
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_my_consult.png);
   background-size: 100% 100%;
   margin-right: 20rpx;
 }
 
 .icon-custom {
-  width: 40rpx;
+  width: 48rpx;
   height: 40rpx;
   background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_custom.png);
   background-size: 100% 100%;
@@ -610,16 +610,16 @@ textarea.form-control {
 }
 
 .icon-user {
-  width: 40rpx;
-  height: 40rpx;
+  width: 48rpx;
+  height: 48rpx;
   background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_me.png);
   background-size: 100% 100%;
   margin-right: 20rpx;
 }
 
 .icon-price {
-  width: 40rpx;
-  height: 40rpx;
+  width: 48rpx;
+  height: 48rpx;
   background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_price.png);
   background-size: 100% 100%;
   margin-right: 20rpx;
@@ -800,9 +800,9 @@ textarea.form-control {
 .list-block .item-link .item-inner {
   padding-right: 44rpx;
   background-image: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_right_grey.png);
-  background-size: 20rpx;
+  background-size: 48rpx;
   background-repeat: no-repeat;
-  background-position: -webkit-calc(100% - 20rpx) center;
+  background-position: -webkit-calc(100% - 30rpx) center;
 }
 
 .list-block .item-content {
@@ -1307,25 +1307,34 @@ swiper-item {
 }
 
 .user-bg {
-  width: 700rpx;
-  height: 208rpx;
-  margin: 20rpx auto 0 auto;
+  width: 100%;
+  height: 312rpx;
   display: position;
-  background-image: linear-gradient(45deg, #a4aac2 0%, #c4cfdd 100%);
+  background-image: linear-gradient(90deg, #F25C62 0%, #FF786A 97%);
   box-sizing: border-box;
-  border-radius: 10rpx;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
   -webkit-box-pack: justify;
   justify-content: flex-start;
-  align-items: center;
+  align-items: top;
+  padding-top:56rpx;
+  padding:56rpx 30rpx 0 30rpx;
 }
-
+.my-wave{
+  background-image:url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/pic_my_wave.png);
+  background-size:750rpx;
+  height: 90rpx;
+  width:100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top:226rpx;
+  left:0;
+}
 .user-img {
-  width: 144rpx;
-  height: 144rpx;
+  width: 120rpx;
+  height: 120rpx;
   background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/img_normal.png);
   background-size: 100% 100%;
   border-radius: 5rpx;
@@ -1350,9 +1359,16 @@ swiper-item {
 }
 
 .user-bg .user-img {
-  border: 10rpx solid rgba(255, 255, 255, 0.2);
+  border: 8rpx solid rgba(255, 255, 255, 0.2);
 }
-
+.my-level{
+  background: rgba(255,255,255,0.20);
+border: 1px solid #FFFFFF;
+border-radius: 100px;
+color:#fff;
+float:left;
+padding:2rpx 12rpx;
+}
 .swiper-tab {
   width: 100%;
   border-bottom: 1rpx solid #ecedef;
@@ -1495,7 +1511,7 @@ swiper-item {
 .btn-list {
   width: 100%;
   position: relative;
-  height: 160rpx;
+  height: 180rpx;
   background-color: #fff;
 }
 
@@ -1503,16 +1519,34 @@ swiper-item {
   width: 100%;
   position: relative;
   list-style: none;
+   display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+  padding:24rpx 30rpx;
+  box-sizing: border-box;
 }
 
 .btn-list ul li {
-  width: 50%;
   box-sizing: border-box;
-  position: relative;
   display: inline-block;
+  width:330rpx;
+  height: 132rpx;
+  border-radius:16rpx;
+  padding:23rpx 30rpx 0 30rpx;
+  box-sizing: border-box;
+  color:#fff;
 }
-
-.btn-list ul li navigator {
+.btn-list ul li:first-child {
+ 
+  background-image: linear-gradient(90deg, #FFD31A 4%, #FFB01C 93%);
+ 
+}
+.btn-list ul li:last-child {
+ background-image: linear-gradient(90deg, #FF786A 0%, #F25C62 97%);
+ 
+}
+.btn-list ul li .btn-list-item {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1520,23 +1554,23 @@ swiper-item {
   -webkit-box-pack: justify;
   justify-content: space-between;
   align-items: center;
-  height: 160rpx;
+  
 }
 
 .icon-release {
-  width: 100rpx;
-  height: 100rpx;
-  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_fabu.png);
+  width: 88rpx;
+  height: 88rpx;
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/pic_release.png);
   background-size: 100% 100%;
-  opacity: 0.5;
+  
 }
 
 .icon-undertake {
-  width: 100rpx;
-  height: 100rpx;
-  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_chengjie.png);
+  width: 88rpx;
+  height: 88rpx;
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/pic_undertake.png);
   background-size: 100% 100%;
-  opacity: 0.5;
+ 
 }
 
 .icon-sound {
@@ -1567,12 +1601,17 @@ swiper-item {
 }
 
 .news-roller-title {
-  font-size: 28rpx;
-  color: #999;
-  min-width: 140rpx;
-  margin-right: 10rpx;
+  width: 150rpx;
+  height: 30rpx;
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/pic_broadcast.png);
+  background-size: 100% 100%;
 }
-
+.news-roller-divide{
+  width:1rpx;
+  height: 40rpx;
+  background:#e6e6e6;
+  margin:0 20rpx;
+}
 .news-roller-price {
   font-size: 28rpx;
   color: #666;
@@ -1585,7 +1624,7 @@ swiper-item {
   font-size: 28rpx;
   color: #666;
   overflow: hidden;
-  height: 120rpx;
+ 
   white-space: nowrap;
   max-width: 100%;
   text-overflow: ellipsis;
@@ -1663,7 +1702,9 @@ swiper-item {
 .img-circle {
   border-radius: 50%;
 }
-
+.img-rounded{
+  border-radius:10rpx;
+}
 .ver-mid {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1673,8 +1714,8 @@ swiper-item {
 }
 
 .icon-arrow-right-white {
-  width: 120rpx;
-  height: 120rpx;
+  width: 48rpx;
+  height: 48rpx;
   background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_arrow_white.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -1687,7 +1728,9 @@ swiper-item {
 .opt-5 {
   opacity: 0.5;
 }
-
+.opt-7 {
+  opacity: 0.7;
+}
 .inline {
   display: inline-block;
 }
@@ -1761,4 +1804,14 @@ swiper-item {
   height: 74rpx;
   background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/logo.png);
   background-size: 100% 100%;
+}
+
+.icon-red-line{
+  width:6rpx;
+  height: 32rpx;
+  background:#f23030;
+  border-radius:100rpx;
+  margin-right:16rpx;
+ margin-top:-5rpx;
+ vertical-align: middle;
 }
