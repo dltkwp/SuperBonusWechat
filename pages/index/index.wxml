@@ -98,8 +98,8 @@
 </view>
 
  <view wx:if="{{productList.length==0&&pageNum==1}}">
-      <view class="empty-container">
-        <image src="https://bonus.oss-cn-beijing.aliyuncs.com/product/842935B5D1A44CEB8C2D104AB8BF5900.png"></image>
-        <view class="tit">暂无内容</view>
-      </view>
+       <view class="empty-container">
+    <icon class='empty-img'></icon>
+    <view class="tit">暂无内容</view>
+  </view>
     </view>

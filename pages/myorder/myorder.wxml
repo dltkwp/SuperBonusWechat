@@ -1,6 +1,6 @@
 <view wx:if="{{ordeList.length==0}}">
   <view class="empty-container">
-    <image src="https://bonus.oss-cn-beijing.aliyuncs.com/product/842935B5D1A44CEB8C2D104AB8BF5900.png"></image>
+    <icon class='empty-img'></icon>
     <view class="tit">暂无内容</view>
   </view>
 </view>

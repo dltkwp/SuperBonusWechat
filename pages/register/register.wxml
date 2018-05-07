@@ -18,16 +18,16 @@
               <view class="item-input-lg font-lg pad-0">
                 <input type="text" placeholder="请输入短信验证码" placeholder-class="font-grey-cararra" bindinput="smsCodeInput"  maxlength="8" name="smsCode"></input>
               </view>
-              <view bindtap="send" class="item-title label font-lg font-grey text-center">{{smsTip}}</view>
+              <view bindtap="send" class="item-title label font-lg font-red text-center">{{smsTip}}</view>
             </view>
           </view>
         </li>
       </ul>
     </view>
-    <view class="mar-t-md ver-mid">
+    <view class="mar-t-lg ver-mid">
       <icon class="icon-checked-red-sm mar-r-xs"></icon>
       <text class="font-sm font-grey-steel mar-r-xs">我已查看并同意</text>
-      <navigator url="/pages/agreement/agreement" class="font-sm font-blue inline">超级悬赏注册协议</navigator>
+      <navigator url="/pages/agreement/agreement" class="font-sm font-gren inline">超级悬赏注册协议</navigator>
     </view>
     <button formType="submit" class="btn btn-block btn-red mar-t-lg">注册</button>
   </view>

@@ -1,9 +1,7 @@
-<view class='text-center mar-t-xlg'>
+<view class='item text-center bg-white pad-b-xxlg'>
   <icon class='img-success'></icon>
-</view>
-<view class='text-center mar-t-xlg'>
-  <view class='font-lg font-black'>支付成功！</view>
-  <view class='font-md font-grey mar-t-md'>您已经成功支付该订单</view>
+  <view class='font-xxxlg font-black item'>支付成功！</view>
+  <view class='font-md font-grey-steel mar-t-xs'>您已经成功支付该订单</view>
 </view>
 
 <view class='list-block media-list mar-t-xlg'>

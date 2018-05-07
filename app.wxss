@@ -5,7 +5,7 @@ page {
 }
 
 input {
-  color: #383838;
+  color: #b3b3b3;
 }
 
 .container {
@@ -1247,13 +1247,13 @@ swiper-item {
 }
 
 .btn-default {
-  background: #f8f8f8;
-  color: #383838;
-  border: 1rpx solid #ecedef;
+  background: #fff;
+  color: #737373;
+  border: 1rpx solid #b3b3b3;
 }
 
 .btn-default:hover, .btn-default:focus {
-  background: #c6c6c6;
+  background: #f2f2f2;
   color: #383838;
 }
 
@@ -1269,12 +1269,12 @@ swiper-item {
 /*红色btn*/
 
 .btn-red {
-  background: #d43b33;
+  background: #f23030;
   color: #fff;
 }
 
 .btn-red:hover, .btn-red:focus {
-  background: #aa2f29;
+  background: #D62A2A;
   color: #fff;
 }
 
@@ -1484,10 +1484,11 @@ padding:2rpx 12rpx;
 }
 
 .img-success {
-  width: 396rpx;
-  height: 264rpx;
-  margin: 20rpx 162rpx;
-  background: url('https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_success.png');
+  width: 361rpx;
+  height: 201rpx;
+  margin: 80rpx 195rpx 80rpx;
+  box-sizing: border-box;
+  background: url('https://bonus.oss-cn-beijing.aliyuncs.com/wechat/pic_paysuccess.png');
   background-size: 100% 100%;
 }
 
@@ -1533,9 +1534,14 @@ padding:2rpx 12rpx;
   width:330rpx;
   height: 132rpx;
   border-radius:16rpx;
-  padding:23rpx 30rpx 0 30rpx;
+  color:#fff; 
+}
+.btn-list ul li navigator{
+  width:330rpx;
+  height:132rpx;
+   padding:23rpx 30rpx 0 30rpx;
   box-sizing: border-box;
-  color:#fff;
+   border-radius:16rpx;
 }
 .btn-list ul li:first-child {
  
@@ -1746,8 +1752,17 @@ padding:2rpx 12rpx;
 .empty-container {
   width: 100%;
   padding-top: 40rpx;
+ 
+  padding-bottom:40rpx;
 }
-
+.empty-img{
+    width: 360rpx;
+  height: 200rpx;
+  margin: 80rpx 195rpx 40rpx;
+  box-sizing: border-box;
+  background: url('https://bonus.oss-cn-beijing.aliyuncs.com/wechat/pic_blankpage.png');
+  background-size: 100% 100%;
+}
 .empty-container image {
   display: block;
   width: 78%;
@@ -1755,9 +1770,9 @@ padding:2rpx 12rpx;
 }
 
 .empty-container .tit {
-  margin-top: 20rpx;
-  color: #333;
-  font-size: 36rpx;
+ 
+  color: #b3b3b3;
+  font-size: 28rpx;
   text-align: center;
 }
 
