@@ -34,7 +34,7 @@
    
   </ul>
 </view>
-<!-- <view class='list-block mar-t-md'>
+<view class='list-block mar-t-md'>
   <ul>
     <li>
       <navigator class='item-content item-link' url='/pages/mytask/mytask'>
@@ -47,7 +47,7 @@
       </navigator>
     </li>
   </ul>
-</view> -->
+</view>
 <view class='list-block mar-t-md'>
   <ul>
     <li>

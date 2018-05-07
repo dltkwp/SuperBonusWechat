@@ -1,4 +1,8 @@
 <view class='item bg-white'>
-    <view class="font-md font-black pad-lg">文字内容区域</view>
-    <image  src="https://cdns.mtscrm.com/FvIo6tSOUwUJxl0ilLV270HClddK?version=2017091901"></image>
+    <view class="font-md font-black pad-lg">
+       <import src="../../wxParse/wxParse.wxml" />
+        <view class="wxParse intro-detail">
+            <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+        </view>    
+    </view>
 </view>

@@ -53,7 +53,7 @@ Page({
     let index = e.currentTarget.dataset.index;
     let _this = this;
     let cur = _this.data.bannerList[index];
-    if (cur.href) {   // pages/product/product?productId=17
+    if (cur.href) {  
       switch (cur.type) {
         case 'product': { 
           wx.navigateTo({

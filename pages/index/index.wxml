@@ -2,9 +2,10 @@
 <view class='swiper-container'>
   <swiper class="swiper-box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:240rpx;">
     <block wx:for="{{bannerList}}" wx:key="index">
-      <swiper-item >
-        <image bindtap="advItemClick" data-index="{{index}}" 
-               src="{{item.image}}" class="slide-image" style="height: 240rpx;" />
+      <swiper-item>
+        <image bindtap="advItemClick" 
+              data-index="{{index}}" src="{{item.image}}" 
+              class="slide-image" style="height: 240rpx;" />
       </swiper-item>
     </block>
   </swiper>
@@ -23,54 +24,51 @@
           <icon class="icon-release"></icon>
         </view>
       </navigator> -->
-      <navigator url="#" bindtap="noWork" >
-      <view class='btn-list-item'>
-        <view>
-          <view class="font-xlg ">我要发布</view>
-          <view class="font-sm opt-7">Release</view>
-        </view>
-       
+      <navigator url="#" bindtap="noWork">
+        <view class='btn-list-item'>
+          <view>
+            <view class="font-xlg ">我要发布</view>
+            <view class="font-sm opt-7">Release</view>
+          </view>
           <icon class="icon-release"></icon>
-        
         </view>
       </navigator>
     </li>
     <li>
-      <navigator url="/pages/discovery/discovery" 
-                 open-type="switchTab" >
-                  <view class='btn-list-item'>
-        <view>
-          <view class="font-xlg">我要承接</view>
-          <view class="font-sm opt-7">Undertake</view>
-        </view>
-       
+      <navigator url="/pages/discovery/discovery" open-type="switchTab">
+        <view class='btn-list-item'>
+          <view>
+            <view class="font-xlg">我要承接</view>
+            <view class="font-sm opt-7">Undertake</view>
+          </view>
+
           <icon class="icon-undertake"></icon>
-       
+
         </view>
-      </navigator> 
+      </navigator>
     </li>
   </ul>
 </view>
 <view class='news-roller' wx:if="marqueeList.length>0" style="border-top:none;">
- 
+
   <text class="news-roller-title"></text>
   <text class='news-roller-divide'></text>
-    <navigator url='/pages/task/task?id={{marquee.id}}' class='news-roller-info'>
-      
-          {{marquee.projectName}}
-     
-    </navigator>
+  <navigator url='/pages/task/task?id={{marquee.id}}' class='news-roller-info'>
+
+    {{marquee.projectName}}
+
+  </navigator>
   <text class='news-roller-price hide'></text>
 </view>
 <view class="list-block media-list mar-t-md">
   <ul>
     <li>
       <view class="item-content">
-     
+
         <view class="item-inner">
-         
-            <view class="item-title font-lg font-black">
-                 <icon class='icon-red-line'></icon>加入超级悬赏
+
+          <view class="item-title font-lg font-black">
+            <icon class='icon-red-line'></icon>加入超级悬赏
           </view>
         </view>
       </view>
@@ -92,14 +90,14 @@
         </view>
       </navigator>
     </li>
-    
+
   </ul>
 
 </view>
 
- <view wx:if="{{productList.length==0&&pageNum==1}}">
-       <view class="empty-container">
+<view wx:if="{{productList.length==0&&pageNum==1}}">
+  <view class="empty-container">
     <icon class='empty-img'></icon>
     <view class="tit">暂无内容</view>
   </view>
-    </view>
+</view>
