@@ -1287,12 +1287,17 @@ swiper-item {
 .add-img {
   width: 160rpx;
   height: 160rpx;
-  margin-right: 20rpx;
-  margin-bottom: 20rpx;
+ 
   background-color: #f0f1f3;
+
+}
+.add-img-box{
+   width: 160rpx;
+  height: 160rpx;
+   margin-right: 20rpx;
+  margin-bottom: 20rpx;
   display: inline-block;
 }
-
 .icon-add-img {
   width: 160rpx;
   height: 160rpx;
@@ -1304,11 +1309,10 @@ swiper-item {
   height: 44rpx;
   background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/ic_delete.png);
   background-size: 100% 100%;
-  position: relative;
-  left:-40rpx;
-  top:-130rpx;
-  margin:0;
-  padding:0;
+ float:right;
+
+margin:-180rpx -10rpx 0 0;
+
 }
 .icon-pay-user {
   width: 60rpx;
