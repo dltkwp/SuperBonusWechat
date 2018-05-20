@@ -55,18 +55,18 @@ Page({
     let remark2 = save.remark2;
     let remark3 = save.remark3;
 
-    if (!regex.gtZeroNumber(cnt)) {
+    if (cnt&&!regex.gtZeroNumber(cnt)) {
       message.warn('数量格式不正确');return false;
     }
-    if(!productDesc){
-      message.warn('项目背景不可为空');return false;
-    }
-    if (!productDesc) {
-      message.warn('项目背景不可为空'); return false;
-    }
-    if(!target){
-      message.warn('目标客户群体不可为空'); return false;
-    }
+    // if(!productDesc){
+    //   message.warn('项目背景不可为空');return false;
+    // }
+    // if (!productDesc) {
+    //   message.warn('项目背景不可为空'); return false;
+    // }
+    // if(!target){
+    //   message.warn('目标客户群体不可为空'); return false;
+    // }
 
     save.time = _this.data.values[_this.data.index];
     save.index = _this.data.index;

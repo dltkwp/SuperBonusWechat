@@ -18,5 +18,17 @@
 <view class='font-md font-black text-center'>
   您可与客服进行沟通，推进项目审核过程
 </view>
-   <navigator  url='' class='btn btn-large btn-red mar-t-xxlg mar-lr-auto'>联系客服</navigator> 
-    <navigator  url='/pages/index/index' class='btn btn-large btn-default mar-t-md mar-lr-auto'>返回首页</navigator> 
+<view class='btn btn-large btn-red mar-t-xxlg mar-lr-auto'>联系客服
+      <contact-button type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:0;'></contact-button>
+      <contact-button type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:80rpx;'></contact-button>
+      <contact-button type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:160rpx;'></contact-button>
+      <contact-button type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:240rpx;'></contact-button>
+      <contact-button type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:320rpx;'></contact-button>
+      <contact-button type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:400rpx;'></contact-button>
+      <contact-button type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:480rpx;'></contact-button>
+      <contact-button type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:560rpx;'></contact-button>
+      <contact-button type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:640rpx;'></contact-button>
+      <contact-button type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:720rpx;'></contact-button>
+
+  </view>
+    <navigator open-type="switchTab" url='/pages/index/index' class='btn btn-large btn-default mar-t-md mar-lr-auto'>返回首页</navigator> 

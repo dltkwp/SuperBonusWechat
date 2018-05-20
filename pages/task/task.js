@@ -1,10 +1,10 @@
-const WxParse = require('../../wxParse/wxParse.js')
+const WxParse = require('../../wxParse/wxParse')
 const _ = require('../../utils/lodash.core');
 const request = require('../../utils/request');
 const modal = require('../../utils/modal');
 const message = require('../../utils/message');
 const superConst = require("../../utils/super-const");
-const moment  = require("../../utils/moment.min.js");
+const moment  = require("../../utils/moment.min");
 const app = getApp()
 
 Page({
@@ -36,7 +36,7 @@ Page({
         method: 'POST',
         params: {},
         success: function (data) {
-          wx.navigateTo({
+          wx.redirectTo({
             url: '../joinProject/joinProject'
           });
         },
