@@ -28,8 +28,70 @@ Page({
   onShow: function () {
   
   },
-  uploadImage: function () {
+  uploadImage: function (e) {
+    let _this = this;
+    wx.showActionSheet({
+      itemList: ['从相册中选择', '拍照'],
+      itemColor: "#f7982a",
+      count: 1,
+      success: function (res) {
+        if (!res.cancel) {
+          if (res.tapIndex == 0) {
+            _this.chooseWxImage('album')
+          } else if (res.tapIndex == 1) {
+            _this.chooseWxImage('camera')
+          }
+        }
+      }
+    })
+  },
+  chooseWxImage: function (type) {
+    let _this = this;
+    wx.chooseImage({
+      sizeType: ['original', 'compressed'],
+      sourceType: [type],
+      success: function (res) {
 
+          let storage = wx.getStorageSync(superConst.SUPER_TOKEN_KEY)
+          wx.showToast({
+            icon: "loading",
+            title: "正在上传"
+          });
+          wx.uploadFile({
+            url: superConst.API_BASE_URL +  "upload",
+            filePath: res.tempFilePaths[0],
+            name: 'file',
+            header: { 
+              "Content-Type": "multipart/form-data",
+              'token': storage.token
+            },
+            success: function (res) {
+              console.log(res);
+              if (res.statusCode != 200) {
+                wx.showModal({
+                  title: '提示',
+                  content: '上传失败',
+                  showCancel: false
+                })
+                return;
+              }
+              console.log(res.data, 1111111111);
+              var data = res.data
+              
+            },
+            fail: function (e) {
+              wx.showModal({
+                title: '提示',
+                content: '上传失败',
+                showCancel: false
+              })
+            },
+            complete: function () {
+              wx.hideToast();  //隐藏Toast
+            }
+          })
+      }
+    })
   },
   submit: function (e) {
     let save = e.detail.value;

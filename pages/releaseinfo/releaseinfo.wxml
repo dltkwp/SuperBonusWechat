@@ -120,7 +120,7 @@
           </view>
         </view>
         <view class='pad-lg'>
-          <view class='add-img'>
+          <view class='add-img' bindtap='uploadImage'>
             <icon class='icon-add-img'></icon>
           </view>
         </view>
