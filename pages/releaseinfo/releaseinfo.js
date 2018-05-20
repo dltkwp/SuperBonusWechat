@@ -1,12 +1,9 @@
-// pages/releaseinfo/releaseinfo.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     array: ['实体产品', '虚拟服务'],
-    index: 0
+    index: 0,
+    image:'',
+    other:{}
   },
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -14,59 +11,35 @@ Page({
       index: e.detail.value
     })
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
   
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady: function () {
   
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
   
   },
+  uploadImage: function () {
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
   },
+  submit: function (e) {
+    console.log(e.detail.value);
+    let save = e.detail.value;
+    let _this = this;
+    let commpanyName =  save.companyName;
+    let userName = save.userName;
+    let phone = save.phone;
+    let projectName = save.projectName;
+    let projectArea = save.projectArea;
+    let productPrice = save.productPrice;
+    let platePrice = save.platePrice;
+    let desc = save.desc;
+    let image = _this.data.image;
+    let categroy = _this.data.index; // 0: 实体服务 1: 虚拟服务
+    
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
+    console.log(_this.data.other);
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
   }
 })

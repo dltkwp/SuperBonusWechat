@@ -1,52 +1,83 @@
-// pages/elaborate/elaborate.js
-Page({
+const WxParse = require('../../wxParse/wxParse.js')
+const _ = require('../../utils/lodash.core');
+const request = require('../../utils/request');
+const modal = require('../../utils/modal');
+const superConst = require("../../utils/super-const");
+const message = require('../../utils/message');
+const regex = require('../../utils/regex');
+const app = getApp();
 
-  /**
-   * 页面的初始数据
-   */
+Page({
   data: {
     array: ['1个月', '3个月', '6个月', '1年'],
-    index: 0
+    values: [30,90,180,365],
+    index: 0,
+    other:{
+      productDesc:'',
+      target:'',
+      remark1:'',
+      remark2:'',
+      remark3:'',
+      cnt:''
+    }
   },
   bindPickerChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       index: e.detail.value
     })
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
   
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady: function () {
   
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
-  
-  },
+    let _this = this;
+    let pages = getCurrentPages();
+    let currPage = pages[pages.length - 1];
+    let prevPage = pages[pages.length - 2];
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
+    _this.setData({
+        index:prevPage.data.other.index,
+        other:prevPage.data.other
+    });
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
+  },
+  submitp: function (e) {
+    let save = e.detail.value;
+    let _this = this;
+    let cnt  = save.cnt;
+    let productDesc = save.productDesc;
+    let target = save.target;
+    
+    let remark1 = save.remark1;
+    let remark2 = save.remark2;
+    let remark3 = save.remark3;
+
+    if (!regex.gtZeroNumber(cnt)) {
+      message.warn('数量格式不正确');return false;
+    }
+    if(!productDesc){
+      message.warn('项目背景不可为空');return false;
+    }
+    if (!productDesc) {
+      message.warn('项目背景不可为空'); return false;
+    }
+    if(!target){
+      message.warn('目标客户群体不可为空'); return false;
+    }
+
+    save.time = _this.data.values[_this.data.index];
+    save.index = _this.data.index;
+    
+    let pages = getCurrentPages();
+    let currPage = pages[pages.length - 1];
+    let prevPage = pages[pages.length - 2];
+    prevPage.setData({
+      other:save
+    });
+    wx.navigateBack();
+    
   }
 })

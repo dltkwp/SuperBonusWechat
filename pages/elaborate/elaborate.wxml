@@ -1,108 +1,122 @@
+<form bindsubmit="submitp">
+  <view class='list-block mar-t-md'>
+    <ul>
+      <li>
+        <view class='item-content'>
+          <view class='item-inner'>
+            <view class='item-title label font-lg font-grey'>产品数量
 
-<view class='list-block mar-t-md'>
-  <ul>
-    <li>
-      <view class='item-content'>
-        <view class='item-inner'>
-          <view class='item-title label font-lg font-grey'>产品数量
-            
-          </view>
-          <view class='item-input font-lg'>
-            <input type='text' placeholder='请填写产品数量' placeholder-class='font-grey-cararra' auto-focus></input>
+            </view>
+            <view class='item-input font-lg'>
+              <input value='{{other.cnt}}' type='text' placeholder='请填写产品数量' name='cnt'  maxlength='6'
+              placeholder-class='font-grey-cararra' auto-focus></input>
+            </view>
           </view>
         </view>
-      </view>
-    </li>
-   <li>
-      <navigator class='item-content item-link'>
-        <view class='item-inner'>
-          <view class='item-title label font-lg font-grey'>销售周期</view>
-          <view class='item-input font-lg'>
-            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-              <view class="picker font-black">
-                {{array[index]}}
-              </view>
-            </picker>
+      </li>
+      <li>
+        <view class='item-content item-link'>
+          <view class='item-inner'>
+            <view class='item-title label font-lg font-grey'>销售周期</view>
+            <view class='item-input font-lg'>
+              <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <view class="picker font-black">
+                  {{array[index]}}
+                </view>
+              </picker>
+            </view>
           </view>
         </view>
-     </navigator>
-    </li>
-  </ul>
-</view>
-<view class='pad-lg font-md font-grey-steel'>项目背景</view>
-<view class='list-block'>
-  <ul>
-    <li>
-      <view class='item-content'>
-        <view class='item-inner font-lg'>
-          <view class='item-title-row'>
-            <textarea bindblur="bindTextAreaBlur" class='form-textarea' placeholder='项目的详细描述' placeholder-class='font-grey-cararra' />
+      </li>
+    </ul>
+  </view>
+  <view class='pad-lg font-md font-grey-steel'>项目背景</view>
+  <view class='list-block'>
+    <ul>
+      <li>
+        <view class='item-content'>
+          <view class='item-inner font-lg'>
+            <view class='item-title-row'>
+              <textarea  class='form-textarea' 
+              maxlength='500' name='productDesc' 
+              value="{{other.productDesc}}"
+              placeholder='项目的详细描述' placeholder-class='font-grey-cararra' />
+            </view>
           </view>
         </view>
-      </view>
-    </li>
-  </ul>
-</view>
-<view class='pad-lg font-md font-grey-steel'>项目产品目标客户群体描述</view>
-<view class='list-block'>
-  <ul>
-    <li>
-      <view class='item-content'>
-        <view class='item-inner font-lg'>
-          <view class='item-title-row'>
-            <textarea bindblur="bindTextAreaBlur" class='form-textarea' placeholder='哪些人群是目标客户群' placeholder-class='font-grey-cararra' />
+      </li>
+    </ul>
+  </view>
+  <view class='pad-lg font-md font-grey-steel'>项目产品目标客户群体描述</view>
+  <view class='list-block'>
+    <ul>
+      <li>
+        <view class='item-content'>
+          <view class='item-inner font-lg'>
+            <view class='item-title-row'>
+              <textarea bindblur="bindTextAreaBlur" class='form-textarea' 
+              maxlength='500' name='target'
+              value='{{other.target}}'
+              placeholder='哪些人群是目标客户群' placeholder-class='font-grey-cararra' />
+            </view>
           </view>
         </view>
-      </view>
-    </li>
-  </ul>
-</view>
-<view class='pad-lg font-md font-grey-steel'>项目产品的优劣势</view>
-<view class='list-block'>
-  <ul>
-    <li>
-      <view class='item-content'>
-        <view class='item-inner font-lg'>
-          <view class='item-title-row'>
-            <textarea bindblur="bindTextAreaBlur" class='form-textarea' placeholder='描述下产品的优劣势是什么？建议4条以上' placeholder-class='font-grey-cararra' />
+      </li>
+    </ul>
+  </view>
+  <view class='pad-lg font-md font-grey-steel'>项目产品的优劣势</view>
+  <view class='list-block'>
+    <ul>
+      <li>
+        <view class='item-content'>
+          <view class='item-inner font-lg'>
+            <view class='item-title-row'>
+              <textarea class='form-textarea' 
+              maxlength='1000' name='remark1' value='{{other.remark1}}'
+              placeholder='描述下产品的优劣势是什么？建议4条以上' placeholder-class='font-grey-cararra' />
+            </view>
           </view>
         </view>
-      </view>
-    </li>
-  </ul>
-</view>
+      </li>
+    </ul>
+  </view>
 
-<view class='pad-lg font-md font-grey-steel'>项目产品的卖点</view>
-<view class='list-block'>
-  <ul>
-    <li>
-      <view class='item-content'>
-        <view class='item-inner font-lg'>
-          <view class='item-title-row'>
-            <textarea bindblur="bindTextAreaBlur" class='form-textarea' placeholder='产品有什么卖点？您可以说说' placeholder-class='font-grey-cararra' />
+  <view class='pad-lg font-md font-grey-steel'>项目产品的卖点</view>
+  <view class='list-block'>
+    <ul>
+      <li>
+        <view class='item-content'>
+          <view class='item-inner font-lg'>
+            <view class='item-title-row'>
+              <textarea  class='form-textarea' 
+              maxlength='1000' name='remark2' value="{{other.remark2}}"              
+              placeholder='产品有什么卖点？您可以说说' placeholder-class='font-grey-cararra' />
+            </view>
           </view>
         </view>
-      </view>
-    </li>
-  </ul>
-</view>
+      </li>
+    </ul>
+  </view>
 
-<view class='pad-lg font-md font-grey-steel'>同行竞品有哪些？</view>
-<view class='list-block'>
-  <ul>
-    <li>
-      <view class='item-content'>
-        <view class='item-inner font-lg'>
-          <view class='item-title-row'>
-            <textarea bindblur="bindTextAreaBlur" class='form-textarea' placeholder='请输入竞品名称' placeholder-class='font-grey-cararra' />
+  <view class='pad-lg font-md font-grey-steel'>同行竞品有哪些？</view>
+  <view class='list-block'>
+    <ul>
+      <li>
+        <view class='item-content'>
+          <view class='item-inner font-lg'>
+            <view class='item-title-row'>
+              <textarea  class='form-textarea' 
+              maxlength='1000' name='remark3' value='{{other.remark3}}'                            
+              placeholder='请输入竞品名称' placeholder-class='font-grey-cararra' />
+            </view>
           </view>
         </view>
-      </view>
-    </li>
-  </ul>
-</view>
+      </li>
+    </ul>
+  </view>
 
-<view class='fixed-bottom-space'></view>
-<view class='fixed-bottom'>
-  <navigator url='/pages/relaeaseinfo/relaeaseinfo' class='btn btn-red btn-block'>提交</navigator>
-</view>
+  <view class='fixed-bottom-space'></view>
+  <view class='fixed-bottom'>
+      <button formType="submit" class='btn btn-red btn-block'>提交</button>  
+  </view>
+</form>
