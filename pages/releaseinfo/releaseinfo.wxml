@@ -122,7 +122,7 @@
         <view class='pad-lg'>
         <view class='add-img-box'>
         <view class='add-img' >
-            <icon class='icon-add-img'></icon>
+           <image class="icon-add-img" src='https://bonus.oss-cn-beijing.aliyuncs.com/product/D5A1E8281AAB46F0BB30F1110AFA8044'></image>
           </view>
           <icon class='icon-delete-img'></icon>
           </view>
