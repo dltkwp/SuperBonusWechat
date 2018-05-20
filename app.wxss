@@ -1290,6 +1290,7 @@ swiper-item {
   margin-right: 20rpx;
   margin-bottom: 20rpx;
   background-color: #f0f1f3;
+  display: inline-block;
 }
 
 .icon-add-img {
@@ -1298,7 +1299,17 @@ swiper-item {
   background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/icon_add_img.png);
   background-size: 100% 100%;
 }
-
+.icon-delete-img {
+  width: 44rpx;
+  height: 44rpx;
+  background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/ic_delete.png);
+  background-size: 100% 100%;
+  position: relative;
+  left:-40rpx;
+  top:-130rpx;
+  margin:0;
+  padding:0;
+}
 .icon-pay-user {
   width: 60rpx;
   height: 60rpx;

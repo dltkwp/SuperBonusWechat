@@ -120,9 +120,15 @@
           </view>
         </view>
         <view class='pad-lg'>
+        <view class='add-img' >
+            <icon class='icon-add-img'></icon>
+          </view>
+          <icon class='icon-delete-img'></icon>
           <view class='add-img' bindtap='uploadImage'>
             <icon class='icon-add-img'></icon>
           </view>
+         
+          
         </view>
       </li>
     </ul>
