@@ -1,4 +1,11 @@
+const WxParse = require('../../wxParse/wxParse.js')
+const _ = require('../../utils/lodash.core');
+const request = require('../../utils/request');
+const modal = require('../../utils/modal');
+const superConst = require("../../utils/super-const");
+const message = require('../../utils/message');
 var app = getApp()
+
 Page({
   data: { 
     currentTab:0,
@@ -9,38 +16,51 @@ Page({
     taskList: []
   },
   onLoad: function () {
-    var that = this;
+    var _this = this;
     wx.getSystemInfo({
       success: function (res) {
-        that.setData({
+        _this.setData({
           winWidth: res.windowWidth,
           winHeight: res.windowHeight
         });
       }
     });
+
+    _this.setData({
+      pageNum: 1
+    });
+    _this.getList();
+    
   },
   gotoDetail: function (e) {
-    var that = this;
-    that.setData({ currentTab: e.detail.current });
+    var _this = this;
+    _this.setData({ currentTab: e.detail.current });
   },
   swichNav: function (e) {
-    console.log(e,3453453453);
-    var that = this;
+    var _this = this;
     if (this.data.currentTab === e.target.dataset.current) {
       return false;
     } else {
-      that.setData({
+      _this.setData({
         currentTab: e.target.dataset.current
       })
     }
+    _this.setData({
+      pageNum:1
+    });
+    _this.getList();
   },
   getList: function () {
     let _this = this;
+
+    let url = 'users/project/release';
+    if (_this.data.currentTab == 1){
+      url = 'users/project/undertake';
+    }
+
     let requestHandler = {
       isLoading: true,
-      url: 'products?pageNum=' + _this.data.pageNum +
-      '&pageSize=' + _this.data.pageSize +
-      '&status=1',
+      url: url + '?pageNum=' + _this.data.pageNum + '&pageSize=' + _this.data.pageSize,
       method: 'GET',
       params: {},
       success: function (data) {
@@ -60,9 +80,12 @@ Page({
           if (data.list.length < _this.data.pageSize) {
             _this.setData({ loadOver: true })
 
+          }else{
+            _this.setData({
+              pageNum: _this.data.pageNum + 1,
+            });
           }
           _this.setData({
-            pageNum: _this.data.pageNum + 1,
             taskList: _taskList
           });
         } catch (e) {

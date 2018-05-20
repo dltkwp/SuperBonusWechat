@@ -15,16 +15,7 @@
 <view class="btn-list">
   <ul>
     <li>
-      <!-- <navigator url="/pages/release/release" class="btn-list-item pad-xlg b-r-line">
-        <view>
-          <view class="font-lg font-black">我要发布</view>
-          <view class="font-sm font-grey-steel">Release</view>
-        </view>
-        <view>
-          <icon class="icon-release"></icon>
-        </view>
-      </navigator> -->
-      <navigator url="#" bindtap="noWork">
+      <navigator url="/pages/release/release" >
         <view class='btn-list-item'>
           <view>
             <view class="font-xlg ">我要发布</view>
