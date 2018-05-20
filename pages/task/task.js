@@ -36,7 +36,9 @@ Page({
         method: 'POST',
         params: {},
         success: function (data) {
-          message.success('操作成功');
+          wx.navigateTo({
+            url: '../joinProject/joinProject'
+          });
         },
         fail: function () { }
       }

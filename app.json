@@ -22,7 +22,8 @@
     "pages/task/task",
     "pages/undertake/undertake",
     "pages/userinfo/userinfo",
-    "pages/page/page"
+    "pages/page/page",
+    "pages/joinProject/joinProject"
   ],
   "window":{
     "backgroundTextStyle":"light",

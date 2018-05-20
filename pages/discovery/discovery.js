@@ -9,6 +9,7 @@ Page({
   data: {
     areaList: [],
     areaShow: '区域',
+    queryKey:'',
 
     orderByList:[],
     orderBy: 'created',
@@ -27,7 +28,7 @@ Page({
     taskList: []
   },
   onLoad: function (options) {
-  
+    
   },
   onReady: function () {
   
@@ -35,6 +36,7 @@ Page({
   onShow: function () {
     this.setData({
       pageNum: 1,
+      queryKey: '',
       orderByList: [{
         key: 'DESC',
         type:'created',

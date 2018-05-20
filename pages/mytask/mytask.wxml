@@ -7,79 +7,37 @@
   <view class='tab-item active'>
     <view class="list-block media-list">
       <ul>
-        <li>
+        <li wx:for="{{productList}}" wx:key="{{index}}" wx:for-index="index">
           <navigator hover-class='none' class='item-content' url='/pages/task/task'>
             <view class='item-media'>
-              <image src="https://cdns.mtscrm.com/FvIo6tSOUwUJxl0ilLV270HClddK?version=2017091901" class='product-img-sm'></image>
+              <image src="{{item.imageUrl}}" class='product-img-sm'></image>
             </view>
             <view class='item-inner'>
               <view class='item-title-row'>
-                <view class='item-title font-xlg font-black'>天津户口对外推送</view>
+                <view class='item-title font-xlg font-black'>{{item.projectName}}</view>
               </view>
-              <view class='item-text font-sm mar-t-xs font-grey-steel'>5个天津户口对外推送，有能力的前来对接
-              
-              </view>
+              <view class='item-text font-sm mar-t-xs font-grey-steel'>{{item.intoduction}}</view>
               <view class='item-task-price'>
               <view>
-                  <text class='font-red font-xs'>赏金</text>
-                  <text class='font-red font-lg  pad-l-sm '>¥2000.00</text>
-                </view>
+                <text class='font-red font-xs'>赏金</text>
+                <text class='font-red font-lg  pad-l-sm '>¥{{item.price}}</text>
+              </view>
               
-                  <view class='font-black font-md'>已完成</view>
-                
-              </view>
-            </view>
-          </navigator>
-        </li>
-        <li>
-          <navigator hover-class='none' class='item-content' url='/pages/task/task'>
-            <view class='item-media'>
-              <image src="https://cdns.mtscrm.com/FvIo6tSOUwUJxl0ilLV270HClddK?version=2017091901" class='product-img-sm'></image>
-            </view>
-            <view class='item-inner'>
-              <view class='item-title-row'>
-                <view class='item-title font-xlg font-black'>天津户口对外推送</view>
-              </view>
-              <view class='item-text font-sm mar-t-xs font-grey-steel'>5个天津户口对外推送，有能力的前来对接
-              
-              </view>
-              <view class='item-task-price'>
-              <view>
-                  <text class='font-red font-xs'>赏金</text>
-                  <text class='font-red font-lg  pad-l-sm '>¥2000.00</text>
-                </view>
-              
-                  <view class='font-red font-md'>任务中</view>
-                
-              </view>
-            </view>
-          </navigator>
-        </li>
-        <li>
-          <navigator hover-class='none' class='item-content' url='/pages/task/task'>
-            <view class='item-media'>
-              <image src="https://cdns.mtscrm.com/FvIo6tSOUwUJxl0ilLV270HClddK?version=2017091901" class='product-img-sm'></image>
-            </view>
-            <view class='item-inner'>
-              <view class='item-title-row'>
-                <view class='item-title font-xlg font-black'>天津户口对外推送</view>
-              </view>
-              <view class='item-text font-sm mar-t-xs font-grey-steel'>5个天津户口对外推送，有能力的前来对接
-              
-              </view>
-              <view class='item-task-price'>
-              <view>
-                  <text class='font-red font-xs'>赏金</text>
-                  <text class='font-red font-lg  pad-l-sm '>¥2000.00</text>
-                </view>
-              
-                  <view class='font-grey-steel font-md'>已取消</view>
-                
+              <view class='font-black font-md'>已完成</view>
+              <view class='font-red font-md'>任务中</view>
+              <view class='font-grey-steel font-md'>已取消</view>
+                  
               </view>
             </view>
           </navigator>
         </li>
       </ul>
+      <view wx:if="{{taskList.length==0&&pageNum==1}}">
+        <view class="empty-container">
+          <icon class='empty-img'></icon>
+          <view class="tit">暂无内容</view>
+        </view>
+      </view>
     </view>
   </view>
 </view>

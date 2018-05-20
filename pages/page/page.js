@@ -26,7 +26,7 @@ Page({
   getDetail: function () {
     let _this = this;
     let requestHandler = {
-      url: 'pages/' + _this.data.id,
+      url: 'customPages/' + _this.data.id,
       method: 'GET',
       params: {},
       success: function (data) {

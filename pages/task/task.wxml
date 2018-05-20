@@ -16,7 +16,8 @@
   </view>
   <view class='font-xlg font-red mar-t-lg'>
    <text class='font-md pad-r-xs'>赏金</text>
-    <text class='font-md pad-r-xs'>¥</text>{{detail.price}}
+    <!-- <text class='font-md pad-r-xs'>¥</text> -->
+    {{detail.price}}
     <!-- <text class='font-md text-line-through font-grey-steel'>¥7000</text> -->
   </view>
 </view>
@@ -80,7 +81,7 @@
 <view class='fixed-bottom-space'></view>
 <view class='fixed-bottom fixed-bottom-button'>
   
-  <navigator url='/pages/recommendother/recommendother' 
-    class='btn btn-default btn-half'>推荐他人</navigator> 
+   <navigator  url='/pages/recommendother/recommendother?id={{id}}' 
+    class='btn btn-default btn-half'>推荐他人</navigator>  
   <view class='btn btn-red btn-half' bindtap='submit'>立即承接</view>
 </view>

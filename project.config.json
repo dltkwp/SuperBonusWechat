@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.0.0",
 	"appid": "wx3902cc912c78c08e",
-	"projectname": "Super-wechat",
+	"projectname": "Super-Newer",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -71,6 +71,12 @@
 					"id": -1,
 					"name": "推荐他人",
 					"pathName": "pages/recommendother/recommendother",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "全网",
+					"pathName": "pages/joinProject/joinProject",
 					"query": ""
 				}
 			]

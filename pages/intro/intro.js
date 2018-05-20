@@ -17,15 +17,13 @@ Page({
   },
   onLoad: function (options) {
     let _this = this;
+    _this.getIntroduce();
     _this.initImages();
   },
   onReady: function () {
 
   },
   onShow: function () {
-
-  },
-  onReachBottom: function () {
 
   },
   initImages: function () {
@@ -53,5 +51,8 @@ Page({
     this.setData({
       showIndex: index
     })
+  },
+  getIntroduce: function () {  //  读取平台介绍
+
   }
 })
