@@ -6,7 +6,6 @@ Page({
     other:{}
   },
   bindPickerChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       index: e.detail.value
     })
@@ -24,7 +23,6 @@ Page({
 
   },
   submit: function (e) {
-    console.log(e.detail.value);
     let save = e.detail.value;
     let _this = this;
     let commpanyName =  save.companyName;

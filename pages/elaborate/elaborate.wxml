@@ -108,7 +108,7 @@
               <textarea  class='form-textarea' 
               maxlength='1000' name='remark3' value='{{other.remark3}}'                            
               placeholder='请输入竞品名称' placeholder-class='font-grey-cararra' />
-            </view>
+                      </view>
           </view>
         </view>
       </li>
