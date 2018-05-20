@@ -120,14 +120,36 @@
           </view>
         </view>
         <view class='pad-lg'>
+        <view class='add-img-box'>
         <view class='add-img' >
             <icon class='icon-add-img'></icon>
           </view>
           <icon class='icon-delete-img'></icon>
-          <view class='add-img' bindtap='uploadImage'>
+          </view>
+          <view class='add-img-box'>
+        <view class='add-img' >
             <icon class='icon-add-img'></icon>
           </view>
-         
+          <icon class='icon-delete-img'></icon>
+          </view>
+          <view class='add-img-box'>
+        <view class='add-img' >
+            <icon class='icon-add-img'></icon>
+          </view>
+          <icon class='icon-delete-img'></icon>
+          </view>
+          <view class='add-img-box'>
+        <view class='add-img' >
+            <icon class='icon-add-img'></icon>
+          </view>
+          <icon class='icon-delete-img'></icon>
+          </view>
+          <view class='add-img-box'>
+        <view class='add-img' >
+            <icon class='icon-add-img'></icon>
+          </view>
+          <icon class='icon-delete-img'></icon>
+          </view>
           
         </view>
       </li>
