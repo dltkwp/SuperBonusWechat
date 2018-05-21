@@ -75,8 +75,7 @@ Page({
                 })
                 return;
               }
-              let data = res.data;
-              let fileCode = data.fileCode;
+              let fileCode = JSON.parse(res.data).fileCode;
 
               let obj = {
                 code: fileCode,
