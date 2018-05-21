@@ -51,7 +51,6 @@ Page({
       sizeType: ['original', 'compressed'],
       sourceType: [type],
       success: function (res) {
-
           let storage = wx.getStorageSync(superConst.SUPER_TOKEN_KEY)
           wx.showToast({
             icon: "loading",

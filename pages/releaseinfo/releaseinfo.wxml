@@ -137,7 +137,7 @@
             </view>
             <icon class='icon-delete-img'></icon>
           </view> -->
-          <view class='add-img-box' wx:if='images.length<5'>
+          <view class='add-img-box' wx:if='{{images.length<5}}'>
             <view class='add-img' bindtap='uploadImage'>
               <icon class='icon-add-img'></icon>
             </view>
