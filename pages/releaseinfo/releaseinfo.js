@@ -51,7 +51,6 @@ Page({
       sizeType: ['original', 'compressed'],
       sourceType: [type],
       success: function (res) {
-
           let storage = wx.getStorageSync(superConst.SUPER_TOKEN_KEY)
           wx.showToast({
             icon: "loading",
@@ -149,7 +148,7 @@ Page({
 
       "originPrice": productPrice,
       "price": platePrice,
-      "cycle":0
+      "cycle": 1
     }
     if(_this.data.images.length>0){
       param.images = _.map(_this.data.images, 'code').join(',');

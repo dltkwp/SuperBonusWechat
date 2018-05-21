@@ -77,5 +77,13 @@ Page({
       fail: function () {}
     }
     request(requestHandler);
+  },
+  onShareAppMessage: function (res) {
+    return {
+      title: this.data.detail.projectName,
+      path: '/pages/task/task?id=' + this.data.id,
+      success: function (res) { },
+      fail: function (res) { }
+    }
   }
 })

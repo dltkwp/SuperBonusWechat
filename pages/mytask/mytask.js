@@ -68,9 +68,11 @@ Page({
           // 处理下图片
           let _taskList = [];
           _.forEach(data.list, function (item) {
-            if (item.images) {
+            if (item.images.length>0) {
               let arr = item.images.split(',');
               item.imageUrl = superConst.IMAGE_STATIC_URL + arr[0];
+            }else{
+              item.imageUrl = superConst.PROJECT_DEFAULT_IMAGE;
             }
             _taskList.push(item);
           });

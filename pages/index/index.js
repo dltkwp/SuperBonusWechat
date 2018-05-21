@@ -198,5 +198,13 @@ Page({
       fail: function () { }
     }
     request(requestHandler);
+  },
+  onShareAppMessage: function (res) {
+    return {
+      title: '超级悬赏',
+      path: '/pages/index/index',
+      success: function (res) { },
+      fail: function (res) { }
+    }
   }
 })

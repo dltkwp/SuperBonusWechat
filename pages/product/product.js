@@ -90,6 +90,14 @@ Page({
     request(requestHandler);
   },
   onReady: function () {},
-  onShow: function () {}
+  onShow: function () {},
+  onShareAppMessage: function (res) {
+    return {
+      title: this.data.detail.productName,
+      path: '/pages/product/product?productId=' + this.data.id,
+      success: function (res) { },
+      fail: function (res) { }
+    }
+  }
 
 })

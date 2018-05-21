@@ -113,10 +113,11 @@
         </view>
         <view class='pad-lg'>
           <view class='add-img-box'  wx:for="{{images}}" wx:key="{{index}}" wx:for-index="index">
+           <icon class='icon-delete-img' data-index='{{index}}' bindtap='removeImage'></icon>
             <view class='add-img'>
               <image class="icon-add-img"  src='{{item.url}}'></image>
             </view>
-            <icon class='icon-delete-img' data-index='{{index}}' bindtap='removeImage'></icon>
+           
           </view>
           <!-- <view class='add-img-box'>
             <view class='add-img'>
@@ -136,7 +137,7 @@
             </view>
             <icon class='icon-delete-img'></icon>
           </view> -->
-          <view class='add-img-box' wx:if='images.length<5'>
+          <view class='add-img-box' wx:if='{{images.length<5}}'>
             <view class='add-img' bindtap='uploadImage'>
               <icon class='icon-add-img'></icon>
             </view>

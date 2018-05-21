@@ -1309,9 +1309,10 @@ swiper-item {
   height: 44rpx;
   background: url(https://bonus.oss-cn-beijing.aliyuncs.com/wechat/ic_delete.png);
   background-size: 100% 100%;
- float:right;
-
-margin:-180rpx -10rpx 0 0;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+margin:-22rpx 0rpx 0 144rpx;
 
 }
 .icon-pay-user {
