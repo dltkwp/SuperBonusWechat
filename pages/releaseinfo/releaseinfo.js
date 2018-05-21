@@ -152,7 +152,7 @@ Page({
       "cycle":0
     }
     if(_this.data.images.length>0){
-      param.images = _.map(_this.data.images,'code').join(',');
+      param.images = _.map(_this.data.images, 'code').join(',');
     }
 
     if (projectArea){
@@ -186,9 +186,6 @@ Page({
     }
     if (_this.data.other && _this.data.other.remark3) {
       param.competitor = _this.data.other.remark3;
-    }
-    if(_this.data.images.length>0){
-      param.images = _this.data.images.join(',');
     }
 
     let requestHandler = {
