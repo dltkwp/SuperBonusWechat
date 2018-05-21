@@ -149,7 +149,7 @@ Page({
 
       "originPrice": productPrice,
       "price": platePrice,
-      "cycle":0
+      "cycle": 1
     }
     if(_this.data.images.length>0){
       param.images = _.map(_this.data.images,'code').join(',');
