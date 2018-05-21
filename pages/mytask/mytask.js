@@ -104,4 +104,15 @@ Page({
       _this.getList();
     }
   },
+  toTaskDetail: function(e){
+    let index = e.currentTarget.dataset.index;
+    let cur = this.data.taskList[index];
+    if(cur.status == 'wait') {
+      message.error('当前任务等待审核')
+      return
+    }
+    wx.navigateTo({
+      url: '/pages/task/task?id=' + cur.projectId,
+    })
+  }
 })  

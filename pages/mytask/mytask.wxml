@@ -8,7 +8,7 @@
     <view class="list-block media-list">
       <ul>
         <li wx:for="{{taskList}}" wx:key="{{index}}" wx:for-index="index">
-          <navigator hover-class='none' class='item-content' url='/pages/task/task?id={{item.projectId}}'>
+          <view hover-class='none' class='item-content' bindtap='toTaskDetail' data-index="{{index}}">
             <view class='item-media'>
               <image src="{{item.imageUrl}}" class='product-img-sm'></image>
             </view>
@@ -26,10 +26,11 @@
               <view class='font-black font-md' wx:if="{{item.status == 'done'}}">已完成</view>
               <view class='font-red font-md' wx:if="{{item.status == 'undertake'}}">任务中</view>
               <view class='font-grey-steel font-md' wx:if="{{item.status == 'cancel'}}">已取消</view>
+              <view class='font-red font-md' wx:if="{{item.status == 'wait'}}">待审核</view>
                   
               </view>
             </view>
-          </navigator>
+          </view>
         </li>
       </ul>
       <view wx:if="{{taskList.length==0&&pageNum==1}}">
