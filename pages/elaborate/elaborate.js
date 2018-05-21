@@ -10,7 +10,7 @@ const app = getApp();
 Page({
   data: {
     array: ['1个月', '3个月', '6个月', '1年'],
-    values: [30,90,180,365],
+    values: [1,3,6,12],
     index: 0,
     other:{
       productDesc:'',
@@ -39,7 +39,7 @@ Page({
     let prevPage = pages[pages.length - 2];
 
     _this.setData({
-        index:prevPage.data.other.index,
+        index:prevPage.data.other.index||0,
         other:prevPage.data.other
     });
 
@@ -58,15 +58,6 @@ Page({
     if (cnt&&!regex.gtZeroNumber(cnt)) {
       message.warn('数量格式不正确');return false;
     }
-    // if(!productDesc){
-    //   message.warn('项目背景不可为空');return false;
-    // }
-    // if (!productDesc) {
-    //   message.warn('项目背景不可为空'); return false;
-    // }
-    // if(!target){
-    //   message.warn('目标客户群体不可为空'); return false;
-    // }
 
     save.time = _this.data.values[_this.data.index];
     save.index = _this.data.index;
