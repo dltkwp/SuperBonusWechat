@@ -45,7 +45,7 @@
             <view class='item-title-row'>
               <view class='item-title font-xlg font-black'>{{item.projectName}}</view>
             </view>
-            <view class='item-text font-sm mar-t-xs font-grey-steel'>{{item.intoduction}}
+            <view class='item-text font-sm font-grey-steel'>{{item.intoduction}}
             
             </view>
             <view class='item-task-price'>
