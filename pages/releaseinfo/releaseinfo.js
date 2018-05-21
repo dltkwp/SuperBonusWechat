@@ -122,7 +122,6 @@ Page({
     let productPrice = save.productPrice;
     let platePrice = save.platePrice;
     let desc = save.desc;
-    let image = _this.data.image;
     
     if (!commpanyName) {
       message.warn('公司名称不可为空'); return false;
@@ -151,8 +150,10 @@ Page({
 
       "originPrice": productPrice,
       "price": platePrice,
-      "cycle":0,
-      "images": "",
+      "cycle":0
+    }
+    if(_this.data.images.length>0){
+      param.images = _.map(_this.data.images,'code').join(',');
     }
 
     if (projectArea){
@@ -170,7 +171,7 @@ Page({
       param.projectNumber = _this.data.other.cnt;
     }
     if(_this.data.other && _this.data.other.time){
-      param.cycle = _this.data.other.index;
+      param.cycle = _this.data.other.time;
     }
     if (_this.data.other && _this.data.other.productDesc) {
       param.context = _this.data.other.productDesc;
