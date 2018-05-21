@@ -20,7 +20,7 @@
               <view class='item-task-price'>
               <view>
                 <text class='font-red font-xs'>赏金</text>
-                <text class='font-red font-lg  pad-l-sm '>¥{{item.price}}</text>
+                <text class='font-red font-lg  pad-l-sm '>{{item.price}}</text>
               </view>
               
               <view class='font-black font-md' wx:if="{{item.status == 'done'}}">已完成</view>

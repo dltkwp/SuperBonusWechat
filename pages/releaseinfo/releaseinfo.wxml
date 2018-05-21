@@ -9,8 +9,7 @@
               <text class='font-red'>*</text>
             </view>
             <view class='item-input font-lg'>
-              <input type='text' placeholder='请输入公司名称' name='companyName' 
-                     maxlength='20' placeholder-class='font-grey-cararra' auto-focus></input>
+              <input type='text' placeholder='请输入公司名称' name='companyName' maxlength='20' placeholder-class='font-grey-cararra' auto-focus></input>
             </view>
           </view>
         </view>
@@ -22,8 +21,7 @@
               <text class='font-red'>*</text>
             </view>
             <view class='item-input font-lg'>
-              <input type='text' placeholder='请输入联系人姓名' maxlength='10' name='userName'
-                placeholder-class='font-grey-cararra'></input>
+              <input type='text' placeholder='请输入联系人姓名' maxlength='10' name='userName' placeholder-class='font-grey-cararra'></input>
             </view>
           </view>
         </view>
@@ -35,8 +33,7 @@
               <text class='font-red'>*</text>
             </view>
             <view class='item-input font-lg'>
-              <input type='text' placeholder='请输入联系人手机号' maxlength='11' name='phone'
-                placeholder-class='font-grey-cararra'></input>
+              <input type='text' placeholder='请输入联系人手机号' maxlength='11' name='phone' placeholder-class='font-grey-cararra'></input>
             </view>
           </view>
         </view>
@@ -53,8 +50,7 @@
               <text class='font-red'>*</text>
             </view>
             <view class='item-input font-lg'>
-              <input type='text' placeholder='请输入项目名称' maxlength='20' name='projectName'
-                  placeholder-class='font-grey-cararra'></input>
+              <input type='text' placeholder='请输入项目名称' maxlength='20' name='projectName' placeholder-class='font-grey-cararra'></input>
             </view>
           </view>
         </view>
@@ -64,8 +60,7 @@
           <view class='item-inner'>
             <view class='item-title label font-lg font-grey'>地区</view>
             <view class='item-input font-lg'>
-              <input type='text' placeholder='项目产品所在位置或产地' name='projectArea' maxlength='20'
-                  placeholder-class='font-grey-cararra'></input>
+              <input type='text' placeholder='项目产品所在位置或产地' name='projectArea' maxlength='20' placeholder-class='font-grey-cararra'></input>
             </view>
           </view>
         </view>
@@ -91,8 +86,7 @@
               <text class='font-red'>*</text>
             </view>
             <view class='item-input font-lg'>
-              <input type='text' placeholder='产品对外市场价格' name='productPrice' maxlength='20'
-                placeholder-class='font-grey-cararra'></input>
+              <input type='text' placeholder='产品对外市场价格' name='productPrice' maxlength='20' placeholder-class='font-grey-cararra'></input>
             </view>
           </view>
         </view>
@@ -104,8 +98,7 @@
               <text class='font-red'>*</text>
             </view>
             <view class='item-input font-lg'>
-              <input type='text' placeholder='与平台合作底价' name='platePrice' maxlength='20'
-                placeholder-class='font-grey-cararra'></input>
+              <input type='text' placeholder='与平台合作底价' name='platePrice' maxlength='20' placeholder-class='font-grey-cararra'></input>
             </view>
           </view>
         </view>
@@ -114,43 +107,41 @@
         <view class='item-content'>
           <view class='item-inner font-lg'>
             <view class='item-title-row'>
-              <textarea bindblur="bindTextAreaBlur" class='form-textarea' name='desc' maxlength='500'
-                placeholder='对产品对简单描述' placeholder-class='font-grey-cararra' />
+              <textarea bindblur="bindTextAreaBlur" class='form-textarea' name='desc' maxlength='500' placeholder='对产品对简单描述' placeholder-class='font-grey-cararra' />
             </view>
           </view>
         </view>
         <view class='pad-lg'>
-        <view class='add-img-box'>
-        <view class='add-img' >
-           <image class="icon-add-img" src='https://bonus.oss-cn-beijing.aliyuncs.com/product/D5A1E8281AAB46F0BB30F1110AFA8044'></image>
+          <view class='add-img-box'  wx:for="{{images}}" wx:key="{{index}}" wx:for-index="index">
+            <view class='add-img'>
+              <image class="icon-add-img"  src='{{item.url}}'></image>
+            </view>
+            <icon class='icon-delete-img' data-index='{{index}}' bindtap='removeImage'></icon>
           </view>
-          <icon class='icon-delete-img'></icon>
-          </view>
-          <view class='add-img-box'>
-        <view class='add-img' >
-            <icon class='icon-add-img'></icon>
-          </view>
-          <icon class='icon-delete-img'></icon>
-          </view>
-          <view class='add-img-box'>
-        <view class='add-img' >
-            <icon class='icon-add-img'></icon>
-          </view>
-          <icon class='icon-delete-img'></icon>
+          <!-- <view class='add-img-box'>
+            <view class='add-img'>
+              <icon class='icon-add-img'></icon>
+            </view>
+            <icon class='icon-delete-img'></icon>
           </view>
           <view class='add-img-box'>
-        <view class='add-img' >
-            <icon class='icon-add-img'></icon>
-          </view>
-          <icon class='icon-delete-img'></icon>
+            <view class='add-img'>
+              <icon class='icon-add-img'></icon>
+            </view>
+            <icon class='icon-delete-img'></icon>
           </view>
           <view class='add-img-box'>
-        <view class='add-img' >
-            <icon class='icon-add-img'></icon>
+            <view class='add-img'>
+              <icon class='icon-add-img'></icon>
+            </view>
+            <icon class='icon-delete-img'></icon>
+          </view> -->
+          <view class='add-img-box' wx:if='images.length<5'>
+            <view class='add-img' bindtap='uploadImage'>
+              <icon class='icon-add-img'></icon>
+            </view>
           </view>
-          <icon class='icon-delete-img'></icon>
-          </view>
-          
+
         </view>
       </li>
     </ul>
@@ -171,6 +162,6 @@
 
   <view class='fixed-bottom-space'></view>
   <view class='fixed-bottom'>
-    <button formType="submit" class='btn btn-red btn-block'>发布项目</button>  
+    <button formType="submit" class='btn btn-red btn-block'>发布项目</button>
   </view>
 </form>

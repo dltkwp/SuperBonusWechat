@@ -11,8 +11,8 @@ Page({
   data: {
     array: ['实体产品', '虚拟服务'],
     index: 0,
-    image:'',
-    other:{}
+    other:{},
+    images:[],
   },
   bindPickerChange: function (e) {
     this.setData({
@@ -75,9 +75,18 @@ Page({
                 })
                 return;
               }
-              console.log(res.data, 1111111111);
-              var data = res.data
-              
+              let data = res.data;
+              let fileCode = data.fileCode;
+
+              let obj = {
+                code: fileCode,
+                url: superConst.IMAGE_STATIC_URL + fileCode
+              };
+              let arr = _this.data.images;
+              arr.push(obj);
+              _this.setData({
+                images:arr
+              });              
             },
             fail: function (e) {
               wx.showModal({
@@ -92,6 +101,15 @@ Page({
           })
       }
     })
+  },
+  removeImage: function(e){
+    let _this = this;
+    let index = e.currentTarget.dataset.index;
+    let arr = _this.data.images;
+    arr.splice(index, 1);
+    _this.setData({
+      images:arr
+    });
   },
   submit: function (e) {
     let save = e.detail.value;
@@ -134,7 +152,6 @@ Page({
       "originPrice": productPrice,
       "price": platePrice,
       "cycle":0,
-
       "images": "",
     }
 
@@ -169,6 +186,9 @@ Page({
     }
     if (_this.data.other && _this.data.other.remark3) {
       param.competitor = _this.data.other.remark3;
+    }
+    if(_this.data.images.length>0){
+      param.images = _this.data.images.join(',');
     }
 
     let requestHandler = {
