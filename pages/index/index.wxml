@@ -14,16 +14,16 @@
 
 <view class="btn-list">
   <ul>
-    <li>
-      <navigator url="/pages/release/release" >
-        <view class='btn-list-item'>
+    <li bindtap='publishSubmit'>
+      <!-- <navigator url="/pages/release/release" > -->
+        <view class='btn-list-item' >
           <view>
             <view class="font-xlg ">我要发布</view>
             <view class="font-sm opt-7">Release</view>
           </view>
           <icon class="icon-release"></icon>
         </view>
-      </navigator>
+      <!-- </navigator> -->
     </li>
     <li>
       <navigator url="/pages/discovery/discovery" open-type="switchTab">

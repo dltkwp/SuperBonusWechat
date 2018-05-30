@@ -3,6 +3,8 @@ const request = require('../../utils/request');
 const modal = require('../../utils/modal');
 const message = require('../../utils/message');
 const superConst = require("../../utils/super-const");
+const util = require("../../utils/util");
+
 const app = getApp()
 let timer = null;
 
@@ -43,10 +45,13 @@ Page({
     let _this = this;
     _this.getProjects();
   },
-  noWork: function () {
-    modal({
-      content: '程序猿小伙伴正在加班赶工中。。。'
-    })
+  publishSubmit: function () {
+    let _this = this;
+    if (util.isPayAccount('publish')) {
+      wx.redirectTo({
+        url: '../release/release'
+      });
+    }
   },
   advItemClick: function (e) {
     console.log(e);

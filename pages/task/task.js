@@ -5,6 +5,7 @@ const modal = require('../../utils/modal');
 const message = require('../../utils/message');
 const superConst = require("../../utils/super-const");
 const moment  = require("../../utils/moment.min");
+const util = require("../../utils/util");
 const app = getApp()
 
 Page({
@@ -26,23 +27,33 @@ Page({
   onShow: function () {
   
   },
+  underTakeOther: function (){
+    let _this = this;
+    if (util.isPayAccount('undertake')) {
+      wx.redirectTo({
+        url: '../recommendother/recommendother?id=' + _this.id
+      });
+    }
+  },
   submit: function () {
     let _this = this;
-    let storage = wx.getStorageSync(superConst.SUPER_TOKEN_KEY);
-    if (storage && storage.userId) {
-      let requestHandler = {
-        isLoading: true,
-        url: 'projects/' + _this.data.id + '/users/' + storage.userId,
-        method: 'POST',
-        params: {},
-        success: function (data) {
-          wx.redirectTo({
-            url: '../joinProject/joinProject'
-          });
-        },
-        fail: function () { }
+    if (util.isPayAccount('undertake')){
+      let storage = wx.getStorageSync(superConst.SUPER_TOKEN_KEY);
+      if (storage && storage.userId) {
+        let requestHandler = {
+          isLoading: true,
+          url: 'projects/' + _this.data.id + '/users/' + storage.userId,
+          method: 'POST',
+          params: {},
+          success: function (data) {
+            wx.redirectTo({
+              url: '../joinProject/joinProject'
+            });
+          },
+          fail: function () { }
+        }
+        request(requestHandler);
       }
-      request(requestHandler);
     }
   },
   getDetail: function () {

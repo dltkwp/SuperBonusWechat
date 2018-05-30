@@ -73,7 +73,7 @@ const isLogin = function () {
    * height      每个模块的高度
    * colunm      列数
   **/
-  const countIndex = function(offetHight, scrollTop, height, colunm) {
+const countIndex = function(offetHight, scrollTop, height, colunm) {
   // 单例获取屏幕宽度比
   if (!countIndex.pix) {
       try {
@@ -88,8 +88,70 @@ const isLogin = function () {
   return scroll > 0 ? Math.floor(scroll / hei) * colunm : 0
 }
 
+/**
+ * 验证登录用户是否是付费用户
+ */
+const isPayAccount = function (opt) {
+  let requestHandle = {
+    url: 'users/point',
+    method: 'GET',
+    success: function (data) {
+      if (data.code && data.code > 0) {
+        wx.showModal({
+          title: '温馨提示',
+          confirmText: '立即加入',
+          cancelText: '取消',
+          content: '加入超级悬赏共享平台方可进行' + (opt=='publish'?"发布":"承接"),
+          success: function (d) {
+            if (d.confirm) {
+              wx.navigateTo({
+                url: '/pages/product/product?productId=20'
+              });
+            }
+          }
+        });
+      } else {
+        if(data>0){
+          return true;
+        }else{
+          wx.showModal({
+            title: '温馨提示',
+            confirmText: '立即加入',
+            cancelText: '取消',
+            content: '加入超级悬赏共享平台方可进行' + (opt == 'publish' ? "发布" : "承接"),
+            success: function (d) {
+              if(d.confirm){
+                wx.navigateTo({
+                  url: '/pages/product/product?productId=20'
+                });
+              }
+            }
+          });
+        }
+      }
+    },
+    fail: function () { 
+      wx.showModal({
+        title: '温馨提示',
+        confirmText: '立即加入',
+        cancelText: '取消',
+        content: '加入超级悬赏共享平台方可进行' + (opt == 'publish' ? "发布" : "承接"),
+        success: function (d) {
+          if (d.confirm) {
+            wx.navigateTo({
+              url: '/pages/product/product?productId=20'
+            });
+          }
+        }
+      });
+    }
+  };
+  request(requestHandle);
+}
+
 module.exports = {
   isLogin,
   getOpenId,
-  countIndex
+  countIndex,
+  isPayAccount
 }

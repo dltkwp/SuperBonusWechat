@@ -1,4 +1,3 @@
-let moment = require('./moment.min');
 let superConst = require('./super-const');
 let message = require('./message');
 
@@ -41,7 +40,6 @@ const request = function (requestHandler) {
         switch (statusCode) {
           case 401: { // 未登录授权自动跳转
             wx.redirectTo({ url: '../register/register' });
-            console.error('未登录授权');
           } break;
           default: {
             //-- 拦截后端返回的结果
