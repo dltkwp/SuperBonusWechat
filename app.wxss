@@ -19,7 +19,7 @@ input {
 }
 
 .hide {
-  display: none;
+  display: none!important;
 }
 
 /*字体大小设置 */

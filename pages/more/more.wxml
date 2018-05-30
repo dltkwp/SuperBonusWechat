@@ -2,7 +2,7 @@
   
    <image src="{{userInfo.headImage}}" mode='aspectFill	' class='user-img img-circle'></image>
    <view class='mar-l-lg' style='width:500rpx;'>
-   <view class='font-lg font-white mar-t-sm'>{{userInfo.realname || userInfo.nickname}}</view>
+   <view class='font-lg font-white mar-t-sm'>【超级】{{userInfo.realname || userInfo.nickname}}</view>
    <view class='font-md font-white mar-t-xs my-level'>{{userInfo.levelName || ''}}</view>
    </view>
     <view class='icon-arrow-right-white  mar-t-xxlg'></view>
