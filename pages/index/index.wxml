@@ -14,8 +14,9 @@
 
 <view class="btn-list">
   <ul>
-    <li bindtap='publishSubmit'>
-      <!-- <navigator url="/pages/release/release" > -->
+    <li>
+    <view class='nav-item' bindtap='publishSubmit'>
+       
         <view class='btn-list-item' >
           <view>
             <view class="font-xlg ">我要发布</view>
@@ -23,10 +24,10 @@
           </view>
           <icon class="icon-release"></icon>
         </view>
-      <!-- </navigator> -->
+      </view>
     </li>
     <li>
-      <navigator url="/pages/discovery/discovery" open-type="switchTab">
+      <navigator url="/pages/discovery/discovery" class='nav-item' open-type="switchTab">
         <view class='btn-list-item'>
           <view>
             <view class="font-xlg">我要承接</view>

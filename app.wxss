@@ -1552,7 +1552,7 @@ padding:2rpx 12rpx;
   border-radius:16rpx;
   color:#fff; 
 }
-.btn-list ul li navigator{
+.btn-list ul li .nav-item{
   width:330rpx;
   height:132rpx;
    padding:23rpx 30rpx 0 30rpx;
