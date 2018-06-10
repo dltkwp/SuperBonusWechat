@@ -58,6 +58,7 @@
     </li>
   </ul>
 </view>
+<!--
 <view class='pad-lg font-md font-grey-steel'>目标客户</view>
 
 <view class='item bg-white b-t-line b-b-line pad-md'>
@@ -69,8 +70,15 @@
 <view class='item bg-white b-t-line b-b-line pad-md'>
     <text class='font-md font-black'>{{detail.context}}</text>
 </view>
-
-<view class='pad-lg font-md font-grey-steel'>详细介绍</view>
+-->
+<view class="swiper-tab content-tab">
+   <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">图文详情</view> 
+   <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">公司背景</view> 
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="1" bindtap="swichNav">超级悬赏</view> 
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="1" bindtap="swichNav">合作模式</view> 
+</view> 
+<view current="{{currentTab}}" class="tab-box content-tab-box" duration="300">
+  <view class='tab-item active'>
 
 <view class='item bg-white b-t-line b-b-line pad-md'>
     <import src="../../wxParse/wxParse.wxml" />
@@ -78,6 +86,12 @@
         <template is="wxParse" data="{{wxParseData:article.nodes}}" />
     </view>
 </view>
+  </view>
+  </view>
+
+
+
+
 <view class='fixed-bottom-space'></view>
 <view class='fixed-bottom fixed-bottom-button'>
   

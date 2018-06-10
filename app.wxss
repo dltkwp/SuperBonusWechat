@@ -1846,3 +1846,17 @@ padding:2rpx 12rpx;
  margin-top:-5rpx;
  vertical-align: middle;
 }
+.btn-logout{
+  background-color:#fff;
+color:#FF5D54;
+margin-top: 1
+}
+.content-tab{
+  position: relative;
+  margin-top: 20rpx;
+  border-bottom: 0;
+}
+.content-tab-box{
+  position: relative;
+  padding-top: 0;
+}

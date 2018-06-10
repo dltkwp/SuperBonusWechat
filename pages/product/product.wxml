@@ -9,6 +9,21 @@
     </view>
 </view>
 <view class="fixed-bottom-space"></view>
-<view class="fixed-bottom">
-    <view bindtap="pay" loading="{{loading}}" disabled="{{disabled}}" class="btn btn-red btn-block">立即加盟</view>
+
+<view class='fixed-bottom fixed-bottom-button'>
+
+
+  <view class='btn btn-default btn-half'><contact-button 
+            type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:0;'></contact-button>
+          <contact-button 
+            type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:80rpx;'></contact-button>
+             <contact-button 
+            type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:160rpx;'></contact-button>
+            <contact-button 
+            type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:240rpx;'></contact-button>
+            <contact-button 
+            type="default-dark" size="40" session-from="weapp" class='box-askonline' style='left:320rpx;'></contact-button>
+            在线咨询</view>
+  
+  <view class='btn btn-red btn-half' bindtap="pay" loading="{{loading}}" disabled="{{disabled}}" >立即加盟</view>
 </view>
