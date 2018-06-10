@@ -47,11 +47,9 @@ Page({
   },
   publishSubmit: function () {
     let _this = this;
-    if (util.isPayAccount('publish')) {
-      wx.redirectTo({
-        url: '../release/release'
-      });
-    }
+    util.isPayAccount('publish', function () {
+      wx.redirectTo({url: '../release/release'});
+    })
   },
   advItemClick: function (e) {
     console.log(e);

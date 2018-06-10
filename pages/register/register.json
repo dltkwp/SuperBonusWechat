@@ -1,7 +1,7 @@
 {
   "backgroundTextStyle": "black",
   "navigationBarTextStyle": "black",
-  "navigationBarTitleText": "注册",
+  "navigationBarTitleText": "登录",
   "navigationBarBackgroundColor": "#fff",
   "backgroundColor": "#F2f2f2",
   "enablePullDownRefresh": false

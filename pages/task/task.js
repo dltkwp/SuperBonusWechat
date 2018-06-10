@@ -29,32 +29,30 @@ Page({
   },
   underTakeOther: function (){
     let _this = this;
-    if (util.isPayAccount('undertake')) {
-      wx.redirectTo({
-        url: '../recommendother/recommendother?id=' + _this.id
-      });
-    }
+    util.isPayAccount('undertake',function () {
+      wx.redirectTo({ url: '../recommendother/recommendother?id=' + _this.id });
+    })
   },
   submit: function () {
     let _this = this;
-    if (util.isPayAccount('undertake')){
-      let storage = wx.getStorageSync(superConst.SUPER_TOKEN_KEY);
-      if (storage && storage.userId) {
-        let requestHandler = {
-          isLoading: true,
-          url: 'projects/' + _this.data.id + '/users/' + storage.userId,
-          method: 'POST',
-          params: {},
-          success: function (data) {
-            wx.redirectTo({
-              url: '../joinProject/joinProject'
-            });
-          },
-          fail: function () { }
+    util.isPayAccount('undertake',function () {
+        let storage = wx.getStorageSync(superConst.SUPER_TOKEN_KEY);
+        if (storage && storage.userId) {
+          let requestHandler = {
+            isLoading: true,
+            url: 'projects/' + _this.data.id + '/users/' + storage.userId,
+            method: 'POST',
+            params: {},
+            success: function (data) {
+              wx.redirectTo({
+                url: '../joinProject/joinProject'
+              });
+            },
+            fail: function () { }
+          }
+          request(requestHandler);
         }
-        request(requestHandler);
-      }
-    }
+    })
   },
   getDetail: function () {
     let _this = this;

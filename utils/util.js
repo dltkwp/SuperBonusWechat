@@ -91,7 +91,7 @@ const countIndex = function(offetHight, scrollTop, height, colunm) {
 /**
  * 验证登录用户是否是付费用户
  */
-const isPayAccount = function (opt) {
+const isPayAccount = function (opt,callback) {
   let requestHandle = {
     url: 'users/point',
     method: 'GET',
@@ -112,7 +112,7 @@ const isPayAccount = function (opt) {
         });
       } else {
         if(data>0){
-          return true;
+          callback && callback()
         }else{
           wx.showModal({
             title: '温馨提示',

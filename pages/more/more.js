@@ -44,5 +44,11 @@ Page({
       }
       request(requestHandler);
     }
+  },
+  logout: function () {
+    wx.setStorageSync(superConst.SUPER_TOKEN_KEY, '');
+    setTimeout(function () {
+      wx.redirectTo({ url: '../register/register' });
+    }, 800)
   }
 })

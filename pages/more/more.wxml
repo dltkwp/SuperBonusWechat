@@ -100,3 +100,18 @@
 </view>
 
 
+<view class='list-block mar-t-md' bindtap='logout'>
+  <ul>
+    <li>
+      <view class='item-content item-link'>
+        <view class='item-media'>
+          <icon class='icon-order'></icon>
+        </view>
+        <view class='item-inner'>
+          <view class='item-title font-lg'>退出</view>
+        </view>
+      </view>
+    </li>
+  </ul>
+</view>
+
