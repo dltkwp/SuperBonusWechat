@@ -1,1 +1,6 @@
-/* pages/product/product.wxss */
+view {
+    padding:16rpx;
+}
+.wxmlified-text {
+    font-size: 14px;
+}

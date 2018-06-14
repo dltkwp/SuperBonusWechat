@@ -5,6 +5,9 @@ const modal = require('../../utils/modal');
 const superConst = require("../../utils/super-const");
 const message = require('../../utils/message');
 
+const Wxmlify = require('../../wxmlify/wxmlify.js')
+
+
 const app = getApp()
 
 Page({
@@ -37,7 +40,8 @@ Page({
         wx.setNavigationBarTitle({
           title: data.productName
         })
-        WxParse.wxParse('article', 'html', data.description, _this, 5)
+        var wxmlify = new Wxmlify(data.description, _this, {preserveStyles:'all'})
+        // WxParse.wxParse('article', 'html', data.description, _this, 5)
       },
       fail: function () {}
     }
