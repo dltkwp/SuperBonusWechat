@@ -1817,7 +1817,38 @@ padding:2rpx 12rpx;
   display: block;
   text-align: justify;
 }
+.intro-detail .wxmlified-element{
+   font-size: 28rpx;
+  color: #333;
+  width: 100%;
+  padding: 0rpx 20rpx;
+  box-sizing: border-box;
+  display: block;
+  text-align: justify;
+  line-height: 2;
+}
 
+.intro-detail .wxmlified-element.h1{
+   font-size: 36rpx;
+   padding:15rpx 20rpx;
+ 
+}
+.intro-detail .wxmlified-element.h2{
+   font-size: 34rpx;
+   padding:15rpx 20rpx;
+ 
+}
+.intro-detail .wxmlified-element.h3{
+   font-size: 32rpx;
+   padding:15rpx 20rpx;
+ 
+}
+
+.intro-detail .wxmlified-element.h4{
+   font-size: 30rpx;
+   padding:10rpx 20rpx;
+ 
+}
 .intro-detail image {
   width: 100% !important;
   float: left;
