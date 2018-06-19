@@ -1,9 +1,8 @@
-const WxParse = require('../../wxParse/wxParse.js')
 const _ = require('../../utils/lodash.core');
 const request = require('../../utils/request');
-const modal = require('../../utils/modal');
 const superConst = require("../../utils/super-const");
 const message = require('../../utils/message');
+const util = require("../../utils/util");
 
 const Wxmlify = require('../../wxmlify/wxmlify.js')
 
@@ -22,7 +21,9 @@ Page({
     _this.setData({
       id: options.productId
     })
-    _this.getProductDetail();
+    util.getOpenId(function () {
+      _this.getProductDetail();
+    });
   },
   getProductDetail: function () {
     let _this = this;
@@ -93,8 +94,6 @@ Page({
     }
     request(requestHandler);
   },
-  onReady: function () {},
-  onShow: function () {},
   onShareAppMessage: function (res) {
     return {
       title: this.data.detail.productName,

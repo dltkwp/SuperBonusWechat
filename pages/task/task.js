@@ -19,13 +19,9 @@ Page({
     _this.setData({
       id: options.id
     });
-    _this.getDetail();
-  },
-  onReady: function () {
-  
-  },
-  onShow: function () {
-  
+    util.getOpenId(function () {
+      _this.getDetail();
+    });
   },
   underTakeOther: function (){
     let _this = this;

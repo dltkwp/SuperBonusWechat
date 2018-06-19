@@ -45,7 +45,6 @@ Page({
   onShow: function () {
     let _this = this;
     let temp = wx.getStorageSync(superConst.SUPER_TOKEN_KEY);
-    console.log(temp,222222222)
     if(temp.openId){　
       _this.getProjects();
     }
