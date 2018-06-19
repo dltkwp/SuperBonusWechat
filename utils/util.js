@@ -46,6 +46,8 @@ const getOpenId = function (callback) {
           }
         }
       })
+  } else {
+    callback && callback();
   }
 }
 

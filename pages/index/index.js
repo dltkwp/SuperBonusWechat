@@ -36,14 +36,19 @@ Page({
       bannerList: [],
       productList: []
     });
-    setTimeout(function () {
-      _this.getAdvImages();
-      _this.getProductList();
-    }, 0)
+
+    util.getOpenId(function () {
+        _this.getAdvImages();
+        _this.getProductList();
+    })
   },
   onShow: function () {
     let _this = this;
-    _this.getProjects();
+    let temp = wx.getStorageSync(superConst.SUPER_TOKEN_KEY);
+    console.log(temp,222222222)
+    if(temp.openId){　
+      _this.getProjects();
+    }
   },
   publishSubmit: function () {
     let _this = this;
