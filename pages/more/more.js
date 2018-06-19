@@ -2,6 +2,7 @@ const _ = require('../../utils/lodash.core');
 const request = require('../../utils/request');
 const modal = require('../../utils/modal');
 const superConst = require("../../utils/super-const");
+const util = require("../../utils/util");
 const app = getApp()
 
 Page({
@@ -48,7 +49,9 @@ Page({
   logout: function () {
     wx.setStorageSync(superConst.SUPER_TOKEN_KEY, '');
     setTimeout(function () {
-      wx.redirectTo({ url: '../register/register' });
+      util.getOpenId(function () {
+        wx.redirectTo({ url: '../register/register' });
+      })
     }, 800)
   }
 })
