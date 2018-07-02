@@ -54,8 +54,12 @@ Page({
     let _this = this;
 
     let url = 'users/project/release';
-    if (_this.data.currentTab == 1){
+    if(_this.data.currentTab == 0){
+      url = 'users/project/release';
+    } else if (_this.data.currentTab == 1){
       url = 'users/project/undertake';
+    } else if (_this.data.currentTab == 2){
+      url = 'users/recommend';
     }
 
     let requestHandler = {
