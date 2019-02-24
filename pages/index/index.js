@@ -133,9 +133,18 @@ Page({
             _this.setData({ loadOver: true })
 
           }
+
+          let list = _productList.sort(function(a,b){
+            if (a.productOrder === b.productOrder)
+               return a.productOrder - b.productOrder;
+            if (a.productOrder > b.productOrder)
+                return -1;
+              return 1;
+          })
+
           _this.setData({
             pageNum: _this.data.pageNum + 1,
-            productList: _productList
+            productList: list
           });
         } catch (e) {
           console.error(e);
@@ -146,6 +155,13 @@ Page({
       }
     }
     request(requestHandler);
+  },
+  dataSort (a, b) {
+    if (a.key === b.key)
+      return a.position - b.position;
+    if (a.key < b.key)
+      return -1;
+    return 1;
   },
   onReachBottom: function () {
     let _this = this;

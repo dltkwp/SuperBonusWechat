@@ -26,7 +26,7 @@ Page({
   underTakeOther: function (){
     let _this = this;
     util.isPayAccount('undertake',function () {
-      wx.redirectTo({ url: '../recommendother/recommendother?id=' + _this.id });
+      wx.redirectTo({ url: '../recommendother/recommendother?id=' + _this.data.id });
     })
   },
   submit: function () {
